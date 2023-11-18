@@ -1,7 +1,6 @@
-/**
- * Project Complain Management System
- */
+#include<string>
 
+using namespace std;
 
 #ifndef _DIRECTOR_H
 #define _DIRECTOR_H

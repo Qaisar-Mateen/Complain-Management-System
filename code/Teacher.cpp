@@ -1,14 +1,20 @@
-/**
- * Project Complain Management System
- */
-
-
 #include "Teacher.h"
 
-/**
- * Teacher implementation
- */
+Teacher::Teacher()
+{
+	id = -1;
+}
 
+Teacher::Teacher(int ID, string Name)
+{
+	id = ID;
+	name = Name;
+}
+
+void Teacher::printDetail()
+{
+	cout << "\n ID: " << id << "\t Name: " << name << "\n";
+}
 
 void Teacher::makeComplain() {
 

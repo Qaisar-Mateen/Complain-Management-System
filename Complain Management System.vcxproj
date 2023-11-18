@@ -23,7 +23,7 @@
     <ClCompile Include="code\Complain.cpp" />
     <ClCompile Include="code\Department.cpp" />
     <ClCompile Include="code\Director.cpp" />
-    <ClCompile Include="code\Employee.cpp" />
+    <ClCompile Include="code\Employe.cpp" />
     <ClCompile Include="code\Job.cpp" />
     <ClCompile Include="code\main.cpp" />
     <ClCompile Include="code\Manager.cpp" />
@@ -35,11 +35,14 @@
     <ClInclude Include="code\Complain.h" />
     <ClInclude Include="code\Department.h" />
     <ClInclude Include="code\Director.h" />
-    <ClInclude Include="code\Employee.h" />
+    <ClInclude Include="code\Employe.h" />
     <ClInclude Include="code\Job.h" />
     <ClInclude Include="code\Manager.h" />
     <ClInclude Include="code\State.h" />
     <ClInclude Include="code\Teacher.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

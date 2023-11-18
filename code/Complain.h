@@ -2,14 +2,17 @@
  * Project Complain Management System
  */
 
+#include<string>
+
+using namespace std;
 
 #ifndef _COMPLAIN_H
 #define _COMPLAIN_H
 
 class Complain {
 public: 
-    void id;
-    void description;
+    int id;
+    string description;
     
 void currState();
     
