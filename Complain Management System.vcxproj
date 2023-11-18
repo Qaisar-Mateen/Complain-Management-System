@@ -18,6 +18,29 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="code\Admin.cpp" />
+    <ClCompile Include="code\Complain.cpp" />
+    <ClCompile Include="code\Department.cpp" />
+    <ClCompile Include="code\Director.cpp" />
+    <ClCompile Include="code\Employee.cpp" />
+    <ClCompile Include="code\Job.cpp" />
+    <ClCompile Include="code\main.cpp" />
+    <ClCompile Include="code\Manager.cpp" />
+    <ClCompile Include="code\State.cpp" />
+    <ClCompile Include="code\Teacher.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="code\Admin.h" />
+    <ClInclude Include="code\Complain.h" />
+    <ClInclude Include="code\Department.h" />
+    <ClInclude Include="code\Director.h" />
+    <ClInclude Include="code\Employee.h" />
+    <ClInclude Include="code\Job.h" />
+    <ClInclude Include="code\Manager.h" />
+    <ClInclude Include="code\State.h" />
+    <ClInclude Include="code\Teacher.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -138,9 +161,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="main.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
