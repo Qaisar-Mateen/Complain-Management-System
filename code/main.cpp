@@ -5,12 +5,10 @@ using namespace std;
 
 int main()
 {
-
-
-
 	Admin* ad = new Admin();
 
-	ad->addEmployee();
+	//ad->addEmployee();
+	ad->removeEmployee();
 	ad->removeEmployee();
 	cin.ignore();
 

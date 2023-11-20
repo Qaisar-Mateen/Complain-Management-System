@@ -18,7 +18,6 @@ class Admin : virtual public Person {
     vector<Manager> Managers;
     vector<Teacher> Teachs;
 
-
 public:
     
     Admin();

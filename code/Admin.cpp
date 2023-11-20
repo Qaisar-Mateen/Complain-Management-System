@@ -108,7 +108,6 @@ void Admin::removeEmployee() {
 	cout << "\n Enter Employee ID to remove: ";
 	cin >> empId;
 	Employee::markAsUnallocated(empId);
-	cout << "\n Employee with ID " << empId << " removed successfully.\n";
 }
 
 void Admin::removeTeacher() {
@@ -116,7 +115,6 @@ void Admin::removeTeacher() {
 	cout << "\n Enter Teacher ID to remove: ";
 	cin >> tId;
 	Teacher::markAsUnallocated(tId);
-	cout << "\n Teacher with ID " << tId << " removed successfully.\n";
 }
 
 void Admin::removeManager() {
@@ -124,5 +122,4 @@ void Admin::removeManager() {
 	cout << "\n Enter Manager ID to remove: ";
 	cin >> mId;
 	Manager::markAsUnallocated(mId);
-	cout << "\n Manager with ID " << mId << " removed successfully.\n";
 }

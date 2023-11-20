@@ -76,6 +76,7 @@ void Teacher::markAsUnallocated(int teachId) {
         if (currentID == teachId) {
             // Unallocate Id
             outFile << "";
+            cout << "\n Teacher with ID " << teachId << " removed successfully.\n";
         }
         else {
             outFile << currentID << " " << currentName << endl;

@@ -76,6 +76,7 @@ void Manager::markAsUnallocated(int manageId) {
         if (currentID == manageId) {
             // Unallocate Id
             outFile << "" ;
+            cout << "\n Manager with ID " << manageId << " removed successfully.\n";
         }
         else {
             outFile << currentID << " " << currentName << endl;

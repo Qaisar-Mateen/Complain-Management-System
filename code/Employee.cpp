@@ -73,6 +73,8 @@ void Employee::markAsUnallocated(int empId) {
         if (currentID == empId) {
             // Unallocate Id
             outFile << "" ;
+
+            cout << "\n Employee with ID " << empId << " removed successfully.\n";
         }
         else {
             outFile << currentID << " " << currentName << endl;
