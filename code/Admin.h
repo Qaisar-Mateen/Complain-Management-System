@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "Person.h"
 #include "Employee.h"
 #include "Manager.h"
 #include "Teacher.h"
@@ -10,7 +11,7 @@ using namespace std;
 #ifndef _ADMIN_H
 #define _ADMIN_H
 
-class Admin {
+class Admin : virtual public Person {
     int id;
     string Name;
     vector<Employee> Emps;
