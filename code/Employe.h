@@ -1,5 +1,6 @@
 #include <string>
 #include <iostream>
+#include <fstream>
 using namespace std;
 
 #ifndef _EMPLOYEE_H
@@ -14,9 +15,19 @@ public:
 
     Employe(int ID, string Name);
 
+    static void writeToFile(const Employe& emp);
+
+    static int getUniqueID();
+
+    int getID() const;
+
+    string getName() const;
+
     void printDetail();
 
     void updateSystem();
+
+    static void markAsUnallocated(int empId);
 
     ~Employe();
 };

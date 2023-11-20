@@ -1,5 +1,6 @@
 #include <string>
 #include <iostream>
+#include <fstream>
 using namespace std;
 
 #ifndef _MANAGER_H
@@ -22,6 +23,16 @@ public:
     void assignJob();
     
     void reviewJob();
+
+    static void writeToFile(const Manager& manage);
+
+    static int getUniqueID();
+
+    int getID() const;
+
+    string getName() const;
+
+    static void markAsUnallocated(int manageId);
 };
 
 #endif //_MANAGER_H

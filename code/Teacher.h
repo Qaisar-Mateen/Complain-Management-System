@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <fstream>
 
 using namespace std;
 
@@ -23,6 +24,16 @@ public:
     void printComplains();
         
     void reocordFeedback();
+
+    static void writeToFile(const Teacher& teach);
+
+    static int getUniqueID();
+
+    int getID() const;
+
+    string getName() const;
+
+    static void markAsUnallocated(int teachId);
 };
 
 #endif //_TEACHER_H

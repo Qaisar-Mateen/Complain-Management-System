@@ -9,23 +9,27 @@ int main()
 
 	ad->addEmploye();
 
-	ad->addTeacher();
-
 	ad->addEmploye();
-
-	ad->addManager();
-
-	ad->addManager();
-
-	ad->addEmploye();
+	
+	ad->removeEmploye();
 
 	ad->addTeacher();
 
-	ad->displayEmployes();
+	ad->addTeacher();
+
+	ad->removeTeacher();
+
+	/*ad->addManager();
+
+	ad->addManager();
+
+	ad->removeManager();*/
+
+	/*ad->displayEmployes();
 
 	ad->displayManagers();
 
-	ad->displayTeachers();
+	ad->displayTeachers();*/
 
 	return 0;
 }

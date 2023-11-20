@@ -41,6 +41,8 @@ public:
     void removeTeacher();
     
     void removeManager();
+
+    void removeEmployeFromFile(int empId);
 };
 
 #endif //_ADMIN_H
