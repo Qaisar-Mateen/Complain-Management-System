@@ -1,4 +1,5 @@
 #include <iostream>
+#include<windows.h>
 #include <string>
 #include <vector>
 #include "Person.h"
@@ -27,6 +28,8 @@ public:
     int getID() const ;
 
     string getName() const;
+
+    void control();
 
     void displayEmployees();
 

@@ -25,6 +25,18 @@ string Admin::getName() const
 	return Name;
 }
 
+void Admin::control()
+{
+	Sleep(700);
+	system("cls");
+	cout << "\t\t\t ----<><><><><><><><><><><><( Admin )><><><><><><><><><><><>----\n\n";
+	cout << " ID: " << id << endl;
+	cout << " Name: " << Name << endl;
+	cout << "\n\n Admin Controls\n";
+	cout << " a:add Employee\n";
+
+}
+
 void Admin::displayEmployees()
 {
 	cout << "\n\t\t\t Employees\n";
