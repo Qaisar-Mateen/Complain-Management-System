@@ -1,38 +1,38 @@
-#include "Employe.h"
+#include "Employee.h"
 
-Employe::Employe()
+Employee::Employee()
 {
     id = -1;
 }
 
-Employe::Employe(int ID, string Name)
+Employee::Employee(int ID, string Name)
 {
     id = ID;
     name = Name;
 }
 
-void Employe::printDetail()
+void Employee::printDetail()
 {
     cout << "\n ID: " << id << "\t Name: " << name << "\n";
 }
 
-void Employe::updateSystem()
+void Employee::updateSystem()
 {
 
 }
 
-Employe::~Employe()
+Employee::~Employee()
 {
 }
-int Employe::getID() const {
+int Employee::getID() const {
     return id;
 }
 
-string Employe::getName() const {
+string Employee::getName() const {
     return name;
 }
 
-void Employe::writeToFile(const Employe& emp) {
+void Employee::writeToFile(const Employee& emp) {
     ofstream file("Employee.txt", ios::app);
     if (file.is_open()) {
         file << emp.getID() << " " << emp.getName() << endl;
@@ -40,7 +40,7 @@ void Employe::writeToFile(const Employe& emp) {
     }
 }
 
-int Employe::getUniqueID() {
+int Employee::getUniqueID() {
     ifstream file("Employee.txt");
     int maxID = 0;
     int currentID;
@@ -59,7 +59,7 @@ int Employe::getUniqueID() {
     return maxID + 1;
 }
 
-void Employe::markAsUnallocated(int empId) {
+void Employee::markAsUnallocated(int empId) {
     ifstream inFile("Employee.txt");
     ofstream outFile("temp.txt");
 

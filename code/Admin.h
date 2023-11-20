@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "Employe.h"
+#include "Employee.h"
 #include "Manager.h"
 #include "Teacher.h"
 
@@ -13,7 +13,7 @@ using namespace std;
 class Admin {
     int id;
     string Name;
-    vector<Employe> Emps;
+    vector<Employee> Emps;
     vector<Manager> Managers;
     vector<Teacher> Teachs;
 
@@ -22,27 +22,25 @@ public:
     
     Admin();
 
-    Admin(vector<Employe>, vector<Manager>, vector<Teacher>);
+    Admin(vector<Employee>, vector<Manager>, vector<Teacher>);
 
-    void displayEmployes();
+    void displayEmployees();
 
     void displayManagers();
 
     void displayTeachers();
 
-    void addEmploye();
+    void addEmployee();
     
     void addManager();
         
     void addTeacher();
     
-    void removeEmploye();
+    void removeEmployee();
     
     void removeTeacher();
     
     void removeManager();
-
-    void removeEmployeFromFile(int empId);
 };
 
 #endif //_ADMIN_H

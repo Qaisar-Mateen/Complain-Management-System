@@ -6,16 +6,16 @@ using namespace std;
 #ifndef _EMPLOYEE_H
 #define _EMPLOYEE_H
 
-class Employe {
+class Employee {
     int id;
     string name;
 
 public:
-    Employe();
+    Employee();
 
-    Employe(int ID, string Name);
+    Employee(int ID, string Name);
 
-    static void writeToFile(const Employe& emp);
+    static void writeToFile(const Employee& emp);
 
     static int getUniqueID();
 
@@ -29,7 +29,7 @@ public:
 
     static void markAsUnallocated(int empId);
 
-    ~Employe();
+    ~Employee();
 };
 
 #endif //_EMPLOYEE_H

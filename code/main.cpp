@@ -7,11 +7,11 @@ int main()
 {
 	Admin* ad = new Admin();
 
-	ad->addEmploye();
+	ad->addEmployee();
 
-	ad->addEmploye();
-	
-	ad->removeEmploye();
+	ad->addEmployee();
+
+	ad->removeEmployee();
 
 	ad->addTeacher();
 
@@ -25,7 +25,7 @@ int main()
 
 	ad->removeManager();
 
-	/*ad->displayEmployes();
+	/*ad->displayEmployees();
 
 	ad->displayManagers();
 

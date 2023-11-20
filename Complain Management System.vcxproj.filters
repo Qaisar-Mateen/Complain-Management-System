@@ -30,7 +30,7 @@
     <ClCompile Include="code\Director.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="code\Employe.cpp">
+    <ClCompile Include="code\Employee.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="code\Job.cpp">
@@ -59,7 +59,7 @@
     <ClInclude Include="code\Director.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="code\Employe.h">
+    <ClInclude Include="code\Employee.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="code\Job.h">

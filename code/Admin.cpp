@@ -5,7 +5,7 @@ Admin::Admin()
 	id = 0;
 }
 
-Admin::Admin(vector<Employe> e, vector<Manager> m, vector<Teacher> t)
+Admin::Admin(vector<Employee> e, vector<Manager> m, vector<Teacher> t)
 {
 	id = 0;
 	Emps = e;
@@ -13,7 +13,7 @@ Admin::Admin(vector<Employe> e, vector<Manager> m, vector<Teacher> t)
 	Teachs = t;
 }
 
-void Admin::displayEmployes()
+void Admin::displayEmployees()
 {
 	cout << "\n\t\t\t Employees\n";
 
@@ -38,22 +38,22 @@ void Admin::displayTeachers()
 		Teachs[i].printDetail();
 }
 
-void Admin::addEmploye()
+void Admin::addEmployee()
 {
 	string nam;
 
 	// Automatically generate a unique ID
-	int id = Employe::getUniqueID();
+	int id = Employee::getUniqueID();
 
-	cout << "\n Enter Employe Name: ";
+	cout << "\n Enter Employee Name: ";
 	cin >> nam;
 
-	Employe* e = new Employe(id, nam);
+	Employee* e = new Employee(id, nam);
 
 	Emps.push_back(*e);
 
 	// Write employee data to the file
-	Employe::writeToFile(*e);
+	Employee::writeToFile(*e);
 
 	// Display details
 	cout << "\n Employee added successfully.\n";
@@ -103,51 +103,26 @@ void Admin::addTeacher() {
 	t->printDetail();
 }
 
-void Admin::removeEmploye() {
+void Admin::removeEmployee() {
 	int empId;
 	cout << "\n Enter Employee ID to remove: ";
 	cin >> empId;
-	Employe::markAsUnallocated(empId);
-	cout << "Employee with ID " << empId << " removed successfully.\n";
+	Employee::markAsUnallocated(empId);
+	cout << "\n Employee with ID " << empId << " removed successfully.\n";
 }
-
-//void Admin::removeEmployeFromFile(int empId) {
-//	ifstream inFile("employees.txt");
-//	ofstream outFile("temp.txt");
-//
-//	int currentID;
-//	string currentName;
-//
-//	while (inFile >> currentID >> currentName) {
-//		if (currentID == empId) {
-//			// Mark the employee as unallocated by writing '-' as the name
-//			outFile << currentID << " -" << endl;
-//		}
-//		else {
-//			outFile << currentID << " " << currentName << endl;
-//		}
-//	}
-//
-//	inFile.close();
-//	outFile.close();
-//
-//	// Rename the temp file to replace the original file
-//	remove("employees.txt");
-//	rename("temp.txt", "employees.txt");
-//}
 
 void Admin::removeTeacher() {
 	int tId;
-	cout << "Enter Teacher ID to remove: ";
+	cout << "\n Enter Teacher ID to remove: ";
 	cin >> tId;
 	Teacher::markAsUnallocated(tId);
-	cout << "Teacher with ID " << tId << " removed successfully.\n";
+	cout << "\n Teacher with ID " << tId << " removed successfully.\n";
 }
 
 void Admin::removeManager() {
 	int mId;
-	cout << "Enter Manager ID to remove: ";
+	cout << "\n Enter Manager ID to remove: ";
 	cin >> mId;
 	Manager::markAsUnallocated(mId);
-	cout << "Manager with ID " << mId << " removed successfully.\n";
+	cout << "\n Manager with ID " << mId << " removed successfully.\n";
 }
