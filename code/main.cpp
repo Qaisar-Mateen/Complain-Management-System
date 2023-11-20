@@ -19,11 +19,11 @@ int main()
 
 	ad->removeTeacher();
 
-	/*ad->addManager();
+	ad->addManager();
 
 	ad->addManager();
 
-	ad->removeManager();*/
+	ad->removeManager();
 
 	/*ad->displayEmployes();
 

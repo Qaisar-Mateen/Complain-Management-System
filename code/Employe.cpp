@@ -33,7 +33,7 @@ string Employe::getName() const {
 }
 
 void Employe::writeToFile(const Employe& emp) {
-    ofstream file("employees.txt", ios::app);
+    ofstream file("Employee.txt", ios::app);
     if (file.is_open()) {
         file << emp.getID() << " " << emp.getName() << endl;
         file.close();
@@ -41,7 +41,7 @@ void Employe::writeToFile(const Employe& emp) {
 }
 
 int Employe::getUniqueID() {
-    ifstream file("employees.txt");
+    ifstream file("Employee.txt");
     int maxID = 0;
     int currentID;
 
@@ -60,7 +60,7 @@ int Employe::getUniqueID() {
 }
 
 void Employe::markAsUnallocated(int empId) {
-    ifstream inFile("employees.txt");
+    ifstream inFile("Employee.txt");
     ofstream outFile("temp.txt");
 
     int currentID;
@@ -80,6 +80,6 @@ void Employe::markAsUnallocated(int empId) {
     outFile.close();
 
     // Rename the temp file to replace the original file
-    remove("employees.txt");
-    rename("temp.txt", "employees.txt");
+    remove("Employee.txt");
+    rename("temp.txt", "Employee.txt");
 }
