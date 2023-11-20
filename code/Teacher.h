@@ -1,13 +1,13 @@
 #include <iostream>
 #include <string>
 #include <fstream>
-
+#include "Person.h"
 using namespace std;
 
 #ifndef _TEACHER_H
 #define _TEACHER_H
 
-class Teacher {
+class Teacher : virtual public Person {
     int id;
     string name;
 

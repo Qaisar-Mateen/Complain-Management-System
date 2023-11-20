@@ -5,6 +5,9 @@ using namespace std;
 
 int main()
 {
+
+
+
 	Admin* ad = new Admin();
 
 	ad->addEmployee();

@@ -1,12 +1,13 @@
 #include <string>
 #include <iostream>
 #include <fstream>
+#include "Person.h"
 using namespace std;
 
 #ifndef _MANAGER_H
 #define _MANAGER_H
 
-class Manager {
+class Manager : virtual public Person {
 private:
     int id;
     string name;

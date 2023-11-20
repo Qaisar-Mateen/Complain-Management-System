@@ -27,6 +27,7 @@
     <ClCompile Include="code\Job.cpp" />
     <ClCompile Include="code\main.cpp" />
     <ClCompile Include="code\Manager.cpp" />
+    <ClCompile Include="code\Person.cpp" />
     <ClCompile Include="code\State.cpp" />
     <ClCompile Include="code\Teacher.cpp" />
   </ItemGroup>
@@ -38,6 +39,7 @@
     <ClInclude Include="code\Employee.h" />
     <ClInclude Include="code\Job.h" />
     <ClInclude Include="code\Manager.h" />
+    <ClInclude Include="code\Person.h" />
     <ClInclude Include="code\State.h" />
     <ClInclude Include="code\Teacher.h" />
   </ItemGroup>
