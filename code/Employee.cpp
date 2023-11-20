@@ -66,10 +66,13 @@ void Employee::markAsUnallocated(int empId) {
     int currentID;
     string currentName;
 
-    while (inFile >> currentID >> currentName) {
+    while (inFile >> currentID) {
+        inFile.ignore(); // Ignore the space between ID and name
+        getline(inFile, currentName); // Read the rest of the line, including spaces
+
         if (currentID == empId) {
             // Unallocate Id
-            outFile << "" << "";
+            outFile << "" ;
         }
         else {
             outFile << currentID << " " << currentName << endl;

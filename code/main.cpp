@@ -8,23 +8,17 @@ int main()
 	Admin* ad = new Admin();
 
 	ad->addEmployee();
-
-	ad->addEmployee();
-
 	ad->removeEmployee();
+	cin.ignore();
 
 	ad->addTeacher();
-
-	ad->addTeacher();
-
 	ad->removeTeacher();
+	cin.ignore();
 
 	ad->addManager();
-
-	ad->addManager();
-
 	ad->removeManager();
-
+	cin.ignore();
+	
 	/*ad->displayEmployees();
 
 	ad->displayManagers();

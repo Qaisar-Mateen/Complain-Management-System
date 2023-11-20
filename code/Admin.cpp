@@ -46,7 +46,7 @@ void Admin::addEmployee()
 	int id = Employee::getUniqueID();
 
 	cout << "\n Enter Employee Name: ";
-	cin >> nam;
+	getline(cin, nam);
 
 	Employee* e = new Employee(id, nam);
 
@@ -68,7 +68,7 @@ void Admin::addManager() {
 	int id = Manager::getUniqueID();
 
 	cout << "\n Enter Manager Name: ";
-	cin >> nam;
+	getline(cin, nam);
 
 	Manager* mg = new Manager(id, nam);
 
@@ -89,7 +89,7 @@ void Admin::addTeacher() {
 	int id = Teacher::getUniqueID();
 
 	cout << "\n Enter Teacher Name: ";
-	cin >> nam;
+	getline(cin, nam);
 
 	Teacher* t = new Teacher(id, nam);
 
