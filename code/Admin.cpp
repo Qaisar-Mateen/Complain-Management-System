@@ -3,14 +3,26 @@
 Admin::Admin()
 {
 	id = 0;
+	Name = "admin";
 }
 
 Admin::Admin(vector<Employee> e, vector<Manager> m, vector<Teacher> t)
 {
 	id = 0;
+	Name = "admin";
 	Emps = e;
 	Managers = m;
 	Teachs = t;
+}
+
+int Admin::getID() const
+{
+	return id;
+}
+
+string Admin::getName() const
+{
+	return Name;
 }
 
 void Admin::displayEmployees()

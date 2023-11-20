@@ -24,6 +24,10 @@ public:
 
     Admin(vector<Employee>, vector<Manager>, vector<Teacher>);
 
+    int getID() const ;
+
+    string getName() const;
+
     void displayEmployees();
 
     void displayManagers();
