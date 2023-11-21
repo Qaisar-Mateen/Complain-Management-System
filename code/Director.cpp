@@ -20,6 +20,10 @@ string Director::getName() const
     return Name;
 }
 
+void Director::control()
+{
+}
+
 void Director::complains_in_Dept() {
 
 }

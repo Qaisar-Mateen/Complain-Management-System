@@ -17,6 +17,8 @@ public:
 
     Teacher(int, string);
 
+    void control();
+
     void printDetail();
 
     void makeComplain();

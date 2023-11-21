@@ -25,30 +25,202 @@ string Admin::getName() const
 	return Name;
 }
 
+char Admin::printInterface()
+{
+	bool valid = false;
+	char opt;
+	do {
+		system("cls");
+		cout << "\t\t\t ----<><><><><><><><><><><><( Admin )><><><><><><><><><><><>----\n\n";
+		cout << " ID: " << id << endl;
+		cout << " Name: " << Name << endl;
+		cout << "\n --<{ Admin Controls }>--\n";
+		cout << " a: Add Someone\n";
+		if(!Managers.empty() || !Teachs.empty() || !Emps.empty())
+			cout << " b: Remove Someone\n";
+		cout << " c: Print Detail\n";
+		cout << " f: Log out\n";
+		cout << " >";
+		cin >> opt;
+
+		if (opt == 'a' || opt == 'c' || opt == 'f')
+			valid = true;
+		else if (opt == 'b' && (!Managers.empty() || !Teachs.empty() || !Emps.empty()))
+			valid = true;
+		else {
+			cout << "\n Invalid!! \n";
+			Sleep(700);
+		}
+	} while (!valid);
+
+	return opt;
+}
+
+char Admin::printAddInterface()
+{
+	bool valid = false;
+	char opt;
+	do {
+		system("cls");
+		cout << "\t\t\t ----<><><><><><><><><><><><( Admin )><><><><><><><><><><><>----\n\n";
+		cout << " ID: " << id << endl;
+		cout << " Name: " << Name << endl;
+		cout << "\n --<{ Admin Controls }>--\n";
+		cout << " a: Add Employee\n";
+		cout << " b: Add Manager\n";
+		cout << " c: Add Teacher\n";
+		cout << " >";
+		cin >> opt;
+
+		if (opt == 'a' || opt == 'c' || opt == 'b')
+			valid = true;
+
+		else {
+			cout << "\n Invalid!! \n";
+			Sleep(700);
+		}
+	} while (!valid);
+
+	return opt;
+}
+
+char Admin::printRemoveInterface()
+{
+	bool valid = false;
+	char opt;
+	do {
+		system("cls");
+		cout << "\t\t\t ----<><><><><><><><><><><><( Admin )><><><><><><><><><><><>----\n\n";
+		cout << " ID: " << id << endl;
+		cout << " Name: " << Name << endl;
+		cout << "\n --<{ Admin Controls }>--\n";
+		if(!Emps.empty())
+			cout << " a: Remove Employee\n";
+		if (!Managers.empty())
+			cout << " b: Remove Manager\n";
+		if (!Teachs.empty())
+			cout << " c: Remove Teacher\n";
+		cout << " >";
+		cin >> opt;
+
+		if (opt == 'a' && !Emps.empty())
+			valid = true;
+		else if (opt == 'b' && !Managers.empty())
+			valid = true;
+		else if (opt == 'c' && !Teachs.empty())
+			valid = true;
+		else {
+			cout << "\n Invalid!! \n";
+			Sleep(700);
+		}
+	} while (!valid);
+
+	return opt;
+}
+
+char Admin::printDetailInterface()
+{
+	bool valid = false;
+	char opt;
+
+	do {
+		system("cls");
+		cout << "\t\t\t ----<><><><><><><><><><><><( Admin )><><><><><><><><><><><>----\n\n";
+		cout << " ID: " << id << endl;
+		cout << " Name: " << Name << endl;
+		cout << "\n --<{ Admin Controls }>--\n";
+		cout << " a: Print Detail of Employees\n";
+		cout << " b: Print Detail of Managers\n";
+		cout << " c: Print Detail of Teachers\n";
+		cout << " >";
+		cin >> opt;
+
+		if (opt == 'a' || opt == 'b' || opt == 'c')
+			valid = true;
+
+		else {
+			cout << "\n Invalid!! \n";
+			Sleep(700);
+		}
+	} while (!valid);
+
+	return opt;
+}
+
 void Admin::control()
 {
 	Sleep(700);
-	system("cls");
-	cout << "\t\t\t ----<><><><><><><><><><><><( Admin )><><><><><><><><><><><>----\n\n";
-	cout << " ID: " << id << endl;
-	cout << " Name: " << Name << endl;
-	cout << "\n\n Admin Controls\n";
-	cout << " a:add Employee\n";
+	char opt = 'd';
 
+	while (opt != 'f')
+	{
+		opt = printInterface();
+
+		if (opt == 'a')
+		{
+			opt = printAddInterface();
+			if (opt == 'a')
+				addEmployee();
+			else if (opt == 'b')
+				addManager();
+			else if (opt == 'c')
+				addTeacher();
+		}
+
+		else if (opt == 'b')
+		{
+			opt = printRemoveInterface();
+			if (opt == 'a')
+				removeEmployee();
+			else if (opt == 'b')
+				removeManager();
+			else if (opt == 'c')
+				removeTeacher();
+		}
+
+		else if (opt == 'c')
+		{
+			opt = printDetailInterface();
+			if (opt == 'a')
+				displayEmployees();
+			else if (opt == 'b')
+				displayManagers();
+			else if (opt == 'c')
+				displayTeachers();
+		}
+		if(opt != 'f')
+		{ 
+			cin.ignore();
+			cout << "\n Press any key to continue...";
+			cin.get();
+		}
+	}
+	cout << "\n Logging out...";
+	Sleep(700);
+	system("cls");
 }
 
 void Admin::displayEmployees()
 {
-	cout << "\n\t\t\t Employees\n";
+	if (Emps.empty())
+	{
+		cout << "\n No Employee to Display\n";
+		return ;
+	}
+	cout << "\n\t\t\t--<{ All Employees Detail}>--\n";
 
 	for (int i = 0; i < Emps.size(); i++)
 		Emps[i].printDetail();
-
 }
 
 void Admin::displayManagers()
 {
-	cout << "\n\t\t\t Managers\n";
+	if (Managers.empty())
+	{
+		cout << "\n No Manager to Display\n";
+		return;
+	}
+	cout << "\n\t\t\t--<{ All Managers Detail }>--\n";
 
 	for (int i = 0; i < Managers.size(); i++)
 		Managers[i].printDetail();
@@ -56,7 +228,12 @@ void Admin::displayManagers()
 
 void Admin::displayTeachers()
 {
-	cout << "\n\t\t\t Teachers\n";
+	if (Teachs.empty())
+	{
+		cout << "\n No Teacher to Display\n";
+		return;
+	}
+	cout << "\n\t\t\t--<{ All Teachers Detail }>--\n";
 
 	for (int i = 0; i < Teachs.size(); i++)
 		Teachs[i].printDetail();
@@ -68,7 +245,7 @@ void Admin::addEmployee()
 
 	// Automatically generate a unique ID
 	int id = Employee::getUniqueID();
-
+	cin.ignore();
 	cout << "\n Enter Employee Name: ";
 	getline(cin, nam);
 
@@ -91,6 +268,7 @@ void Admin::addManager() {
 	// Automatically generate a unique ID
 	int id = Manager::getUniqueID();
 
+	cin.ignore();
 	cout << "\n Enter Manager Name: ";
 	getline(cin, nam);
 
@@ -112,6 +290,7 @@ void Admin::addTeacher() {
 	// Automatically generate a unique ID
 	int id = Teacher::getUniqueID();
 
+	cin.ignore();
 	cout << "\n Enter Teacher Name: ";
 	getline(cin, nam);
 
@@ -129,6 +308,7 @@ void Admin::addTeacher() {
 
 void Admin::removeEmployee() {
 	int empId;
+	cin.ignore();
 	cout << "\n Enter Employee ID to remove: ";
 	cin >> empId;
 	Employee::markAsUnallocated(empId);
@@ -136,6 +316,7 @@ void Admin::removeEmployee() {
 
 void Admin::removeTeacher() {
 	int tId;
+	cin.ignore();
 	cout << "\n Enter Teacher ID to remove: ";
 	cin >> tId;
 	Teacher::markAsUnallocated(tId);
@@ -143,6 +324,7 @@ void Admin::removeTeacher() {
 
 void Admin::removeManager() {
 	int mId;
+	cin.ignore();
 	cout << "\n Enter Manager ID to remove: ";
 	cin >> mId;
 	Manager::markAsUnallocated(mId);

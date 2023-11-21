@@ -11,6 +11,10 @@ Employee::Employee(int ID, string Name)
     name = Name;
 }
 
+void Employee::control()
+{
+}
+
 void Employee::printDetail()
 {
     cout << "\n ID: " << id << "\t Name: " << name << "\n";

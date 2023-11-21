@@ -17,6 +17,8 @@ public:
 
     Manager(int ID, string Name);
 
+    void control();
+
     void printDetail();
 
     void reviewRequest();

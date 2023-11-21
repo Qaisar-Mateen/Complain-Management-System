@@ -16,6 +16,8 @@ public:
 
     Employee(int ID, string Name);
 
+    void control();
+
     static void writeToFile(const Employee& emp);
 
     static int getUniqueID();

@@ -11,6 +11,10 @@ Teacher::Teacher(int ID, string Name)
 	name = Name;
 }
 
+void Teacher::control()
+{
+}
+
 void Teacher::printDetail()
 {
 	cout << "\n ID: " << id << "\t Name: " << name << "\n";

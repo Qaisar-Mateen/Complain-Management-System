@@ -26,7 +26,12 @@ int main()
 
 	//step2: login into the system
 
-	Person* user = Login();
+	while (1) {
+		Person* user = Login();
+		if (user == nullptr)
+			break;
+		user->control();
+	}
 
 	//adm->addEmployee();
 	adm->removeEmployee();
@@ -72,11 +77,17 @@ Person* Login()
 			cout << " d: Teacher\n";
 		if(!emp.empty())
 			cout << " e: Employee\n";
+		cout << " q: Quit\n";
 		cout << " >";
 		cin >> opt;
 		int id, f = 0;
-		
-		if (opt == 'a' && adm) 
+
+		if (opt == 'q')
+		{
+			valid = true;
+		}
+
+		else if (opt == 'a' && adm) 
 		{
 			cout << "\t\t\t\t ---<><><><><><><><><><( Admin )><><><><><><><><><>---\n\n\n";
 			cout << " Enter Admin's ID: ";

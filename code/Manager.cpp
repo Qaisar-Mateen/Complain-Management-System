@@ -11,6 +11,10 @@ Manager::Manager(int ID, string Name)
 	name = Name;
 }
 
+void Manager::control()
+{
+}
+
 void Manager::printDetail()
 {
 	cout << "\n ID: "<< id <<"\t Name: " << name<<"\n";

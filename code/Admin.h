@@ -29,6 +29,14 @@ public:
 
     string getName() const;
 
+    char printInterface();
+
+    char printAddInterface();
+
+    char printRemoveInterface();
+
+    char printDetailInterface();
+
     void control();
 
     void displayEmployees();

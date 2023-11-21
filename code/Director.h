@@ -17,6 +17,8 @@ public:
 
     string getName() const;
     
+    void control();
+
     void complains_in_Dept();
     
     void complainsSummary();
