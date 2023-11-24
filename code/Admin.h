@@ -56,6 +56,9 @@ public:
     void removeTeacher();
     
     void removeManager();
+
+    template<typename T>
+    static void populateFromFile(const std::string& fileName, std::vector<T>& targetVector);
 };
 
 #endif //_ADMIN_H

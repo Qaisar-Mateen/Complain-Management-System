@@ -20,9 +20,11 @@ vector<Teacher> tea;
 
 int main()
 {
-
+	////--------------------------------------------------------------
+	adm = new Admin(emp, man, tea);
+	////--------------------------------------------------------------
 	//step1: populate all the classes from files with objects in main
-	adm = new Admin();
+	//adm = new Admin();
 
 	//step2: login into the system
 

@@ -4,15 +4,21 @@ Admin::Admin()
 {
 	id = 0;
 	Name = "admin";
+	populateFromFile("Employee.txt", Emps);
+	populateFromFile("Manager.txt", Managers);
+	populateFromFile("Teacher.txt", Teachs);
 }
 
 Admin::Admin(vector<Employee> e, vector<Manager> m, vector<Teacher> t)
 {
 	id = 0;
 	Name = "admin";
-	Emps = e;
-	Managers = m;
-	Teachs = t;
+	populateFromFile("Employee.txt", Emps);
+	populateFromFile("Manager.txt", Managers);
+	populateFromFile("Teacher.txt", Teachs);
+	//Emps = e;
+	//Managers = m;
+	//Teachs = t;
 }
 
 int Admin::getID() const
@@ -328,4 +334,27 @@ void Admin::removeManager() {
 	cout << "\n Enter Manager ID to remove: ";
 	cin >> mId;
 	Manager::markAsUnallocated(mId);
+}
+
+template<typename T>
+void Admin::populateFromFile(const std::string& fileName, std::vector<T>& targetVector) {
+	ifstream file(fileName);
+	if (file.is_open()) {
+		int id;
+		string name;
+
+		while (file >> id) {
+			// Read the entire line as the name, including spaces
+			getline(file >> ws, name);
+
+			// Construct the item using the entire name
+			T item(id, name);
+			targetVector.push_back(item);
+		}
+
+		file.close();
+	}
+	else {
+		cout << "Unable to open the file " << fileName << endl;
+	}
 }
