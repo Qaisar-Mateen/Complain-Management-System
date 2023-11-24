@@ -84,6 +84,8 @@ Person* Login()
 
 		if (opt == 'q')
 		{
+			cout << "\n Closing Complain Management System!!\n";
+			Sleep(700);
 			valid = true;
 		}
 

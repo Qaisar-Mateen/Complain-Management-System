@@ -21,7 +21,7 @@
     <ClCompile Include="code\Admin.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="code\Complain.cpp">
+    <ClCompile Include="code\Complaint.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="code\Department.cpp">
@@ -53,7 +53,7 @@
     <ClInclude Include="code\Admin.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="code\Complain.h">
+    <ClInclude Include="code\Complaint.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="code\Department.h">

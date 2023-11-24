@@ -20,7 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="code\Admin.cpp" />
-    <ClCompile Include="code\Complain.cpp" />
+    <ClCompile Include="code\Complaint.cpp" />
     <ClCompile Include="code\Department.cpp" />
     <ClCompile Include="code\Director.cpp" />
     <ClCompile Include="code\Employee.cpp" />
@@ -33,7 +33,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="code\Admin.h" />
-    <ClInclude Include="code\Complain.h" />
+    <ClInclude Include="code\Complaint.h" />
     <ClInclude Include="code\Department.h" />
     <ClInclude Include="code\Director.h" />
     <ClInclude Include="code\Employee.h" />
