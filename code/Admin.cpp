@@ -149,7 +149,6 @@ char Admin::printDetailInterface()
 
 void Admin::control()
 {
-	Sleep(700);
 	char opt = 'd';
 
 	while (opt != 'f')

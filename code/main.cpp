@@ -11,6 +11,9 @@
 using namespace std;
 
 Person* Login();
+Manager* search(vector<Manager> &per, int id);
+Teacher* search(vector<Teacher> &per, int id);
+Employee* search(vector<Employee> &per, int id);
 
 Director* dir;
 Admin* adm;
@@ -21,8 +24,13 @@ vector<Teacher> tea;
 int main()
 {
 
+	man.push_back(Manager(1, "asil"));
+	man.push_back(Manager(2, "sil"));
+	man.push_back(Manager(3, "ail"));
+	man.push_back(Manager(4, "asi"));
+
 	//step1: populate all the classes from files with objects in main
-	adm = new Admin();
+	adm = new Admin(0,emp,man,tea);
 
 	//step2: login into the system
 
@@ -85,7 +93,6 @@ Person* Login()
 		if (opt == 'q')
 		{
 			cout << "\n Closing Complain Management System!!\n";
-			Sleep(700);
 			valid = true;
 		}
 
@@ -125,19 +132,11 @@ Person* Login()
 			cout << " Enter Manager's ID: ";
 			do {
 				cin >> id;
-				for (int i = 0; i < man.size(); i++)
-				{
-					Manager* m = &man[i];
-					if (m->getID() == id) {
-						f = 1;
-						p = m;
-						break;
-					}
-				}
-
+				p = search(man, id);
+				if (p != nullptr)
+					f = 1;
 				if (f == 0)
 					cout << "\n Invalid ID!!\n Enter Manager's ID: ";
-
 			} while (f == 0);
 
 			cout << "\n You are now logged in as Manager\n";
@@ -151,16 +150,9 @@ Person* Login()
 			cout << " Enter Teacher's ID: ";
 			do {
 				cin >> id;
-				for (int i = 0; i < tea.size(); i++)
-				{
-					Teacher* m = &tea[i];
-					if (m->getID() == id) {
-						f = 1;
-						p = m;
-						break;
-					}
-				}
-
+				p = search(tea, id);
+				if (p != nullptr)
+					f = 1;
 				if (f == 0)
 					cout << "\n Invalid ID!!\n Enter Teacher's ID: ";
 
@@ -177,34 +169,58 @@ Person* Login()
 			cout << " Enter Employee's ID: ";
 			do {
 				cin >> id;
-				for (int i = 0; i < emp.size(); i++)
-				{
-					Employee* m = &emp[i];
-
-					if (m->getID() == id) {
-						f = 1;
-						p = m;
-						break;
-					}
-				}
-
+				p = search(emp, id);
+				if (p != nullptr)
+					f = 1;
 				if (f == 0)
 					cout << "\n Invalid ID!!\n Enter Employee's ID: ";
 
 			} while (f == 0);
 
 			cout << "\n You are now logged in as Employee\n";
-
 			valid = true;
 		}
 
 		else
 		{
 			cout << "\n Invalid!!\n";
-			Sleep(700);
 			system("cls");
 		}
+		Sleep(700);
 	}
 
 	return p;
+}
+
+Manager* search(vector<Manager> &per, int id)
+{	
+	for (int i = 0; i < per.size(); i++)
+	{
+		if (per[i].getID() == id)
+			return &per[i];		
+	}
+
+	return nullptr;
+}
+
+Teacher* search(vector<Teacher> &per, int id)
+{
+	for (int i = 0; i < per.size(); i++)
+	{
+		if (per[i].getID() == id)
+			return &per[i];
+	}
+
+	return nullptr;
+}
+
+Employee* search(vector<Employee> &per, int id)
+{
+	for (int i = 0; i < per.size(); i++)
+	{
+		if (per[i].getID() == id)
+			return &per[i];
+	}
+
+	return nullptr;
 }
