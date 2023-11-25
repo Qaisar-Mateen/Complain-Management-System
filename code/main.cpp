@@ -4,16 +4,16 @@
 using namespace std;
 
 
-Person* Login(DataBase& db);
+Person* Login();
 
 int main()
 {
-	DataBase db;
+	DataBase* db = DataBase::getDB();
 
-	db.init("Employee.txt", "Manager.txt", "Teacher.txt", "Department.txt");
+	db->init("Employee.txt", "Manager.txt", "Teacher.txt", "Department.txt");
 
 	while (1) {
-		Person* user = Login(db);
+		Person* user = Login();
 		if (user == nullptr)
 			break;
 		user->control();
@@ -43,16 +43,18 @@ int main()
 	return 0;
 }
 
-Person* Login(DataBase& db)
+Person* Login()
 {
+	DataBase* db = DataBase::getDB();
+
 	char opt;
 	bool valid = false;
 	Person* p = nullptr;
-	Admin* adm = db.getAdmin();
-	Director* dir = db.getDirector();
-	vector<Employee> *emp = db.getEmployees();
-	vector<Manager> *man = db.getManagers();
-	vector<Teacher> *tea = db.getTeachers();
+	Admin* adm = db->getAdmin();
+	Director* dir = db->getDirector();
+	vector<Employee> *emp = db->getEmployees();
+	vector<Manager> *man = db->getManagers();
+	vector<Teacher> *tea = db->getTeachers();
 
 
 	while (!valid)
@@ -116,7 +118,7 @@ Person* Login(DataBase& db)
 			cout << " Enter Manager's ID: ";
 			do {
 				cin >> id;
-				p = db.search(*man, id);
+				p = db->search(*man, id);
 				if (p != nullptr)
 					f = 1;
 				if (f == 0)
@@ -134,7 +136,7 @@ Person* Login(DataBase& db)
 			cout << " Enter Teacher's ID: ";
 			do {
 				cin >> id;
-				p = db.search(*tea, id);
+				p = db->search(*tea, id);
 				if (p != nullptr)
 					f = 1;
 				if (f == 0)
@@ -153,7 +155,7 @@ Person* Login(DataBase& db)
 			cout << " Enter Employee's ID: ";
 			do {
 				cin >> id;
-				p = db.search(*emp, id);
+				p = db->search(*emp, id);
 				if (p != nullptr)
 					f = 1;
 				if (f == 0)

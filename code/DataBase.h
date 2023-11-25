@@ -13,18 +13,27 @@ using namespace std;
 
 class DataBase
 {
+	static DataBase* db;
 	Director* dir;
 	Admin* adm;
 	vector<Employee> emp;
 	vector<Manager> man;
 	vector<Teacher> tea;
 	vector<Department> dept;
-public:
 
 	DataBase()
 	{
 		adm = new Admin(emp, man, tea);
 		dir = new Director();
+	}
+
+public:
+
+	static DataBase* getDB()
+	{
+		if (db == nullptr)
+			db = new DataBase();
+		return db;
 	}
 
 	template<typename t>
@@ -145,3 +154,5 @@ private:
 		}
 	}
 };
+
+DataBase* DataBase::db = nullptr;

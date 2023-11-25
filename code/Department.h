@@ -24,6 +24,11 @@ public:
         man = m;
     }
 
+    int getID()
+    {
+        return id;
+    }
+
     void addEmployee(Employee* e)
     {
         emps.push_back(e);
