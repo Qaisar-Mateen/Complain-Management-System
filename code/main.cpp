@@ -1,102 +1,19 @@
 #include<iostream>
 #include<windows.h>
-#include<vector>
-
-#include "Admin.h"
-#include "Manager.h"
-#include "Employee.h"
-#include "Teacher.h"
-#include "Director.h"
-
+#include "DataBase.h"
 using namespace std;
 
 
-//class DataBase
-//{
-//	Director* dir;
-//	Admin* adm;
-//	vector<Employee> emp;
-//	vector<Manager> man;
-//	vector<Teacher> tea;
-//
-//public:
-//
-//	template<typename T>
-//	void populateFromFile(const std::string& fileName, std::vector<T>& targetVector) {
-//		ifstream file(fileName);
-//		if (file.is_open()) {
-//			int id;
-//			string name;
-//
-//			while (file >> id) {
-//				// Read the entire line as the name, including spaces
-//				getline(file >> ws, name);
-//
-//				// Construct the item using the entire name
-//				T item(id, name);
-//				targetVector.push_back(item);
-//			}
-//
-//			file.close();
-//		}
-//		else {
-//			cout << "Unable to open the file " << fileName << endl;
-//		}
-//	}
-//};
-
-template<typename T>
-void populateFromFile(const std::string& fileName, std::vector<T>& targetVector) 
-{
-	ifstream file(fileName);
-	if (file.is_open()) {
-		int id;
-		string name;
-	
-		while (file >> id) {
-			// Read the entire line as the name, including spaces
-			getline(file >> ws, name);
-	
-			// Construct the item using the entire name
-			T item(id, name);
-			targetVector.push_back(item);
-		}
-	
-		file.close();
-	}
-	else {
-		cout << "Unable to open the file " << fileName << endl;
-	}
-}
-
-Person* Login();
-template<typename t>
-t* search(vector<t> &per, int id);
-
-Director* dir;
-Admin* adm;
-vector<Employee> emp;
-vector<Manager> man;
-vector<Teacher> tea;
-
+Person* Login(DataBase& db);
 
 int main()
 {
+	DataBase db;
 
-	populateFromFile("Employee.txt", emp);
-	populateFromFile("Manager.txt", man);
-	populateFromFile("Teacher.txt", tea);
-
-	////--------------------------------------------------------------
-	adm = new Admin(emp, man, tea);
-	////--------------------------------------------------------------
-	//step1: populate all the classes from files with objects in main
-	//adm = new Admin();
-
-	//step2: login into the system
+	db.init("Employee.txt", "Manager.txt", "Teacher.txt", "Department.txt");
 
 	while (1) {
-		Person* user = Login();
+		Person* user = Login(db);
 		if (user == nullptr)
 			break;
 		user->control();
@@ -126,12 +43,18 @@ int main()
 	return 0;
 }
 
-Person* Login()
+Person* Login(DataBase& db)
 {
 	char opt;
 	bool valid = false;
 	Person* p = nullptr;
-	
+	Admin* adm = db.getAdmin();
+	Director* dir = db.getDirector();
+	vector<Employee> *emp = db.getEmployees();
+	vector<Manager> *man = db.getManagers();
+	vector<Teacher> *tea = db.getTeachers();
+
+
 	while (!valid)
 	{
 		cout << "\t\t\t\t ---<><><><><><><><><><( Login )><><><><><><><><><>---\n\n";
@@ -140,11 +63,11 @@ Person* Login()
 			cout << " a: Admin\n";
 		if(dir)
 			cout << " b: Director\n";
-		if(!man.empty())
+		if(!man->empty())
 			cout << " c: Manager\n";
-		if(!tea.empty())
+		if(!tea->empty())
 			cout << " d: Teacher\n";
-		if(!emp.empty())
+		if(!emp->empty())
 			cout << " e: Employee\n";
 		cout << " q: Quit\n";
 		cout << " >";
@@ -187,13 +110,13 @@ Person* Login()
 			valid = true;
 		}
 
-		else if (opt == 'c' && !man.empty())
+		else if (opt == 'c' && !man->empty())
 		{
 			cout << "\t\t\t\t ---<><><><><><><><><><( Manager )><><><><><><><><><>---\n\n\n";
 			cout << " Enter Manager's ID: ";
 			do {
 				cin >> id;
-				p = search(man, id);
+				p = db.search(*man, id);
 				if (p != nullptr)
 					f = 1;
 				if (f == 0)
@@ -205,13 +128,13 @@ Person* Login()
 			valid = true;
 		}
 
-		else if (opt == 'd' && !tea.empty())
+		else if (opt == 'd' && !tea->empty())
 		{
 			cout << "\t\t\t\t ---<><><><><><><><><><( Teacher )><><><><><><><><><>---\n\n\n";
 			cout << " Enter Teacher's ID: ";
 			do {
 				cin >> id;
-				p = search(tea, id);
+				p = db.search(*tea, id);
 				if (p != nullptr)
 					f = 1;
 				if (f == 0)
@@ -224,13 +147,13 @@ Person* Login()
 			valid = true;
 		}
 
-		else if (opt == 'e' && !emp.empty())
+		else if (opt == 'e' && !emp->empty())
 		{
 			cout << "\t\t\t\t ---<><><><><><><><><><( Employee )><><><><><><><><><>---\n\n\n";
 			cout << " Enter Employee's ID: ";
 			do {
 				cin >> id;
-				p = search(emp, id);
+				p = db.search(*emp, id);
 				if (p != nullptr)
 					f = 1;
 				if (f == 0)
@@ -251,16 +174,4 @@ Person* Login()
 	}
 
 	return p;
-}
-
-template<typename t>
-t* search(vector<t> &per, int id)
-{
-	for (int i = 0; i < per.size(); i++)
-	{
-		if (per[i].getID() == id)
-			return &per[i];
-	}
-
-	return nullptr;
 }

@@ -24,16 +24,10 @@
     <ClCompile Include="code\Complaint.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="code\Department.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="code\Director.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="code\Employee.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="code\Job.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="code\Manager.cpp">
@@ -78,6 +72,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="code\Person.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="code\DataBase.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

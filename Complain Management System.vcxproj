@@ -21,10 +21,8 @@
   <ItemGroup>
     <ClCompile Include="code\Admin.cpp" />
     <ClCompile Include="code\Complaint.cpp" />
-    <ClCompile Include="code\Department.cpp" />
     <ClCompile Include="code\Director.cpp" />
     <ClCompile Include="code\Employee.cpp" />
-    <ClCompile Include="code\Job.cpp" />
     <ClCompile Include="code\main.cpp" />
     <ClCompile Include="code\Manager.cpp" />
     <ClCompile Include="code\Person.cpp" />
@@ -34,6 +32,7 @@
   <ItemGroup>
     <ClInclude Include="code\Admin.h" />
     <ClInclude Include="code\Complaint.h" />
+    <ClInclude Include="code\DataBase.h" />
     <ClInclude Include="code\Department.h" />
     <ClInclude Include="code\Director.h" />
     <ClInclude Include="code\Employee.h" />
