@@ -317,6 +317,7 @@ void Admin::removeEmployee() {
 	cout << "\n Enter Employee ID to remove: ";
 	cin >> empId;
 	Employee::markAsUnallocated(empId);
+
 }
 
 void Admin::removeTeacher() {
