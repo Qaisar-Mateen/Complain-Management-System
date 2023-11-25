@@ -4,21 +4,21 @@ Admin::Admin()
 {
 	id = 0;
 	Name = "admin";
-	populateFromFile("Employee.txt", Emps);
-	populateFromFile("Manager.txt", Managers);
-	populateFromFile("Teacher.txt", Teachs);
+	//populateFromFile("Employee.txt", Emps);
+	//populateFromFile("Manager.txt", Managers);
+	//populateFromFile("Teacher.txt", Teachs);
 }
 
-Admin::Admin(vector<Employee> e, vector<Manager> m, vector<Teacher> t)
+Admin::Admin(vector<Employee> &e, vector<Manager> &m, vector<Teacher> &t)
 {
 	id = 0;
 	Name = "admin";
-	populateFromFile("Employee.txt", Emps);
-	populateFromFile("Manager.txt", Managers);
-	populateFromFile("Teacher.txt", Teachs);
-	//Emps = e;
-	//Managers = m;
-	//Teachs = t;
+	//populateFromFile("Employee.txt", Emps);
+	//populateFromFile("Manager.txt", Managers);
+	//populateFromFile("Teacher.txt", Teachs);
+	Emps = &e;
+	Managers = &m;
+	Teachs = &t;
 }
 
 int Admin::getID() const
@@ -42,7 +42,7 @@ char Admin::printInterface()
 		cout << " Name: " << Name << endl;
 		cout << "\n --<{ Admin Controls }>--\n";
 		cout << " a: Add Someone\n";
-		if(!Managers.empty() || !Teachs.empty() || !Emps.empty())
+		if(!Managers->empty() || !Teachs->empty() || !Emps->empty())
 			cout << " b: Remove Someone\n";
 		cout << " c: Print Detail\n";
 		cout << " f: Log out\n";
@@ -51,7 +51,7 @@ char Admin::printInterface()
 
 		if (opt == 'a' || opt == 'c' || opt == 'f')
 			valid = true;
-		else if (opt == 'b' && (!Managers.empty() || !Teachs.empty() || !Emps.empty()))
+		else if (opt == 'b' && (!Managers->empty() || !Teachs->empty() || !Emps->empty()))
 			valid = true;
 		else {
 			cout << "\n Invalid!! \n";
@@ -100,20 +100,20 @@ char Admin::printRemoveInterface()
 		cout << " ID: " << id << endl;
 		cout << " Name: " << Name << endl;
 		cout << "\n --<{ Admin Controls }>--\n";
-		if(!Emps.empty())
+		if(!Emps->empty())
 			cout << " a: Remove Employee\n";
-		if (!Managers.empty())
+		if (!Managers->empty())
 			cout << " b: Remove Manager\n";
-		if (!Teachs.empty())
+		if (!Teachs->empty())
 			cout << " c: Remove Teacher\n";
 		cout << " >";
 		cin >> opt;
 
-		if (opt == 'a' && !Emps.empty())
+		if (opt == 'a' && !Emps->empty())
 			valid = true;
-		else if (opt == 'b' && !Managers.empty())
+		else if (opt == 'b' && !Managers->empty())
 			valid = true;
-		else if (opt == 'c' && !Teachs.empty())
+		else if (opt == 'c' && !Teachs->empty())
 			valid = true;
 		else {
 			cout << "\n Invalid!! \n";
@@ -207,41 +207,41 @@ void Admin::control()
 
 void Admin::displayEmployees()
 {
-	if (Emps.empty())
+	if (Emps->empty())
 	{
 		cout << "\n No Employee to Display\n";
 		return ;
 	}
 	cout << "\n\t\t\t--<{ All Employees Detail}>--\n";
 
-	for (int i = 0; i < Emps.size(); i++)
-		Emps[i].printDetail();
+	for (int i = 0; i < Emps->size(); i++)
+		(*Emps)[i].printDetail();
 }
 
 void Admin::displayManagers()
 {
-	if (Managers.empty())
+	if (Managers->empty())
 	{
 		cout << "\n No Manager to Display\n";
 		return;
 	}
 	cout << "\n\t\t\t--<{ All Managers Detail }>--\n";
 
-	for (int i = 0; i < Managers.size(); i++)
-		Managers[i].printDetail();
+	for (int i = 0; i < Managers->size(); i++)
+		(*Managers)[i].printDetail();
 }
 
 void Admin::displayTeachers()
 {
-	if (Teachs.empty())
+	if (Teachs->empty())
 	{
 		cout << "\n No Teacher to Display\n";
 		return;
 	}
 	cout << "\n\t\t\t--<{ All Teachers Detail }>--\n";
 
-	for (int i = 0; i < Teachs.size(); i++)
-		Teachs[i].printDetail();
+	for (int i = 0; i < Teachs->size(); i++)
+		(*Teachs)[i].printDetail();
 }
 
 void Admin::addEmployee()
@@ -256,7 +256,7 @@ void Admin::addEmployee()
 
 	Employee* e = new Employee(id, nam);
 
-	Emps.push_back(*e);
+	Emps->push_back(*e);
 
 	// Write employee data to the file
 	Employee::writeToFile(*e);
@@ -279,7 +279,7 @@ void Admin::addManager() {
 
 	Manager* mg = new Manager(id, nam);
 
-	Managers.push_back(*mg);
+	Managers->push_back(*mg);
 
 	// Write manager data to the file
 	Manager::writeToFile(*mg);
@@ -301,7 +301,7 @@ void Admin::addTeacher() {
 
 	Teacher* t = new Teacher(id, nam);
 
-	Teachs.push_back(*t);
+	Teachs->push_back(*t);
 
 	// Write teacher data to the file
 	Teacher::writeToFile(*t);

@@ -11,9 +11,8 @@
 using namespace std;
 
 Person* Login();
-Manager* search(vector<Manager> &per, int id);
-Teacher* search(vector<Teacher> &per, int id);
-Employee* search(vector<Employee> &per, int id);
+template<typename t>
+t* search(vector<t> &per, int id);
 
 Director* dir;
 Admin* adm;
@@ -27,7 +26,7 @@ int main()
 	adm = new Admin(emp, man, tea);
 	////--------------------------------------------------------------
 	//step1: populate all the classes from files with objects in main
-	adm = new Admin();
+	//adm = new Admin();
 
 	//step2: login into the system
 
@@ -189,29 +188,8 @@ Person* Login()
 	return p;
 }
 
-Manager* search(vector<Manager> &per, int id)
-{	
-	for (int i = 0; i < per.size(); i++)
-	{
-		if (per[i].getID() == id)
-			return &per[i];		
-	}
-
-	return nullptr;
-}
-
-Teacher* search(vector<Teacher> &per, int id)
-{
-	for (int i = 0; i < per.size(); i++)
-	{
-		if (per[i].getID() == id)
-			return &per[i];
-	}
-
-	return nullptr;
-}
-
-Employee* search(vector<Employee> &per, int id)
+template<typename t>
+t* search(vector<t> &per, int id)
 {
 	for (int i = 0; i < per.size(); i++)
 	{
