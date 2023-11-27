@@ -1,4 +1,4 @@
 # Complain-Management-System
 
-FILE FORMAT FOR COMPLAIN:
-comp_id | teacher_id | dept_id | description
+FILE FORMAT FOR DEPARTMENT:
+deptid dept name' managerId "employee ids"

@@ -4,18 +4,12 @@ Admin::Admin()
 {
 	id = 0;
 	Name = "admin";
-	//populateFromFile("Employee.txt", Emps);
-	//populateFromFile("Manager.txt", Managers);
-	//populateFromFile("Teacher.txt", Teachs);
 }
 
 Admin::Admin(vector<Employee> &e, vector<Manager> &m, vector<Teacher> &t)
 {
 	id = 0;
 	Name = "admin";
-	//populateFromFile("Employee.txt", Emps);
-	//populateFromFile("Manager.txt", Managers);
-	//populateFromFile("Teacher.txt", Teachs);
 	Emps = &e;
 	Managers = &m;
 	Teachs = &t;
@@ -316,8 +310,10 @@ void Admin::removeEmployee() {
 	cin.ignore();
 	cout << "\n Enter Employee ID to remove: ";
 	cin >> empId;
-	Employee::markAsUnallocated(empId);
-
+	if(emp_delete(empId))
+		Employee::markAsUnallocated(empId);
+	else
+		cerr << "\n Error: Failed to Remove, invalid ID!!\n";
 }
 
 void Admin::removeTeacher() {
@@ -325,7 +321,10 @@ void Admin::removeTeacher() {
 	cin.ignore();
 	cout << "\n Enter Teacher ID to remove: ";
 	cin >> tId;
-	Teacher::markAsUnallocated(tId);
+	if (tea_delete(tId))
+		Teacher::markAsUnallocated(tId);
+	else
+		cerr << "\n Error: Failed to Remove, invalid ID!!\n";
 }
 
 void Admin::removeManager() {
@@ -333,7 +332,52 @@ void Admin::removeManager() {
 	cin.ignore();
 	cout << "\n Enter Manager ID to remove: ";
 	cin >> mId;
-	Manager::markAsUnallocated(mId);
+	if (man_delete(mId))
+		Manager::markAsUnallocated(mId);
+	else
+		cerr << "\n Error: Failed to Remove, invalid ID!!\n";
+}
+
+bool Admin::emp_delete(int Id)
+{
+	for (int i = 0; i < Emps->size(); i++)
+	{
+		if ((*Emps)[i].getID() == Id)
+		{
+			(*Emps)[i].Delete();
+			Emps[i].erase(Emps->begin() + i);
+			return true;
+		}
+	}
+	return false;
+}
+
+bool Admin::man_delete(int Id)
+{
+	for (int i = 0; i < Managers->size(); i++)
+	{
+		if ((*Managers)[i].getID() == Id)
+		{
+			(*Managers)[i].~Manager();
+			Managers[i].erase(Managers->begin() + i);
+			return true;
+		}
+	}
+	return false;
+}
+
+bool Admin::tea_delete(int Id)
+{
+	for (int i = 0; i < Teachs->size(); i++)
+	{
+		if ((*Teachs)[i].getID() == Id)
+		{
+			(*Teachs)[i].~Teacher();
+			Teachs[i].erase(Teachs->begin() + i);
+			return true;
+		}
+	}
+	return false;
 }
 
 template<typename T>

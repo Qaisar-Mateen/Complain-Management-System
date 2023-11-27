@@ -1,11 +1,14 @@
+#pragma once
+
 #include <iostream>
-#include<windows.h>
+#include <windows.h>
 #include <string>
 #include <vector>
 #include "Person.h"
 #include "Employee.h"
 #include "Manager.h"
 #include "Teacher.h"
+//#include "DataBase.h"
 
 using namespace std;
 
@@ -56,6 +59,10 @@ public:
     void removeTeacher();
     
     void removeManager();
+
+    bool emp_delete(int Id);
+    bool man_delete(int Id);
+    bool tea_delete(int Id);
 
     template<typename T>
     static void populateFromFile(const std::string& fileName, std::vector<T>& targetVector);

@@ -25,7 +25,6 @@
     <ClCompile Include="code\Employee.cpp" />
     <ClCompile Include="code\main.cpp" />
     <ClCompile Include="code\Manager.cpp" />
-    <ClCompile Include="code\Person.cpp" />
     <ClCompile Include="code\State.cpp" />
     <ClCompile Include="code\Teacher.cpp" />
   </ItemGroup>

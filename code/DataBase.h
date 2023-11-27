@@ -1,15 +1,17 @@
+#pragma once
+
 #include <iostream>
 #include <fstream>
 #include <sstream>
 #include <vector>
 #include "Admin.h"
-#include "Manager.h"
-#include "Employee.h"
-#include "Teacher.h"
 #include "Director.h"
 #include "Department.h"
 
 using namespace std;
+
+#ifndef _DATABASE_H
+#define _DATABASE_H
 
 class DataBase
 {
@@ -28,7 +30,6 @@ class DataBase
 	}
 
 public:
-
 	static DataBase* getDB()
 	{
 		if (db == nullptr)
@@ -48,6 +49,20 @@ public:
 		return nullptr;
 	}
 
+	//template<typename t>
+	bool remove_emp(int id)
+	{
+		for (int i = 0; i < emp.size(); i++)
+		{
+			if (emp[i].getID() == id)
+			{
+				emp[i].~Employee();
+				return true;
+			}
+		}
+
+		return false;
+	}
 	Admin* getAdmin()
 	{
 		return adm;
@@ -155,4 +170,17 @@ private:
 	}
 };
 
+//	void deleteEmployeeById(int empId) {
+//		// Find the iterator pointing to the element with the specified ID
+//		auto it = std::remove_if(Emps->begin(), Emps->end(),
+//			[empId](const Employee& emp) { return emp.getID() == empId; });
+//
+//		// Erase the elements that match the condition
+//		Emps->erase(it, Emps->end());
+//
+//		std::cout << "Employee(s) with ID " << empId << " deleted successfully.\n";
+//	}
+//};
+
 DataBase* DataBase::db = nullptr;
+#endif //_DATABASE_H

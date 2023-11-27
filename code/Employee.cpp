@@ -25,9 +25,9 @@ void Employee::updateSystem()
 
 }
 
-Employee::~Employee()
-{
-}
+//Employee::~Employee()
+//{
+//}
 int Employee::getID() const {
     return id;
 }
@@ -92,3 +92,4 @@ void Employee::markAsUnallocated(int empId) {
     remove("Employee.txt");
     rename("temp.txt", "Employee.txt");
 }
+
