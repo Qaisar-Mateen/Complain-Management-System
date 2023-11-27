@@ -15,17 +15,17 @@ using namespace std;
 class Admin : virtual public Person {
     int id;
     string Name;
-    vector<Employee> Emps;
-    vector<Manager> Managers;
-    vector<Teacher> Teachs;
+    vector<Employee> *Emps;
+    vector<Manager> *Managers;
+    vector<Teacher> *Teachs;
 
 public:
     
     Admin();
 
-    Admin(vector<Employee>, vector<Manager>, vector<Teacher>);
+    Admin(vector<Employee>&, vector<Manager>&, vector<Teacher>&);
 
-    int getID() const ;
+    int getID() const;
 
     string getName() const;
 

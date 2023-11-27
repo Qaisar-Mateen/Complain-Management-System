@@ -10,10 +10,68 @@
 
 using namespace std;
 
+
+//class DataBase
+//{
+//	Director* dir;
+//	Admin* adm;
+//	vector<Employee> emp;
+//	vector<Manager> man;
+//	vector<Teacher> tea;
+//
+//public:
+//
+//	template<typename T>
+//	void populateFromFile(const std::string& fileName, std::vector<T>& targetVector) {
+//		ifstream file(fileName);
+//		if (file.is_open()) {
+//			int id;
+//			string name;
+//
+//			while (file >> id) {
+//				// Read the entire line as the name, including spaces
+//				getline(file >> ws, name);
+//
+//				// Construct the item using the entire name
+//				T item(id, name);
+//				targetVector.push_back(item);
+//			}
+//
+//			file.close();
+//		}
+//		else {
+//			cout << "Unable to open the file " << fileName << endl;
+//		}
+//	}
+//};
+
+template<typename T>
+void populateFromFile(const std::string& fileName, std::vector<T>& targetVector) 
+{
+	ifstream file(fileName);
+	if (file.is_open()) {
+		int id;
+		string name;
+	
+		while (file >> id) {
+			// Read the entire line as the name, including spaces
+			getline(file >> ws, name);
+	
+			// Construct the item using the entire name
+			T item(id, name);
+			targetVector.push_back(item);
+		}
+	
+		file.close();
+	}
+	else {
+		cout << "Unable to open the file " << fileName << endl;
+	}
+}
+
 Person* Login();
-Manager* search(vector<Manager> &per, int id);
-Teacher* search(vector<Teacher> &per, int id);
-Employee* search(vector<Employee> &per, int id);
+template<typename t>
+t* search(vector<t> &per, int id);
 
 Director* dir;
 Admin* adm;
@@ -21,8 +79,14 @@ vector<Employee> emp;
 vector<Manager> man;
 vector<Teacher> tea;
 
+
 int main()
 {
+
+	populateFromFile("Employee.txt", emp);
+	populateFromFile("Manager.txt", man);
+	populateFromFile("Teacher.txt", tea);
+
 	////--------------------------------------------------------------
 	adm = new Admin(emp, man, tea);
 	////--------------------------------------------------------------
@@ -38,26 +102,26 @@ int main()
 		user->control();
 	}
 
-	//adm->addEmployee();
-	adm->removeEmployee();
-	adm->removeEmployee();
-	cin.ignore();
+	////adm->addEmployee();
+	//adm->removeEmployee();
+	//adm->removeEmployee();
+	//cin.ignore();
 
-	adm->addTeacher();
+	//adm->addTeacher();
 
-	adm->removeTeacher();
+	//adm->removeTeacher();
 
-	adm->addManager();
+	//adm->addManager();
 
-	adm->addManager();
-	adm->removeManager();
-	cin.ignore();
-	
-	/*adm->displayEmployees();
+	//adm->addManager();
+	//adm->removeManager();
+	//cin.ignore();
+	//
+	///*adm->displayEmployees();
 
-	adm->displayManagers();
+	//adm->displayManagers();
 
-	adm->displayTeachers();*/
+	//adm->displayTeachers();*/
 
 	return 0;
 }
@@ -189,29 +253,8 @@ Person* Login()
 	return p;
 }
 
-Manager* search(vector<Manager> &per, int id)
-{	
-	for (int i = 0; i < per.size(); i++)
-	{
-		if (per[i].getID() == id)
-			return &per[i];		
-	}
-
-	return nullptr;
-}
-
-Teacher* search(vector<Teacher> &per, int id)
-{
-	for (int i = 0; i < per.size(); i++)
-	{
-		if (per[i].getID() == id)
-			return &per[i];
-	}
-
-	return nullptr;
-}
-
-Employee* search(vector<Employee> &per, int id)
+template<typename t>
+t* search(vector<t> &per, int id)
 {
 	for (int i = 0; i < per.size(); i++)
 	{
