@@ -22,7 +22,7 @@ public:
 
     Manager(int ID, string Name);
 
-    void addDept(Department* d);
+    void addDept(Department& d);
 
     void control();
 

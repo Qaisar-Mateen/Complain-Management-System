@@ -10,7 +10,7 @@ Department::Department(int ID, string Name, Manager * m)
     id = ID;
     name = Name;
     man = m;
-    man->addDept(this);
+    man->addDept(*this);
 }
 
 int Department::getID()

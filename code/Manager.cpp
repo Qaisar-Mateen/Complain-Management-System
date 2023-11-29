@@ -15,12 +15,12 @@ Manager::Manager(int ID, string Name)
     dept = nullptr;
 }
 
-void Manager::addDept(Department* d)
+void Manager::addDept(Department& d)
 {
     if (dept)
         cout << "\n Already Manager of Dept: " << dept->getName();
     else
-        dept = d;
+        dept = &d;
 }
 
 void Manager::control()
