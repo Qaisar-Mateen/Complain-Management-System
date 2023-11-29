@@ -1,8 +1,12 @@
+#pragma once
 #include <string>
 #include <iostream>
 #include <fstream>
 #include "Person.h"
+#include "Department.h"
 using namespace std;
+
+//class Department;
 
 #ifndef _MANAGER_H
 #define _MANAGER_H
@@ -11,11 +15,14 @@ class Manager : virtual public Person {
 private:
     int id;
     string name;
+    Department* dept;
 
 public: 
     Manager();
 
     Manager(int ID, string Name);
+
+    void addDept(Department* d);
 
     void control();
 

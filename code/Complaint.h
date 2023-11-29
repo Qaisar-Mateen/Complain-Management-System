@@ -1,3 +1,4 @@
+#pragma once
 #include<string>
 
 using namespace std;
@@ -5,10 +6,18 @@ using namespace std;
 #ifndef _COMPLAINT_H
 #define _COMPLAINT_H
 
-class Complaint {
-public: 
+class Department;
+class Teacher;
+
+class Complaint 
+{
     int id;
     string description;
+    Department* to;
+    Teacher* From;
+
+
+public:
     
 void currState();
     

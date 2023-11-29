@@ -1,5 +1,6 @@
 #include "Complaint.h"
-
+#include "Teacher.h"
+#include "Department.h"
 
 void Complaint::currState() {
 

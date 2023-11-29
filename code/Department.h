@@ -1,13 +1,19 @@
+#pragma once
+
 #include<string>
 #include<vector>
-#include"Manager.h"
-#include"Employee.h"
-#include"Complaint.h"
+//#include"Employee.h"
+//#include"Complaint.h"
+//#include"Manager.h"
 
 using namespace std;
 
 #ifndef _DEPARTMENT_H
 #define _DEPARTMENT_H
+
+class Employee;
+class Manager;
+class Complaint;
 
 class Department {
     int id;
@@ -17,34 +23,29 @@ class Department {
     vector<Complaint*> complaints;
 
 public:
-    Department(int ID, string Name, Manager* m)
-    {
-        id = ID;
-        name = Name;
-        man = m;
-    }
+    Department(int ID, string Name, Manager* m);/* : id(ID), name(Name), man(m) {
+        man->addDept(*this);
+    }*/
 
-    int getID()
-    {
+    int getID();
+    /*{
         return id;
-    }
+    }*/
 
-    void addEmployee(Employee* e)
-    {
+    string getName();
+    /*{
+        return name;
+    }*/
+
+    void addEmployee(Employee* e);
+    /*{
         emps.push_back(e);
-    }
+    }*/
 
-    void addManager(Manager* m)
-    {
-        if (man != nullptr)
-            delete man;
-        man = m;        
-    }
-
-    void addComplaint(Complaint* c)
-    {
+    void addComplaint(Complaint* c);
+    /*{
         complaints.push_back(c);
-    }
+    }*/
 };
 
 #endif //_DEPARTMENT_H

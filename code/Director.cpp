@@ -1,14 +1,12 @@
-/**
- * Project Complain Management System
- */
-
-
 #include "Director.h"
+//#include"Department.h"
 
-/**
- * Director implementation
- */
-
+Director::Director(vector<Department>& d)
+{
+    id = 0;
+    Name = "Director";
+    depts = &d;
+}
 
 int Director::getID() const
 {

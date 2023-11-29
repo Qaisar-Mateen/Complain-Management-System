@@ -1,16 +1,12 @@
-#include<iostream>
-#include<windows.h>
-#include "DataBase.h"
-using namespace std;
+#include "Global.h"
 
+using namespace std;
 
 Person* Login();
 
 int main()
 {
-	DataBase* db = DataBase::getDB();
-
-	db->init("Employee.txt", "Manager.txt", "Teacher.txt", "Department.txt");
+	init("Employee.txt", "Manager.txt", "Teacher.txt", "Department.txt");
 
 	while (1) {
 		Person* user = Login();
@@ -19,43 +15,14 @@ int main()
 		user->control();
 	}
 
-	////adm->addEmployee();
-	//adm->removeEmployee();
-	//adm->removeEmployee();
-	//cin.ignore();
-
-	//adm->addTeacher();
-
-	//adm->removeTeacher();
-
-	//adm->addManager();
-
-	//adm->addManager();
-	//adm->removeManager();
-	//cin.ignore();
-	//
-	///*adm->displayEmployees();
-
-	//adm->displayManagers();
-
-	//adm->displayTeachers();*/
-
 	return 0;
 }
 
 Person* Login()
 {
-	DataBase* db = DataBase::getDB();
-
 	char opt;
 	bool valid = false;
 	Person* p = nullptr;
-	Admin* adm = db->getAdmin();
-	Director* dir = db->getDirector();
-	vector<Employee> *emp = db->getEmployees();
-	vector<Manager> *man = db->getManagers();
-	vector<Teacher> *tea = db->getTeachers();
-
 
 	while (!valid)
 	{
@@ -65,11 +32,11 @@ Person* Login()
 			cout << " a: Admin\n";
 		if(dir)
 			cout << " b: Director\n";
-		if(!man->empty())
+		if(!man.empty())
 			cout << " c: Manager\n";
-		if(!tea->empty())
+		if(!tea.empty())
 			cout << " d: Teacher\n";
-		if(!emp->empty())
+		if(!emp.empty())
 			cout << " e: Employee\n";
 		cout << " q: Quit\n";
 		cout << " >";
@@ -112,13 +79,13 @@ Person* Login()
 			valid = true;
 		}
 
-		else if (opt == 'c' && !man->empty())
+		else if (opt == 'c' && !man.empty())
 		{
 			cout << "\t\t\t\t ---<><><><><><><><><><( Manager )><><><><><><><><><>---\n\n\n";
 			cout << " Enter Manager's ID: ";
 			do {
 				cin >> id;
-				p = db->search(*man, id);
+				p = search(man, id);
 				if (p != nullptr)
 					f = 1;
 				if (f == 0)
@@ -130,13 +97,13 @@ Person* Login()
 			valid = true;
 		}
 
-		else if (opt == 'd' && !tea->empty())
+		else if (opt == 'd' && !tea.empty())
 		{
 			cout << "\t\t\t\t ---<><><><><><><><><><( Teacher )><><><><><><><><><>---\n\n\n";
 			cout << " Enter Teacher's ID: ";
 			do {
 				cin >> id;
-				p = db->search(*tea, id);
+				p = search(tea, id);
 				if (p != nullptr)
 					f = 1;
 				if (f == 0)
@@ -149,13 +116,13 @@ Person* Login()
 			valid = true;
 		}
 
-		else if (opt == 'e' && !emp->empty())
+		else if (opt == 'e' && !emp.empty())
 		{
 			cout << "\t\t\t\t ---<><><><><><><><><><( Employee )><><><><><><><><><>---\n\n\n";
 			cout << " Enter Employee's ID: ";
 			do {
 				cin >> id;
-				p = db->search(*emp, id);
+				p = search(emp, id);
 				if (p != nullptr)
 					f = 1;
 				if (f == 0)

@@ -7,9 +7,12 @@ using namespace std;
 #ifndef _EMPLOYEE_H
 #define _EMPLOYEE_H
 
+class Department;
+
 class Employee: virtual public Person {
     int id;
     string name;
+    Department* dept;
 
 public:
     Employee();

@@ -1,19 +1,18 @@
 #pragma once
-
 #include <iostream>
 #include <windows.h>
 #include <string>
 #include <vector>
 #include "Person.h"
-#include "Employee.h"
-#include "Manager.h"
-#include "Teacher.h"
-//#include "DataBase.h"
 
 using namespace std;
 
 #ifndef _ADMIN_H
 #define _ADMIN_H
+
+class Employee;
+class Manager;
+class Teacher;
 
 class Admin : virtual public Person {
     int id;

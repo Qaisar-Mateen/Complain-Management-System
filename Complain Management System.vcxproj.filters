@@ -33,10 +33,10 @@
     <ClCompile Include="code\Manager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="code\State.cpp">
+    <ClCompile Include="code\Teacher.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="code\Teacher.cpp">
+    <ClCompile Include="code\Department.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -56,13 +56,7 @@
     <ClInclude Include="code\Employee.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="code\Job.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="code\Manager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="code\State.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="code\Teacher.h">
@@ -71,7 +65,7 @@
     <ClInclude Include="code\Person.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="code\DataBase.h">
+    <ClInclude Include="code\Global.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,4 +1,7 @@
 #include "Admin.h"
+#include "Employee.h"
+#include "Manager.h"
+#include "Teacher.h"
 
 Admin::Admin()
 {
@@ -69,10 +72,11 @@ char Admin::printAddInterface()
 		cout << " a: Add Employee\n";
 		cout << " b: Add Manager\n";
 		cout << " c: Add Teacher\n";
+		cout << " l: Go Back\n";
 		cout << " >";
 		cin >> opt;
 
-		if (opt == 'a' || opt == 'c' || opt == 'b')
+		if (opt == 'a' || opt == 'c' || opt == 'b' || opt == 'l')
 			valid = true;
 
 		else {
@@ -100,10 +104,13 @@ char Admin::printRemoveInterface()
 			cout << " b: Remove Manager\n";
 		if (!Teachs->empty())
 			cout << " c: Remove Teacher\n";
+		cout << " l: Go Back\n";
 		cout << " >";
 		cin >> opt;
 
-		if (opt == 'a' && !Emps->empty())
+		if (opt == 'l')
+			valid = true;
+		else if (opt == 'a' && !Emps->empty())
 			valid = true;
 		else if (opt == 'b' && !Managers->empty())
 			valid = true;
@@ -132,10 +139,11 @@ char Admin::printDetailInterface()
 		cout << " a: Print Detail of Employees\n";
 		cout << " b: Print Detail of Managers\n";
 		cout << " c: Print Detail of Teachers\n";
+		cout << " l: Go Back\n";
 		cout << " >";
 		cin >> opt;
 
-		if (opt == 'a' || opt == 'b' || opt == 'c')
+		if (opt == 'a' || opt == 'b' || opt == 'c' || opt == 'l')
 			valid = true;
 
 		else {
@@ -159,7 +167,7 @@ void Admin::control()
 		{
 			opt = printAddInterface();
 			if (opt == 'a')
-				addEmployee();
+				addEmployee();	
 			else if (opt == 'b')
 				addManager();
 			else if (opt == 'c')
@@ -187,7 +195,7 @@ void Admin::control()
 			else if (opt == 'c')
 				displayTeachers();
 		}
-		if(opt != 'f')
+		if(opt != 'f' && opt != 'l')
 		{ 
 			cin.ignore();
 			cout << "\n Press any key to continue...";
@@ -340,12 +348,11 @@ void Admin::removeManager() {
 
 bool Admin::emp_delete(int Id)
 {
-	for (int i = 0; i < Emps->size(); i++)
+	for (auto it = Emps->begin(); it != Emps->end(); ++it)
 	{
-		if ((*Emps)[i].getID() == Id)
+		if (it->getID() == Id)
 		{
-			(*Emps)[i].Delete();
-			Emps[i].erase(Emps->begin() + i);
+			it = Emps->erase(it);
 			return true;
 		}
 	}
@@ -354,12 +361,11 @@ bool Admin::emp_delete(int Id)
 
 bool Admin::man_delete(int Id)
 {
-	for (int i = 0; i < Managers->size(); i++)
+	for (auto it = Managers->begin(); it != Managers->end(); ++it)
 	{
-		if ((*Managers)[i].getID() == Id)
+		if (it->getID() == Id)
 		{
-			(*Managers)[i].~Manager();
-			Managers[i].erase(Managers->begin() + i);
+			it = Managers->erase(it);
 			return true;
 		}
 	}
@@ -368,37 +374,13 @@ bool Admin::man_delete(int Id)
 
 bool Admin::tea_delete(int Id)
 {
-	for (int i = 0; i < Teachs->size(); i++)
-	{
-		if ((*Teachs)[i].getID() == Id)
-		{
-			(*Teachs)[i].~Teacher();
-			Teachs[i].erase(Teachs->begin() + i);
-			return true;
-		}
-	}
-	return false;
-}
-
-template<typename T>
-void Admin::populateFromFile(const std::string& fileName, std::vector<T>& targetVector) {
-	ifstream file(fileName);
-	if (file.is_open()) {
-		int id;
-		string name;
-
-		while (file >> id) {
-			// Read the entire line as the name, including spaces
-			getline(file >> ws, name);
-
-			// Construct the item using the entire name
-			T item(id, name);
-			targetVector.push_back(item);
-		}
-
-		file.close();
-	}
-	else {
-		cout << "Unable to open the file " << fileName << endl;
-	}
+	for (auto it = Teachs->begin(); it != Teachs->end(); ++it)
+    {
+        if (it->getID() == Id)
+        {
+            it = Teachs->erase(it);
+            return true;
+        }
+    }
+    return false;
 }

@@ -1,14 +1,26 @@
 #include "Manager.h"
+#include "Department.h"
 
 Manager::Manager()
 {
 	id = -1;
+    name = "Invalid";
+    dept = nullptr;
 }
 
 Manager::Manager(int ID, string Name)
 {
 	id = ID;
 	name = Name;
+    dept = nullptr;
+}
+
+void Manager::addDept(Department* d)
+{
+    if (dept)
+        cout << "\n Already Manager of Dept: " << dept->getName();
+    else
+        dept = d;
 }
 
 void Manager::control()
@@ -17,7 +29,7 @@ void Manager::control()
 
 void Manager::printDetail()
 {
-	cout << "\n ID: "<< id <<"\t Name: " << name<<"\n";
+    cout << "\n ID: " << id << "\t Name: " << name << " Manager of '" << dept->getName() << "' Department \n";
 }
 
 void Manager::reviewRequest() {
