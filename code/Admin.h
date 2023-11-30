@@ -19,15 +19,15 @@ class Teacher;
 class Admin : virtual public Person {
     int id;
     string Name;
-    vector<Employee> *Emps;
-    vector<Manager> *Managers;
-    vector<Teacher> *Teachs;
+    vector<Employee*> *Emps;
+    vector<Manager*> *Managers;
+    vector<Teacher*> *Teachs;
 
 public:
     
     Admin();
 
-    Admin(vector<Employee>&, vector<Manager>&, vector<Teacher>&);
+    Admin(vector<Employee*>&, vector<Manager*>&, vector<Teacher*>&);
 
     int getID() const;
 
@@ -62,11 +62,10 @@ public:
     void removeManager();
 
     bool emp_delete(int Id);
-    bool man_delete(int Id);
-    bool tea_delete(int Id);
 
-    template<typename T>
-    static void populateFromFile(const std::string& fileName, std::vector<T>& targetVector);
+    bool man_delete(int Id);
+
+    bool tea_delete(int Id);
 };
 
 #endif //_ADMIN_H

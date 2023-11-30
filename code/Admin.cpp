@@ -12,7 +12,7 @@ Admin::Admin()
 	Name = "admin";
 }
 
-Admin::Admin(vector<Employee> &e, vector<Manager> &m, vector<Teacher> &t)
+Admin::Admin(vector<Employee*> &e, vector<Manager*> &m, vector<Teacher*> &t)
 {
 	id = 0;
 	Name = "admin";
@@ -220,7 +220,7 @@ void Admin::displayEmployees()
 	cout << "\n\t\t\t--<{ All Employees Detail}>--\n";
 
 	for (int i = 0; i < Emps->size(); i++)
-		(*Emps)[i].printDetail();
+		(*Emps)[i]->printDetail();
 }
 
 void Admin::displayManagers()
@@ -233,7 +233,7 @@ void Admin::displayManagers()
 	cout << "\n\t\t\t--<{ All Managers Detail }>--\n";
 
 	for (int i = 0; i < Managers->size(); i++)
-		(*Managers)[i].printDetail();
+		(*Managers)[i]->printDetail();
 }
 
 void Admin::displayTeachers()
@@ -246,7 +246,7 @@ void Admin::displayTeachers()
 	cout << "\n\t\t\t--<{ All Teachers Detail }>--\n";
 
 	for (int i = 0; i < Teachs->size(); i++)
-		(*Teachs)[i].printDetail();
+		(*Teachs)[i]->printDetail();
 }
 
 void Admin::addEmployee()
@@ -267,16 +267,14 @@ void Admin::addEmployee()
 		cerr << "\n Invalid Department Id!!\n";
 		return;
 	}
-
 	Employee* e = new Employee(id, nam);
 
-	Emps->push_back(*e);
-	e->addDept(search(depts, d_id));
+	e->addDept(d);
+	Emps->push_back(e);
+	d->addEmployee(e);
 
-	// Write employee data to the file
 	Employee::writeToFile(*e);
 
-	// Display details
 	cout << "\n Employee added successfully.\n";
 	e->printDetail();
 }
@@ -298,7 +296,7 @@ void Admin::addManager() {
 
 	Manager* mg = new Manager(id, nam);
 
-	Managers->push_back(*mg);
+	Managers->push_back(mg);
 
 	// Write manager data to the file
 	Manager::writeToFile(*mg);
@@ -321,7 +319,7 @@ void Admin::addTeacher() {
 
 	Teacher* t = new Teacher(id, nam);
 
-	Teachs->push_back(*t);
+	Teachs->push_back(t);
 
 	// Write teacher data to the file
 	Teacher::writeToFile(*t);
@@ -368,7 +366,7 @@ bool Admin::emp_delete(int Id)
 {
 	for (auto it = Emps->begin(); it != Emps->end(); ++it)
 	{
-		if (it->getID() == Id)
+		if ((*it)->getID() == Id)
 		{
 			it = Emps->erase(it);
 			return true;
@@ -381,7 +379,7 @@ bool Admin::man_delete(int Id)
 {
 	for (auto it = Managers->begin(); it != Managers->end(); ++it)
 	{
-		if (it->getID() == Id)
+		if ((*it)->getID() == Id)
 		{
 			it = Managers->erase(it);
 			return true;
@@ -394,7 +392,7 @@ bool Admin::tea_delete(int Id)
 {
 	for (auto it = Teachs->begin(); it != Teachs->end(); ++it)
     {
-        if (it->getID() == Id)
+        if ((*it)->getID() == Id)
         {
             it = Teachs->erase(it);
             return true;

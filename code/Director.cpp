@@ -1,7 +1,7 @@
 #include "Director.h"
 //#include"Department.h"
 
-Director::Director(vector<Department>& d)
+Director::Director(vector<Department*>& d)
 {
     id = 0;
     Name = "Director";

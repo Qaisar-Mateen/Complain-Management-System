@@ -9,12 +9,17 @@
 
 using namespace std;
 
+
+vector<Employee> E;
+vector<Manager> M;
+vector<Teacher> T;
+
 Director* dir;
 Admin* adm;
-vector<Employee> emp;
-vector<Manager> man;
-vector<Teacher> tea;
-vector<Department> depts;
+vector<Employee*> emp;
+vector<Manager*> man;
+vector<Teacher*> tea;
+vector<Department*> depts;
 
 void populateDepartment(string filename)
 {
@@ -49,13 +54,13 @@ void populateDepartment(string filename)
 			exit(1);
 		}
 		Department *d = new Department(dept_id, name, m);
-		depts.push_back(*d);
+		depts.push_back(d);
 
 		for (int i = 0; i < emp_id.size(); i++) {
 			Employee* e = search(emp, emp_id[i]);
 			if (e) {
-				depts.back().addEmployee(e);			
 				e->addDept(d);
+				depts.back()->addEmployee(e);
 			}
 			else {
 				cerr << "\n ERROR: Employee with id: " << emp_id[i] << " does not exists\n";
@@ -66,14 +71,24 @@ void populateDepartment(string filename)
 	file.close();
 }
 
+template<typename t>
+void move(vector<t>& a, vector<t*>& b)
+{
+	for (int i = 0; i < a.size(); i++)
+		b.push_back(&a[i]);
+}
+
 void init(string e_file, string m_file, string t_file, string d_file)
 {
 	adm = new Admin(emp, man, tea);
 	dir = new Director(depts);
 
-	populateFromFile(e_file, emp);
-	populateFromFile(m_file, man);
-	populateFromFile(t_file, tea);
+	populateFromFile(e_file, E);
+	move(E, emp);
+	populateFromFile(m_file, M);
+	move(M, man);
+	populateFromFile(t_file, T);
+	move(T, tea);
 
 	populateDepartment(d_file);
 }

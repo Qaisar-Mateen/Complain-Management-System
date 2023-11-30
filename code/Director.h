@@ -12,11 +12,11 @@ class Department;
 class Director: virtual public Person {
     int id;
     string Name;
-    vector<Department>* depts;
+    vector<Department*>* depts;
 
 public: 
 
-    Director(vector<Department>& depts);
+    Director(vector<Department*>& depts);
 
     int getID() const;
 

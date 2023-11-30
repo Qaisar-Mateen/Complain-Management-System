@@ -3,6 +3,7 @@
 #include <fstream>
 #include <sstream>
 #include <vector>
+#define NOMINMAX
 #include <windows.h>
 
 // Forward declarations
@@ -19,24 +20,23 @@ using namespace std;
 
 extern Director* dir;
 extern Admin* adm;
-extern vector<Employee> emp;
-extern vector<Manager> man;
-extern vector<Teacher> tea;
-extern vector<Department> depts;
+extern vector<Employee*> emp;
+extern vector<Manager*> man;
+extern vector<Teacher*> tea;
+extern vector<Department*> depts;
 
 void populateDepartment(string filename);
 void init(string e_file, string m_file, string t_file, string d_file);
 
 
 template<typename t>
-t* search(vector<t>& per, int id)
+t* search(vector<t*>& per, int id)
 {
 	for (int i = 0; i < per.size(); i++)
 	{
-		if (per[i].getID() == id)
-			return &per[i];
+		if (per[i]->getID() == id)
+			return per[i];
 	}
-
 	return nullptr;
 }
 
