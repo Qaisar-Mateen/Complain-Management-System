@@ -1,4 +1,10 @@
 #include "Global.h"
+#include "Person.h"
+#include "Admin.h"
+#include "Employee.h"
+#include "Manager.h"
+#include "Teacher.h"
+#include "Director.h"
 
 using namespace std;
 

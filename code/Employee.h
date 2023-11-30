@@ -19,6 +19,8 @@ public:
 
     Employee(int ID, string Name);
 
+    void addDept(Department *d);
+
     void control();
 
     static void writeToFile(const Employee& emp);

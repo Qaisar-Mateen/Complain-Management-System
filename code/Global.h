@@ -1,34 +1,31 @@
 #pragma once
-
 #include <iostream>
 #include <fstream>
 #include <sstream>
 #include <vector>
 #include <windows.h>
-#include "Person.h"
-#include "Admin.h"
-#include "Department.h"
-#include "Employee.h"
-#include "Manager.h"
-#include "Teacher.h"
-#include "Complaint.h"
-#include "Director.h"
+
+// Forward declarations
+class Person;
+class Admin;
+class Department;
+class Employee;
+class Manager;
+class Teacher;
+class Complaint;
+class Director;
 
 using namespace std;
 
-Director* dir;
-Admin* adm;
-vector<Employee> emp;
-vector<Manager> man;
-vector<Teacher> tea;
-vector<Department> dept;
+extern Director* dir;
+extern Admin* adm;
+extern vector<Employee> emp;
+extern vector<Manager> man;
+extern vector<Teacher> tea;
+extern vector<Department> depts;
 
-template<typename T>
-void populateFromFile(const string&, vector<T>& );
-template<typename t>
-t* search(vector<t>& , int );
-void init(string, string, string, string);
-void populateDepartment(string);
+void populateDepartment(string filename);
+void init(string e_file, string m_file, string t_file, string d_file);
 
 
 template<typename t>
@@ -43,10 +40,8 @@ t* search(vector<t>& per, int id)
 	return nullptr;
 }
 
-
-
 template<typename T>
-void populateFromFile(const string& fileName, vector<T>& targetVector) 
+void populateFromFile(const string& fileName, vector<T>& targetVector)
 {
 	ifstream file(fileName);
 	if (file.is_open()) {
@@ -66,52 +61,4 @@ void populateFromFile(const string& fileName, vector<T>& targetVector)
 	else {
 		cout << "Unable to open the file " << fileName << endl;
 	}
-}
-
-void populateDepartment(string filename)
-{
-	ifstream file(filename);
-
-	if (!file.is_open()) {
-		cerr << "Error opening file." << endl;
-		return;
-	}
-
-	string line;
-	while (getline(file, line))
-	{
-		istringstream iss(line);
-		int man_id, dept_id;
-		vector<int> emp_id, comp_id;
-		string name;
-
-		iss >> dept_id >> ws; // Skip whitespaces
-		getline(iss, name, '\'');
-		iss >> man_id >> ws;
-
-		// Process the employee ids
-		iss.ignore(); // Skip the opening quote
-		int employee_id;
-		while (iss >> employee_id >> ws)
-			emp_id.push_back(employee_id);
-
-		dept.push_back(Department(dept_id, name, search(man, man_id)));
-
-		for (int i = 0; i < emp_id.size(); i++)
-			dept.back().addEmployee(search(emp, emp_id[i]));
-	}
-	file.close();
-}
-
-
-void init(string e_file, string m_file, string t_file, string d_file)
-{
-	adm = new Admin(emp, man, tea);
-	dir = new Director(dept);
-
-	populateFromFile(e_file, emp);
-	populateFromFile(m_file, man);
-	populateFromFile(t_file, tea);
-
-	populateDepartment(d_file);
 }

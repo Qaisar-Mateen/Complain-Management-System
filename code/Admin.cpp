@@ -1,7 +1,10 @@
+#pragma once
 #include "Admin.h"
 #include "Employee.h"
 #include "Manager.h"
+#include "Department.h"
 #include "Teacher.h"
+#include "Global.h"
 
 Admin::Admin()
 {
@@ -251,14 +254,24 @@ void Admin::addEmployee()
 	string nam;
 
 	// Automatically generate a unique ID
-	int id = Employee::getUniqueID();
+	int id = Employee::getUniqueID(), d_id;
 	cin.ignore();
 	cout << "\n Enter Employee Name: ";
 	getline(cin, nam);
+	cout << "\n Enter Employee department id: ";
+	cin >> d_id;
+
+	Department* d =  search(depts, d_id);
+
+	if (!d) {
+		cerr << "\n Invalid Department Id!!\n";
+		return;
+	}
 
 	Employee* e = new Employee(id, nam);
 
 	Emps->push_back(*e);
+	e->addDept(search(depts, d_id));
 
 	// Write employee data to the file
 	Employee::writeToFile(*e);
@@ -273,11 +286,15 @@ void Admin::addManager() {
 	string nam;
 
 	// Automatically generate a unique ID
-	int id = Manager::getUniqueID();
+	int id = Manager::getUniqueID(), d_id;
 
 	cin.ignore();
 	cout << "\n Enter Manager Name: ";
 	getline(cin, nam);
+	cin.ignore();
+
+	cout << "\n Enter Manager department id: ";
+	cin >> d_id;
 
 	Manager* mg = new Manager(id, nam);
 
@@ -300,6 +317,7 @@ void Admin::addTeacher() {
 	cin.ignore();
 	cout << "\n Enter Teacher Name: ";
 	getline(cin, nam);
+	cin.ignore();
 
 	Teacher* t = new Teacher(id, nam);
 

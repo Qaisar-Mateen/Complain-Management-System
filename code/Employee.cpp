@@ -1,5 +1,6 @@
 #include "Employee.h"
 #include "Department.h"
+//#include "Global.h"
 
 Employee::Employee()
 {
@@ -12,13 +13,21 @@ Employee::Employee(int ID, string Name)
     name = Name;
 }
 
+void Employee::addDept(Department* d)
+{
+    if (dept)
+        cout << "\n Employee already assigned to '" << dept->getName() << "' Department";
+    else
+        dept = d;
+}
+
 void Employee::control()
 {
 }
 
 void Employee::printDetail()
 {
-    cout << "\n ID: " << id << "\t Name: " << name << "\n";
+    cout << "\n ID: " << id << "\tName: " << name << "\tDepartment: " << dept->getName() <<"\n";
 }
 
 void Employee::updateSystem()
@@ -26,9 +35,6 @@ void Employee::updateSystem()
 
 }
 
-//Employee::~Employee()
-//{
-//}
 int Employee::getID() const {
     return id;
 }
