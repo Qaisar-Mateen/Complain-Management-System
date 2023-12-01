@@ -29,6 +29,12 @@ public:
     void printDetail();
    
     void addEmployee(Employee* e);
+
+    void changeManager(Manager* m);
+
+    bool removeEmployee(Employee* e);
+
+    bool removeManager(Manager* m);
     
     void addComplaint(Complaint* c);
 };

@@ -24,7 +24,6 @@ public:
 
     void addDept(Department* d);
 
-
     void control();
 
     void printDetail();
@@ -41,7 +40,11 @@ public:
 
     int getID() const;
 
+    int getDeptId();
+
     string getName() const;
+
+    ~Manager();
 
     static void markAsUnallocated(int manageId);
 };

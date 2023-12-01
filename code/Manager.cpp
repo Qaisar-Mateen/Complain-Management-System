@@ -1,5 +1,6 @@
 #include "Manager.h"
 #include "Department.h"
+#include "Global.h"
 
 Manager::Manager()
 {
@@ -74,9 +75,28 @@ int Manager::getID() const {
     return id;
 }
 
+int Manager::getDeptId()
+{
+    return dept->getID();
+}
+
 string Manager::getName() const {
     return name;
 }
+
+Manager::~Manager()
+{
+    dept->removeManager(this);
+    Manager::markAsUnallocated(id);   
+
+    if (search(man, id))
+    {
+        for (auto it = man.begin(); it != man.end(); ++it)
+            if ((*it)->getID() == id)
+                it = man.erase(it);
+    }
+}
+
 
 void Manager::markAsUnallocated(int manageId) {
     ifstream inFile("Manager.txt");

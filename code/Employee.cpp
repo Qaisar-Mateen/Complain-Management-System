@@ -6,6 +6,7 @@
 Employee::Employee()
 {
     id = -1;
+    name = "Invalid";
 }
 
 Employee::Employee(int ID, string Name)
@@ -34,6 +35,12 @@ void Employee::printDetail()
 void Employee::updateSystem()
 {
 
+}
+
+Employee::~Employee()
+{
+    dept->removeEmployee(this); //remove employee from dept frist
+    Employee::markAsUnallocated(id);
 }
 
 int Employee::getID() const {

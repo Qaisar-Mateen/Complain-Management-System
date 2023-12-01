@@ -35,6 +35,8 @@ public:
 
     void updateSystem();
 
+    ~Employee();
+
     static void markAsUnallocated(int empId);
 };
 

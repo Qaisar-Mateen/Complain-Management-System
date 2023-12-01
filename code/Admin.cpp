@@ -289,18 +289,27 @@ void Admin::addManager() {
 	cin.ignore();
 	cout << "\n Enter Manager Name: ";
 	getline(cin, nam);
-	cin.ignore();
+
+	cout << "\n Note: Manager of this department will be deleted first!!\n";
 
 	cout << "\n Enter Manager department id: ";
 	cin >> d_id;
+
+	Department* d = search(depts, d_id);
+
+	if (!d) {
+		cerr << "\n Invalid Department Id!!\n";
+		return;
+	}
 
 	Manager* mg = new Manager(id, nam);
 
 	Managers->push_back(mg);
 
+	d->changeManager(mg);
+
 	// Write manager data to the file
 	Manager::writeToFile(*mg);
-
 	// Display details
 	cout << "\n Manager added successfully.\n";
 	mg->printDetail();
@@ -315,7 +324,6 @@ void Admin::addTeacher() {
 	cin.ignore();
 	cout << "\n Enter Teacher Name: ";
 	getline(cin, nam);
-	cin.ignore();
 
 	Teacher* t = new Teacher(id, nam);
 
@@ -341,6 +349,7 @@ void Admin::removeEmployee() {
 }
 
 void Admin::removeTeacher() {
+
 	int tId;
 	cin.ignore();
 	cout << "\n Enter Teacher ID to remove: ";
@@ -368,6 +377,7 @@ bool Admin::emp_delete(int Id)
 	{
 		if ((*it)->getID() == Id)
 		{
+			delete *it; // Delete the Employee object
 			it = Emps->erase(it);
 			return true;
 		}
@@ -381,7 +391,22 @@ bool Admin::man_delete(int Id)
 	{
 		if ((*it)->getID() == Id)
 		{
-			it = Managers->erase(it);
+			cout << "\n Note: Add data for new Manager!!\n";
+			string nam;
+			int id = Manager::getUniqueID(), d_id;
+			cin.ignore();
+			cout << "\n Enter Manager Name: ";
+			getline(cin, nam);
+
+			d_id = (*it)->getDeptId();
+			Department* d = search(depts, d_id);
+			Manager* mg = new Manager(id, nam);
+
+			Managers->push_back(mg);
+			d->changeManager(mg);
+
+			Manager::writeToFile(*mg);
+			mg->printDetail();
 			return true;
 		}
 	}
@@ -394,6 +419,7 @@ bool Admin::tea_delete(int Id)
     {
         if ((*it)->getID() == Id)
         {
+			delete *it; // Delete the Teacher object
             it = Teachs->erase(it);
             return true;
         }

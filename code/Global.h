@@ -41,7 +41,7 @@ t* search(vector<t*>& per, int id)
 }
 
 template<typename T>
-void populateFromFile(const string& fileName, vector<T>& targetVector)
+void populateFromFile(const string& fileName, vector<T*>& targetVector)
 {
 	ifstream file(fileName);
 	if (file.is_open()) {
@@ -52,7 +52,7 @@ void populateFromFile(const string& fileName, vector<T>& targetVector)
 			// Read the entire line as the name, including spaces
 			getline(file >> ws, name);
 			// Construct the item using the entire name
-			T item(id, name);
+			T* item = new T(id, name);
 			targetVector.push_back(item);
 		}
 

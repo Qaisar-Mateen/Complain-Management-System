@@ -9,11 +9,6 @@
 
 using namespace std;
 
-
-vector<Employee> E;
-vector<Manager> M;
-vector<Teacher> T;
-
 Director* dir;
 Admin* adm;
 vector<Employee*> emp;
@@ -71,24 +66,14 @@ void populateDepartment(string filename)
 	file.close();
 }
 
-template<typename t>
-void move(vector<t>& a, vector<t*>& b)
-{
-	for (int i = 0; i < a.size(); i++)
-		b.push_back(&a[i]);
-}
-
 void init(string e_file, string m_file, string t_file, string d_file)
 {
 	adm = new Admin(emp, man, tea);
 	dir = new Director(depts);
 
-	populateFromFile(e_file, E);
-	move(E, emp);
-	populateFromFile(m_file, M);
-	move(M, man);
-	populateFromFile(t_file, T);
-	move(T, tea);
+	populateFromFile(e_file, emp);
+	populateFromFile(m_file, man);
+	populateFromFile(t_file, tea);
 
 	populateDepartment(d_file);
 }
