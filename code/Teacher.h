@@ -1,7 +1,9 @@
 #include <iostream>
 #include <string>
+#include <vector>
 #include <fstream>
 #include "Person.h"
+#include "Complaint.h"
 using namespace std;
 
 #ifndef _TEACHER_H
@@ -10,6 +12,7 @@ using namespace std;
 class Teacher : virtual public Person {
     int id;
     string name;
+    vector<Complaint*> comps;
 
 public:
 
@@ -34,6 +37,8 @@ public:
     int getID() const;
 
     string getName() const;
+
+    void addComplaint(Complaint* c);
 
     static void markAsUnallocated(int teachId);
 };

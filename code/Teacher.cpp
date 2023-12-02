@@ -66,6 +66,11 @@ string Teacher::getName() const {
     return name;
 }
 
+void Teacher::addComplaint(Complaint* c)
+{
+    comps.push_back(c);
+}
+
 void Teacher::markAsUnallocated(int teachId) {
     ifstream inFile("Teacher.txt");
     ofstream outFile("temp.txt");

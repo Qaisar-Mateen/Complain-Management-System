@@ -3,7 +3,7 @@
 #include "Department.h"
 #include "Global.h"
 
-Complaint::Complaint(int ID, string des, Department* d, Teacher* teacher, int st, int day, int month, int year) : description(des), From(teacher), To(d)
+Complaint::Complaint(int ID, string des, int d, int t, int st, int day, int month, int year) : description(des), From(search(tea,t)), To(search(depts, d))
 {
     id = ID;
     date = new Date(day, month, year);
@@ -20,19 +20,21 @@ Complaint::Complaint(int ID, string des, Department* d, Teacher* teacher, int st
     case 3:
         state = State::Closed;
         break;
+    default:
+        state = State::New;
+        break;
     }
-
-    d->addComplaint(this);
-//    teacher.
+    To->addComplaint(this);
+    From->addComplaint(this);
 }
 
-Complaint::Complaint(string des, int d_id, Teacher* teacher) : description(des), From(teacher)
+Complaint::Complaint(string des, int d, int t) : description(des), From(search(tea, t)), To(search(depts, d))
 {
 	id = getUniqueID();
-	To = search(depts, d_id);
     date = new Date();
 	state = State::New;
     To->addComplaint(this);
+    From->addComplaint(this);
 }
 
 void Complaint::setState(State s)
@@ -73,19 +75,18 @@ void Complaint::printDetail() {
 
 int Complaint::getUniqueID() {
     ifstream file("Complaint.txt");
-    int maxID = 0;
+    int maxID = 1;
     int currentID;
 
     while (file >> currentID) {
         file.ignore(); // Ignore the space between ID and name
         file.ignore(numeric_limits<streamsize>::max(), '\n'); // Ignore the rest of the line
 
-        if (currentID > maxID) {
-            maxID = currentID;
+        if (currentID == maxID) {
+            maxID++;
         }
     }
-
     file.close();
 
-    return maxID + 1;
+    return maxID;
 }

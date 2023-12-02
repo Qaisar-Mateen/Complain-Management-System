@@ -110,8 +110,7 @@ void populateComplaint(string Filename) {
 			cerr << "\n ERROR: Either a Teacher with id: " << teacher_Id << " or Department with id: " << dept_id << " does not exists!!\n";
 			exit(1);
 		}
-
-		coms.push_back(new Complaint(id, description, d, t, state, day, month, year));
+		coms.push_back(new Complaint(id, description, dept_id, teacher_Id, state, day, month, year));
 	}
 	file.close();
 }

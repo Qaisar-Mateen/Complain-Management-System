@@ -22,8 +22,8 @@ class Complaint
     State state;
 
 public:    
-    Complaint(int ID, string des, Department* d, Teacher* teacher, int st, int day, int month, int year);
-    Complaint(string des, int d_id, Teacher* teacher);
+    Complaint(int ID, string des, int d, int t, int st, int day, int month, int year);
+    Complaint(string des, int d, int t);
 
     void setState(State s);
 
