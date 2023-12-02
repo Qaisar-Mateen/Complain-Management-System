@@ -1,6 +1,4 @@
 #include "Teacher.h"
-#define NOMINMAX
-#include <windows.h>
 #include "Complaint.h"
 #include "Department.h"
 #include "Global.h"
