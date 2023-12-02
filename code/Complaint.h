@@ -25,11 +25,15 @@ public:
     Complaint(int ID, string des, int d, int t, int st, int day, int month, int year);
     Complaint(string des, int d, int t);
 
+    int getID();
+
     void setState(State s);
 
     void displayState();
     
     void printDetail();
+
+    void printFullDetail();
 
     int getUniqueID();
 

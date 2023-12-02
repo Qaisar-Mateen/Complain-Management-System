@@ -74,14 +74,40 @@ void Teacher::complaintDetail() {
 		cout << "\n No Complaints to Display\n";
 		return;
 	}
-	cout << "\n\t\t\t--<{ All Complaints Detail}>--\n";
-	for (int i = 0; i < comps.size(); i++)
-		comps[i]->printDetail();
+	int opt;
+	bool valid = false;
+	do {
+		system("cls");
+		cout << "\t\t\t ----<><><><><><><><><><><><( Teacher )><><><><><><><><><><><>----\n\n";
+		cout << " ID: " << id << endl;
+		cout << " Name: " << name << "\n\n";
+		cout << "\n\t\t\t--<{ All Complaints Detail }>--\n";
+		for (int i = 0; i < comps.size(); i++)
+			comps[i]->printDetail();
+
+		cout << "\n\n Enter Complaint ID for Details: \n";
+		cout << " 0: Go Back\n";
+		cout << " >";
+		cin >> opt;
+		if (opt == 0)
+			valid = true;
+		Complaint* c = search(comps, opt);
+		if (c) {
+			valid = true;
+			c->printFullDetail();
+		}
+
+		else {
+			cout << "\n Invalid!! \n";
+			Sleep(700);
+		}
+
+	} while (!valid);
 }
 
 void Teacher::printDetail()
 {
-	cout << "\n ID: " << id << "\t Name: " << name << "\t Total Complaints Filed:" << comps.size() <<"\n";
+	cout << "\n ID: " << id << "\t Name: " << name << "\t Total Complaints Filed: " << comps.size() <<"\n";
 }
 
 void Teacher::makeComplaint() {
@@ -97,10 +123,7 @@ void Teacher::makeComplaint() {
 	cout << "\n Enter Complaint Description: ";
 	getline(cin, desc);
 	comps.push_back(new Complaint(desc, d_id, id));
-}
-
-void Teacher::printComplains() {
-
+	cout << "\n Complaint Filed successfully.\n";
 }
 
 void Teacher::reocordFeedback() {
@@ -128,11 +151,10 @@ int Teacher::getUniqueID() {
             maxID++;
         }
     }
-
     file.close();
-
     return maxID;
 }
+
 int Teacher::getID() const {return id;}
 
 string Teacher::getName() const {return name;}
@@ -159,11 +181,10 @@ void Teacher::markAsUnallocated(int teachId) {
             outFile << currentID << " " << currentName << endl;
         }
     }
-
     inFile.close();
     outFile.close();
 
     // Rename the temp file to replace the original file
     remove("Teacher.txt");
-    rename("temp.txt", "Teacher.txt");
+    int chk = rename("temp.txt", "Teacher.txt");
 }

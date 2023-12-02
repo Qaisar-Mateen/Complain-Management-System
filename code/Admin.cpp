@@ -253,7 +253,6 @@ void Admin::addEmployee()
 {
 	string nam;
 
-	// Automatically generate a unique ID
 	int id = Employee::getUniqueID(), d_id;
 	cin.ignore();
 	cout << "\n Enter Employee Name: ";
@@ -262,7 +261,6 @@ void Admin::addEmployee()
 	cin >> d_id;
 
 	Department* d =  search(depts, d_id);
-
 	if (!d) {
 		cerr << "\n Invalid Department Id!!\n";
 		return;

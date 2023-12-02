@@ -39,6 +39,8 @@ Complaint::Complaint(string des, int d, int t) : description(des), From(search(t
     coms.push_back(this);
 }
 
+int Complaint::getID() { return id; }
+
 void Complaint::setState(State s)
 {
     state = s;
@@ -63,10 +65,17 @@ void Complaint::displayState()
 }
 
 void Complaint::printDetail() {
-    //cout << "\n ID: " << id << "\t To '"<< To->getName() << "' Department From '" << From->getName() << "' Teacher" << "\n";
-    cout << "\n ID: " << id << "\t ";
+    cout << "\n ID: " << id << "\t Description: " << description << "\t ";
     displayState();
     cout << "\n";
+}
+
+void Complaint::printFullDetail(){
+    cout << "\n Complaint ID: " << id << "\t Filed To '" << To->getName() << "' Department by " << From->getName() << "\t On ";
+    date->displayDate();
+    cout << "\n ";
+    displayState();
+    cout << "\n Complaint Description: " << description << "\n";
 }
 
 int Complaint::getUniqueID() {

@@ -30,8 +30,6 @@ public:
     void printDetail();
 
     void makeComplaint();
-    
-    void printComplains();
         
     void reocordFeedback();
 
