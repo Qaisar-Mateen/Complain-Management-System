@@ -96,29 +96,28 @@ void Manager::reviewComplaint() {
         cout << " 0: Go Back\n";
         cout << " >";
         cin >> opt;
-        if (opt == 0)
-            valid = true;
-
         for (int i = 0; i < v.size(); i++)
             if (v[i] == opt)
                 valid = true;
 
-        if (valid) {
+        if (opt == 0)
+            valid = true;
+
+        else if (valid) {
             int e_Id = -1;
             vector<int> assignEmp;
             cout << "\n Enter IDs of Employees to Assign Job (enter 0 when done): \n";
             while (e_Id != 0) {
                 cout << " >";
                 cin >> e_Id;
-                if (e_Id != 0)
-                    assignEmp.push_back(e_Id);
-
                 if (e_Id == 0 && assignEmp.empty()) {
                     cerr << "\n Minimum One Employee Needed!!\n";
                     e_Id = -1;
                 }
-                if (!dept->inDept(e_Id) || search(emp, e_Id))
+                else if (!dept->inDept(e_Id) || search(emp, e_Id))
                     cerr << "\n ERROR: Either Employee Doesn't Exist or is Not in "<< dept->getName() << " Dept\n";
+                else if (e_Id != 0)
+                    assignEmp.push_back(e_Id);
             }
         }
 
