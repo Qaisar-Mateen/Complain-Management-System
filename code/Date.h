@@ -13,7 +13,6 @@ private:
 public:
     Date() {
         storeCurrentDate();
-        displayDate();
     }
 
     Date(int d, int m, int y) : day(d), month(m), year(y) {}

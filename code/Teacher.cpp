@@ -1,6 +1,9 @@
 #include "Teacher.h"
 #define NOMINMAX
 #include <windows.h>
+#include "Complaint.h"
+#include "Department.h"
+#include "Global.h"
 
 Teacher::Teacher()
 {
@@ -82,7 +85,17 @@ void Teacher::printDetail()
 }
 
 void Teacher::makeComplaint() {
-
+	string desc;
+	int d_id;
+	cout << "\n Enter Department ID for Complaint: ";
+	cin >> d_id;
+	if (!search(depts, d_id)) {
+		cerr << "\n Invalid Department Id!!\n";
+		return;
+	}
+	cout << "\n Enter Complaint Description: ";
+	getline(cin, desc);
+	comps.push_back(new Complaint(desc, id, d_id));
 }
 
 void Teacher::printComplains() {

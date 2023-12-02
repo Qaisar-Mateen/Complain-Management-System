@@ -36,6 +36,7 @@ Complaint::Complaint(string des, int d, int t) : description(des), From(search(t
     To->addComplaint(this);
     From->addComplaint(this);
     writeToFile(t, d);
+    coms.push_back(this);
 }
 
 void Complaint::setState(State s)
@@ -62,7 +63,10 @@ void Complaint::displayState()
 }
 
 void Complaint::printDetail() {
-    
+    //cout << "\n ID: " << id << "\t To '"<< To->getName() << "' Department From '" << From->getName() << "' Teacher" << "\n";
+    cout << "\n ID: " << id << "\t ";
+    displayState();
+    cout << "\n";
 }
 
 int Complaint::getUniqueID() {

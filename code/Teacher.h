@@ -3,8 +3,9 @@
 #include <vector>
 #include <fstream>
 #include "Person.h"
-#include "Complaint.h"
 using namespace std;
+
+class Complaint;
 
 #ifndef _TEACHER_H
 #define _TEACHER_H
