@@ -26,6 +26,8 @@ public:
    
     string getName();
 
+    void printEmployees();
+
     void printDetail();
    
     void addEmployee(Employee* e);

@@ -23,6 +23,13 @@ string Department::getName()
     return name;
 }
 
+void Department::printEmployees()
+{
+    cout << "\n\t\t\t--<{ Employees in Department }>--\n";
+    for (int i = 0; i < emps.size(); i++)
+        emps[i]->printDetail();
+}
+
 void Department::printDetail()
 {
     cout << "\n ID: " << id << "\tName: " << name << "\tManager: " << man->getName() << "\tEmployees: ";

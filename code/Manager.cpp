@@ -104,6 +104,7 @@ void Manager::reviewComplaint() {
             valid = true;
 
         else if (valid) {
+            dept->printEmployees();
             int e_Id = -1;
             vector<int> assignEmp;
             cout << "\n Enter IDs of Employees to Assign Job (enter 0 when done): \n";
@@ -114,7 +115,9 @@ void Manager::reviewComplaint() {
                     cerr << "\n Minimum One Employee Needed!!\n";
                     e_Id = -1;
                 }
-                else if (!dept->inDept(e_Id) || search(emp, e_Id))
+                else if (e_Id == 0)
+                    break;
+                else if (!dept->inDept(e_Id) || !search(emp, e_Id))
                     cerr << "\n ERROR: Either Employee Doesn't Exist or is Not in "<< dept->getName() << " Dept\n";
                 else if (e_Id != 0)
                     assignEmp.push_back(e_Id);
