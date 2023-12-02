@@ -87,3 +87,12 @@ vector<int> Department::NewComplaint() {
         }
     return v;
 }
+
+bool Department::inDept(int iD) {
+    bool present = false;
+    for (auto it : emps)
+        if (it->getID() == iD)
+            present = true;
+
+    return present;
+}

@@ -1,5 +1,6 @@
 #include "Manager.h"
 #include "Department.h"
+#include "Employee.h"
 #include "Global.h"
 
 Manager::Manager()
@@ -32,9 +33,8 @@ void Manager::control()
     {
         opt = printInterface();
 
-        if (opt == 'a') {
-            
-        }
+        if (opt == 'a')
+            reviewComplaint();
 
         if (opt != 'f' && opt != 'l')
         {
@@ -104,7 +104,22 @@ void Manager::reviewComplaint() {
                 valid = true;
 
         if (valid) {
-            //Complaint* c = search(coms, opt);
+            int e_Id = -1;
+            vector<int> assignEmp;
+            cout << "\n Enter IDs of Employees to Assign Job (enter 0 when done): \n";
+            while (e_Id != 0) {
+                cout << " >";
+                cin >> e_Id;
+                if (e_Id != 0)
+                    assignEmp.push_back(e_Id);
+
+                if (e_Id == 0 && assignEmp.empty()) {
+                    cerr << "\n Minimum One Employee Needed!!\n";
+                    e_Id = -1;
+                }
+                if (!dept->inDept(e_Id) || search(emp, e_Id))
+                    cerr << "\n ERROR: Either Employee Doesn't Exist or is Not in "<< dept->getName() << " Dept\n";
+            }
         }
 
         else {

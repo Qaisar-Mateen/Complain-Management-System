@@ -39,6 +39,8 @@ public:
     void addComplaint(Complaint* c);
 
     vector<int> NewComplaint();
+
+    bool inDept(int id);
 };
 
 #endif //_DEPARTMENT_H
