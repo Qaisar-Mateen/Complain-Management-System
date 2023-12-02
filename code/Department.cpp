@@ -72,3 +72,18 @@ void Department::addComplaint(Complaint* c)
 {
     complaints.push_back(c);
 }
+
+vector<int> Department::NewComplaint() {
+    vector<int> v;
+    if(complaints.empty()) {
+        cout << "\n No New Complaints to Display\n";
+        return v;
+    }
+    cout << "\n\t\t\t--<{ All Complaints Detail }>--\n";
+    for (int i = 0; i < complaints.size(); i++)
+        if (complaints[i]->getState() == State::New) {
+            complaints[i]->printDetail();
+            v.push_back(complaints[i]->getID());
+        }
+    return v;
+}

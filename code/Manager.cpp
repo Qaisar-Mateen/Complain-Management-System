@@ -26,7 +26,53 @@ void Manager::addDept(Department* d)
 
 void Manager::control()
 {
+    char opt = 'd';
 
+    while (opt != 'f')
+    {
+        opt = printInterface();
+
+        if (opt == 'a') {
+            
+        }
+
+        if (opt != 'f' && opt != 'l')
+        {
+            cin.ignore();
+            cout << "\n Press any key to continue...";
+            cin.get();
+        }
+    }
+    cout << "\n Logging out...";
+    Sleep(700);
+    system("cls");
+}
+
+char Manager::printInterface() {
+    bool valid = false;
+    char opt;
+    do {
+        system("cls");
+        cout << "\t\t\t ----<><><><><><><><><><><><( Manager )><><><><><><><><><><><>----\n\n";
+        cout << " ID: " << id << endl;
+        cout << " Name: " << name << endl;
+        cout << "\n --<{ Manager Controls }>--\n";
+        cout << " a: View New Complaints\n";
+        cout << " b: \n";
+        cout << " f: Log Out\n";
+        cout << " >";
+        cin >> opt;
+
+        if (opt == 'a' || opt == 'b' || opt == 'f')
+            valid = true;
+
+        else {
+            cout << "\n Invalid!! \n";
+            Sleep(700);
+        }
+    } while (!valid);
+
+    return opt;
 }
 
 void Manager::printDetail()
@@ -34,8 +80,38 @@ void Manager::printDetail()
     cout << "\n ID: " << id << "\tName: " << name << "\tDepartment: " << dept->getName() << "\n";
 }
 
-void Manager::reviewRequest() {
+void Manager::reviewComplaint() {
+    bool valid = false;
+    int opt;
+    do {
+        system("cls");
+        cout << "\t\t\t ----<><><><><><><><><><><><( Manager )><><><><><><><><><><><>----\n\n";
+        cout << " ID: " << id << endl;
+        cout << " Name: " << name << "\n\n";
+        vector<int> v = dept->NewComplaint();
+        if (v.empty())
+            return;
+       
+        cout << "\n\n Enter ID of Complaint to Assign: \n";
+        cout << " 0: Go Back\n";
+        cout << " >";
+        cin >> opt;
+        if (opt == 0)
+            valid = true;
 
+        for (int i = 0; i < v.size(); i++)
+            if (v[i] == opt)
+                valid = true;
+
+        if (valid) {
+            //Complaint* c = search(coms, opt);
+        }
+
+        else {
+            cout << "\n Invalid!! \n";
+            Sleep(700);
+        }
+    } while (!valid);
 }
 
 void Manager::assignJob() {
@@ -123,5 +199,5 @@ void Manager::markAsUnallocated(int manageId) {
 
     // Rename the temp file to replace the original file
     remove("Manager.txt");
-    rename("temp.txt", "Manager.txt");
+    int chk = rename("temp.txt", "Manager.txt");
 }

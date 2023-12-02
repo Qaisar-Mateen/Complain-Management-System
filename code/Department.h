@@ -37,6 +37,8 @@ public:
     bool removeManager(Manager* m);
     
     void addComplaint(Complaint* c);
+
+    vector<int> NewComplaint();
 };
 
 #endif //_DEPARTMENT_H

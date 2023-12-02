@@ -26,9 +26,11 @@ public:
 
     void control();
 
+    char printInterface();
+
     void printDetail();
 
-    void reviewRequest();
+    void reviewComplaint();
     
     void assignJob();
     

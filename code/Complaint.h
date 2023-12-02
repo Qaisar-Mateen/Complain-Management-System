@@ -27,6 +27,8 @@ public:
 
     int getID();
 
+    State getState();
+
     void setState(State s);
 
     void displayState();

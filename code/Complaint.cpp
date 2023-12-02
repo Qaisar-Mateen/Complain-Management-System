@@ -41,6 +41,8 @@ Complaint::Complaint(string des, int d, int t) : description(des), From(search(t
 
 int Complaint::getID() { return id; }
 
+State Complaint::getState() { return state; }
+
 void Complaint::setState(State s)
 {
     state = s;
