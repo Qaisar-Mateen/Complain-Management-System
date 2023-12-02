@@ -35,6 +35,7 @@ Complaint::Complaint(string des, int d, int t) : description(des), From(search(t
 	state = State::New;
     To->addComplaint(this);
     From->addComplaint(this);
+    writeToFile(t, d);
 }
 
 void Complaint::setState(State s)
@@ -60,17 +61,8 @@ void Complaint::displayState()
     }
 }
 
-
-void Complaint::currState() {
-
-}
-
-void Complaint::changeState() {
-
-}
-
 void Complaint::printDetail() {
-
+    
 }
 
 int Complaint::getUniqueID() {
@@ -82,11 +74,33 @@ int Complaint::getUniqueID() {
         file.ignore(); // Ignore the space between ID and name
         file.ignore(numeric_limits<streamsize>::max(), '\n'); // Ignore the rest of the line
 
-        if (currentID == maxID) {
+        if (currentID == maxID)
             maxID++;
-        }
     }
     file.close();
 
     return maxID;
+}
+
+void Complaint::writeToFile(int t, int d) {
+    ofstream file("Complaint.txt", ios::app);
+    if (file.is_open()) {
+        int st;
+        switch (state) {
+        case State::New:
+            st = 0;
+            break;
+        case State::Assigned:
+            st = 1;
+            break;
+        case State::Resolved:
+            st = 2;
+            break;
+        case State::Closed:
+            st = 3;
+            break;
+        }
+        file << id << ',' << description << ',' << t << ',' << d << ',' << date->getDay() << ',' << date->getMonth() << ',' << date->getYear() << ',' << st << endl;
+        file.close();
+    }
 }

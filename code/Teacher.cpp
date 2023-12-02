@@ -42,21 +42,21 @@ void Teacher::writeToFile(const Teacher& teach) {
 
 int Teacher::getUniqueID() {
     ifstream file("Teacher.txt");
-    int maxID = 0;
+    int maxID = 1;
     int currentID;
 
     while (file >> currentID) {
         file.ignore(); // Ignore the space between ID and name
         file.ignore(numeric_limits<streamsize>::max(), '\n'); // Ignore the rest of the line
 
-        if (currentID > maxID) {
-            maxID = currentID;
+        if (currentID == maxID) {
+            maxID++;
         }
     }
 
     file.close();
 
-    return maxID + 1;
+    return maxID;
 }
 int Teacher::getID() const {
     return id;

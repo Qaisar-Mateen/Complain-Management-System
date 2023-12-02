@@ -26,6 +26,7 @@ void Manager::addDept(Department* d)
 
 void Manager::control()
 {
+
 }
 
 void Manager::printDetail()
@@ -55,21 +56,19 @@ void Manager::writeToFile(const Manager& manage) {
 
 int Manager::getUniqueID() {
     ifstream file("Manager.txt");
-    int maxID = 0;
+    int maxID = 1;
     int currentID;
 
     while (file >> currentID) {
         file.ignore(); // Ignore the space between ID and name
         file.ignore(numeric_limits<streamsize>::max(), '\n'); // Ignore the rest of the line
 
-        if (currentID > maxID) {
-            maxID = currentID;
-        }
+        if (currentID == maxID)
+            maxID++;
     }
-
     file.close();
 
-    return maxID + 1;
+    return maxID;
 }
 int Manager::getID() const {
     return id;

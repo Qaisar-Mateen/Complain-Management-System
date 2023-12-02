@@ -28,16 +28,12 @@ public:
     void setState(State s);
 
     void displayState();
-
-    void currState();
-        
-    void changeState();
     
     void printDetail();
 
     int getUniqueID();
 
-    void writeToFile();
+    void writeToFile(int, int);
 };
 
 #endif //_COMPLAINT_H
