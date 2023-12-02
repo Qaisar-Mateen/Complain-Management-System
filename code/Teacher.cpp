@@ -93,9 +93,10 @@ void Teacher::makeComplaint() {
 		cerr << "\n Invalid Department Id!!\n";
 		return;
 	}
+	cin.ignore();
 	cout << "\n Enter Complaint Description: ";
 	getline(cin, desc);
-	comps.push_back(new Complaint(desc, id, d_id));
+	comps.push_back(new Complaint(desc, d_id, id));
 }
 
 void Teacher::printComplains() {
