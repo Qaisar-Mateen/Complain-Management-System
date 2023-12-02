@@ -24,9 +24,11 @@ extern vector<Employee*> emp;
 extern vector<Manager*> man;
 extern vector<Teacher*> tea;
 extern vector<Department*> depts;
+extern vector<Complaint*> coms;
 
-void populateDepartment(string filename);
-void init(string e_file, string m_file, string t_file, string d_file);
+void populateDepartment(string);
+void populateComplaint(string);
+void init(string, string, string, string, string);
 
 
 template<typename t>

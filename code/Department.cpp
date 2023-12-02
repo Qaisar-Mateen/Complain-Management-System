@@ -45,7 +45,6 @@ void Department::changeManager(Manager* m)
     man->addDept(this);
 }
 
-
 bool Department::removeEmployee(Employee* e)
 {
     if (!emps.empty())

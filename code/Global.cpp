@@ -15,6 +15,7 @@ vector<Employee*> emp;
 vector<Manager*> man;
 vector<Teacher*> tea;
 vector<Department*> depts;
+vector<Complaint*> coms;
 
 void populateDepartment(string filename)
 {
@@ -66,7 +67,56 @@ void populateDepartment(string filename)
 	file.close();
 }
 
-void init(string e_file, string m_file, string t_file, string d_file)
+void populateComplaint(string Filename) {
+
+	ifstream file(Filename);
+	if (!file.is_open()) {
+		cerr << "Failed to open file\n";
+		return;
+	}
+	string line;
+	while (getline(file, line)) {
+		istringstream iss(line);
+		string field;
+
+		getline(iss, field, ',');
+		int id = stoi(field);
+
+		getline(iss, field, ',');
+		string description = field;
+
+		getline(iss, field, ',');
+		int teacher_Id = stoi(field);
+
+		getline(iss, field, ',');
+		int dept_id = stoi(field);
+
+		getline(iss, field, ',');
+		int day = stoi(field);
+
+		getline(iss, field, ',');
+		int month = stoi(field);
+
+		getline(iss, field, ',');
+		int year = stoi(field);
+
+		getline(iss, field, ',');
+		int state = stoi(field);
+
+		Department* d = search(depts, dept_id);
+		Teacher* t = search(tea, teacher_Id);
+
+		if(!d || !t) {
+			cerr << "\n ERROR: Either a Teacher with id: " << teacher_Id << " or Department with id: " << dept_id << " does not exists!!\n";
+			exit(1);
+		}
+
+		coms.push_back(new Complaint(id, description, d, t, state, day, month, year));
+	}
+	file.close();
+}
+
+void init(string e_file, string m_file, string t_file, string d_file, string c_file)
 {
 	adm = new Admin(emp, man, tea);
 	dir = new Director(depts);
@@ -76,4 +126,5 @@ void init(string e_file, string m_file, string t_file, string d_file)
 	populateFromFile(t_file, tea);
 
 	populateDepartment(d_file);
+	populateComplaint(c_file);
 }
