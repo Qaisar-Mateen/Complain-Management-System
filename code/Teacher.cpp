@@ -1,8 +1,11 @@
 #include "Teacher.h"
+#define NOMINMAX
+#include <windows.h>
 
 Teacher::Teacher()
 {
 	id = -1;
+    name = "Invalid";
 }
 
 Teacher::Teacher(int ID, string Name)
@@ -13,14 +16,72 @@ Teacher::Teacher(int ID, string Name)
 
 void Teacher::control()
 {
+	char opt = 'd';
+
+	while (opt != 'f')
+	{
+		opt = printInterface();
+
+		if (opt == 'a')
+			makeComplaint();
+
+		else if (opt == 'b')
+			complaintDetail();
+
+		if (opt != 'f' && opt != 'l')
+		{
+			cin.ignore();
+			cout << "\n Press any key to continue...";
+			cin.get();
+		}
+	}
+	cout << "\n Logging out...";
+	Sleep(700);
+	system("cls");
+}
+
+char Teacher::printInterface() {
+	bool valid = false;
+	char opt;
+	do {
+		system("cls");
+		cout << "\t\t\t ----<><><><><><><><><><><><( Teacher )><><><><><><><><><><><>----\n\n";
+		cout << " ID: " << id << endl;
+		cout << " Name: " << name << endl;
+		cout << "\n --<{ Teacher Controls }>--\n";
+		cout << " a: Make a Complaint\n";
+		cout << " b: Display Complaints\n";
+		cout << " f: Log out\n";
+		cout << " >";
+		cin >> opt;
+
+		if (opt == 'a' || opt == 'b' || opt == 'f')
+			valid = true;
+		else {
+			cout << "\n Invalid!! \n";
+			Sleep(700);
+		}
+	} while (!valid);
+
+	return opt;
+}
+
+void Teacher::complaintDetail() {
+	if (comps.empty()) {
+		cout << "\n No Complaints to Display\n";
+		return;
+	}
+	cout << "\n\t\t\t--<{ All Complaints Detail}>--\n";
+	for (int i = 0; i < comps.size(); i++)
+		comps[i]->printDetail();
 }
 
 void Teacher::printDetail()
 {
-	cout << "\n ID: " << id << "\t Name: " << name << "\n";
+	cout << "\n ID: " << id << "\t Name: " << name << "\t Total Complaints Filed:" << comps.size() <<"\n";
 }
 
-void Teacher::makeComplain() {
+void Teacher::makeComplaint() {
 
 }
 
@@ -58,18 +119,11 @@ int Teacher::getUniqueID() {
 
     return maxID;
 }
-int Teacher::getID() const {
-    return id;
-}
+int Teacher::getID() const {return id;}
 
-string Teacher::getName() const {
-    return name;
-}
+string Teacher::getName() const {return name;}
 
-void Teacher::addComplaint(Complaint* c)
-{
-    comps.push_back(c);
-}
+void Teacher::addComplaint(Complaint* c) {comps.push_back(c);}
 
 void Teacher::markAsUnallocated(int teachId) {
     ifstream inFile("Teacher.txt");

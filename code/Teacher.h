@@ -22,9 +22,13 @@ public:
 
     void control();
 
+    char printInterface();
+
+    void complaintDetail();
+
     void printDetail();
 
-    void makeComplain();
+    void makeComplaint();
     
     void printComplains();
         
