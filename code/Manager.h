@@ -36,7 +36,7 @@ public:
 
     void viewNotif_E();
 
-    void viewNotif_T();
+    //void viewNotif_T();
 
     void printDetail();
 

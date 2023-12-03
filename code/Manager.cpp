@@ -40,9 +40,8 @@ void Manager::control()
         if (opt == 'a') reviewComplaint();
 
         if (opt == 'b') {
-            opt = viewNotif();
-            if (opt == 'a') viewNotif_E();
-            else if (opt == 'b') viewNotif_T();
+            viewNotif_E();
+            //opt = viewNotif();
         }
 
         if (opt != 'f' && opt != 'l')
@@ -185,76 +184,76 @@ void Manager::viewNotif_E() {
     } while (!valid);
 }
 
-void Manager::viewNotif_T() {
-    bool valid = false;
-    int opt;
-    do {
-        vector<int> v;
-        system("cls");
-        cout << "\t\t\t ----<><><><><><><><><><><><( Manager )><><><><><><><><><><><>----\n\n";
-        cout << " ID: " << id << endl;
-        cout << " Name: " << name << endl;
-        cout << " Department: " << dept->getName() << "\n\n";
-        cout << "\n\t\t\t--<{ Notification from Teachers }>--\n";
-        v = dept->HighComplaint();
-        if (v.empty()) {
-            cout << "\n No Notification From Teacher\n";
-            valid = true;
-        }
-        else {
-            cout << "\n\n Enter ID: \n";
-            cout << " 0: Go Back\n";
-            cout << " >";
-            cin >> opt;
-            int val = 0;
-
-            for (int i = 0; i < v.size(); i++)
-                if (v[i] == opt) val = 1;
-
-            if (opt == 0) valid = true;
-
-            else if (val) {
-                valid = true;
-                bool valid2 = false;
-                do {
-                    char op;
-                    cout << " a: Accept\n";
-                    cout << " r: Reject\n";
-                    cout << " l: Go Back\n >";
-                    cin >> op;
-                    if (op == 'l') valid2 = true;
-
-                    else if (op == 'a') {
-                        valid2 = true;
-                        for (int i = 0; i < job.size(); i++)
-                            if (job[i]->getID() == opt) {
-                                job[i]->read();
-                                int c_id = job[i]->getComID();
-                                search(coms, c_id)->setNotifyTea(true);
-                            }
-                    }
-
-                    else if (op == 'r') {
-                        valid2 = true;
-                        for (int i = 0; i < job.size(); i++)
-                            if (job[i]->getID() == opt) {
-                                job[i]->Complete(false);
-                                int c_id = job[i]->getComID();
-                                Complaint* c = search(coms, c_id);
-                                dept->setCompState(c_id, 1);
-                            }
-                    }
-
-                } while (!valid2);
-            }
-
-            else {
-                cout << "\n Invalid!! \n";
-                Sleep(700);
-            }
-        }
-    } while (!valid);
-}
+//void Manager::viewNotif_T() {
+//    bool valid = false;
+//    int opt;
+//    do {
+//        vector<int> v;
+//        system("cls");
+//        cout << "\t\t\t ----<><><><><><><><><><><><( Manager )><><><><><><><><><><><>----\n\n";
+//        cout << " ID: " << id << endl;
+//        cout << " Name: " << name << endl;
+//        cout << " Department: " << dept->getName() << "\n\n";
+//        cout << "\n\t\t\t--<{ Notification from Teachers }>--\n";
+//        v = dept->HighComplaint();
+//        if (v.empty()) {
+//            cout << "\n No Notification From Teacher\n";
+//            valid = true;
+//        }
+//        else {
+//            cout << "\n\n Enter ID: \n";
+//            cout << " 0: Go Back\n";
+//            cout << " >";
+//            cin >> opt;
+//            int val = 0;
+//
+//            for (int i = 0; i < v.size(); i++)
+//                if (v[i] == opt) val = 1;
+//
+//            if (opt == 0) valid = true;
+//
+//            else if (val) {
+//                valid = true;
+//                bool valid2 = false;
+//                do {
+//                    char op;
+//                    cout << " a: Accept\n";
+//                    cout << " r: Reject\n";
+//                    cout << " l: Go Back\n >";
+//                    cin >> op;
+//                    if (op == 'l') valid2 = true;
+//
+//                    else if (op == 'a') {
+//                        valid2 = true;
+//                        for (int i = 0; i < job.size(); i++)
+//                            if (job[i]->getID() == opt) {
+//                                job[i]->read();
+//                                int c_id = job[i]->getComID();
+//                                search(coms, c_id)->setNotifyTea(true);
+//                            }
+//                    }
+//
+//                    else if (op == 'r') {
+//                        valid2 = true;
+//                        for (int i = 0; i < job.size(); i++)
+//                            if (job[i]->getID() == opt) {
+//                                job[i]->Complete(false);
+//                                int c_id = job[i]->getComID();
+//                                Complaint* c = search(coms, c_id);
+//                                dept->setCompState(c_id, 1);
+//                            }
+//                    }
+//
+//                } while (!valid2);
+//            }
+//
+//            else {
+//                cout << "\n Invalid!! \n";
+//                Sleep(700);
+//            }
+//        }
+//    } while (!valid);
+//}
 
 void Manager::printDetail()
 {

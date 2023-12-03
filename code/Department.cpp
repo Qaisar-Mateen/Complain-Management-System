@@ -95,20 +95,6 @@ vector<int> Department::NewComplaint() {
     return v;
 }
 
-vector<int> Department::HighComplaint() {
-    vector<int> v;
-    if (complaints.empty()) {
-        cout << "\n No Complaints to Display\n";
-        return v;
-    }
-    for (int i = 0; i < complaints.size(); i++)
-        if (complaints[i]->notifyManager()) {
-            complaints[i]->printDetail();
-            v.push_back(complaints[i]->getID());
-        }
-    return v;
-}
-
 vector<int> Department::inDeptAndAval() {
     vector<int> v;
     for (auto it : emps)
