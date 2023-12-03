@@ -82,7 +82,7 @@ char Manager::printInterface() {
 
 void Manager::printDetail()
 {
-    cout << "\n ID: " << id << "\tName: " << name << "\tDepartment: " << dept->getName() << "\n";
+    cout << "\n ID: " << id << "\t Name: " << name << "\t Department: " << dept->getName() << "\n";
 }
 
 void Manager::reviewComplaint() {
@@ -142,10 +142,6 @@ void Manager::reviewComplaint() {
             Sleep(700);
         }
     } while (!valid);
-}
-
-void Manager::assignJob() {
-
 }
 
 void Manager::reviewJob() {

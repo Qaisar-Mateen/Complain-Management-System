@@ -12,9 +12,11 @@ Job::Job(int c_id, Manager* m, vector<int> e) : com_id(c_id), man(m) {
 	}
 	date = new Date();
 	jobs.push_back(this); //add to global;
+	Man_high = completed = false;
+	writeToFile();
 }
 
-Job::Job(int iD, int c_id, Manager* m, vector<int> e, int day, int month, int year): com_id(c_id), man(m) {
+Job::Job(int iD, int c_id, Manager* m, vector<int> e, int day, int month, int year, int com, int hi): com_id(c_id), man(m) {
 	id = iD;
 	for (int i = 0; i < e.size(); i++) {
 		emps.push_back(search(emp, e[i]));
@@ -22,6 +24,8 @@ Job::Job(int iD, int c_id, Manager* m, vector<int> e, int day, int month, int ye
 	}
 	date = new Date(day, month, year);
 	man->addJob(this);
+	completed = (bool)com;
+	Man_high = (bool)hi;
 }
 
 int Job::getUniqueID()
@@ -38,4 +42,30 @@ int Job::getUniqueID()
 	}
 	file.close();
 	return maxID;
+}
+
+bool Job::isCompleted() { return completed; }
+
+bool Job::highlight() { return Man_high; }
+
+void Job::printDetail(){
+	cout << "\n ID: " << id << "\t Complaint Id: " << com_id << "\t Assigned to: ";
+	for (auto it : emps)
+		cout << it->getName() << ", ";
+	cout << "\t Completed: "<< completed <<"\n";
+}
+
+void Job::writeToFile() {
+	ofstream file("Job.txt", ios::app);
+	if (file.is_open()) {
+		file << id << ',' << com_id << ',' << man->getID() << ',';
+		for (int i = 0; i < emps.size(); i++) {
+			if(i == emps.size()-1)
+				file << emps[i]->getID() << ',';
+			else
+				file << emps[i]->getID() << ' ';
+		}
+		file << date->getDay() << ',' << date->getMonth() << ',' << date->getYear() << ',' << (int)completed << ',' << (int)Man_high << endl;
+		file.close();
+	}
 }

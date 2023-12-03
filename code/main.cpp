@@ -12,7 +12,7 @@ Person* Login();
 
 int main()
 {
-	init("Employee.txt", "Manager.txt", "Teacher.txt", "Department.txt", "Complaint.txt");
+	init("Employee.txt", "Manager.txt", "Teacher.txt", "Department.txt", "Complaint.txt", "Job.txt");
 
 	while (1) {
 		Person* user = Login();

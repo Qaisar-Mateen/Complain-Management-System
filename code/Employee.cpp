@@ -34,18 +34,45 @@ void Employee::control()
     {
         opt = printInterface();
 
-        if (opt == 'a')
+        if (opt == 'a') manageJob();
 
-        if (opt != 'f' && opt != 'l')
-        {
+        if (opt != 'f' && opt != 'l') {
             cin.ignore();
             cout << "\n Press any key to continue...";
             cin.get();
-        }
+        } 
     }
     cout << "\n Logging out...";
     Sleep(700);
     system("cls");
+}
+
+void Employee::manageJob() {
+    bool valid = false;
+    char opt;
+    do {
+        system("cls");
+        cout << "\t\t\t ----<><><><><><><><><><><><( Employee )><><><><><><><><><><><>----\n\n";
+        cout << " ID: " << id << endl;
+        cout << " Name: " << name << endl;
+        cout << " Department: " << dept->getName() << "\n\n";
+        cout << "\n\t\t\t--<{ All Job Assigned }>--\n";
+
+        for (int i = 0; i < job.size(); i++)
+            job[i]->printDetail();
+
+        cout << " l: Go Back\n";
+        cout << " >";
+        cin >> opt;
+
+        if (opt == 'l')
+            valid = true;
+
+        else {
+            cout << "\n Invalid!! \n";
+            Sleep(700);
+        }
+    } while (!valid);
 }
 
 char Employee::printInterface() {
@@ -57,7 +84,7 @@ char Employee::printInterface() {
         cout << " ID: " << id << endl;
         cout << " Name: " << name << endl;
         cout << " Department: " << dept->getName() << "\n";
-        cout << "\n --<{ Manager Controls }>--\n";
+        cout << "\n --<{ Employee Controls }>--\n";
         cout << " a: View Assigned Job\n";
         cout << " b: \n";
         cout << " f: Log Out\n";
@@ -72,7 +99,6 @@ char Employee::printInterface() {
             Sleep(700);
         }
     } while (!valid);
-
     return opt;
 }
 

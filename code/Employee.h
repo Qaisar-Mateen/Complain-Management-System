@@ -28,6 +28,8 @@ public:
 
     void control();
 
+    void manageJob();
+
     char printInterface();
 
     static void writeToFile(const Employee& emp);
