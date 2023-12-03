@@ -103,3 +103,8 @@ vector<int> Department::inDeptAndAval() {
 
     return v;
 }
+
+void Department::setCompState(int c_id) {
+    for (int i = 0; i < complaints.size(); i++)
+        if (complaints[i]->getID() == c_id) complaints[i]->setState(State::Assigned);
+}

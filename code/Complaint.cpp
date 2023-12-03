@@ -36,7 +36,7 @@ Complaint::Complaint(string des, int d, int t) : description(des), From(search(t
     To->addComplaint(this);
     From->addComplaint(this);
     writeToFile(t, d);
-    coms.push_back(this);
+    coms.push_back(this); //add to global
 }
 
 int Complaint::getID() { return id; }

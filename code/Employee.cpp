@@ -29,6 +29,51 @@ void Employee::addJob(Job* j) { job.push_back(j); Available = 0; }
 
 void Employee::control()
 {
+    char opt = 'd';
+    while (opt != 'f')
+    {
+        opt = printInterface();
+
+        if (opt == 'a')
+
+        if (opt != 'f' && opt != 'l')
+        {
+            cin.ignore();
+            cout << "\n Press any key to continue...";
+            cin.get();
+        }
+    }
+    cout << "\n Logging out...";
+    Sleep(700);
+    system("cls");
+}
+
+char Employee::printInterface() {
+    bool valid = false;
+    char opt;
+    do {
+        system("cls");
+        cout << "\t\t\t ----<><><><><><><><><><><><( Employee )><><><><><><><><><><><>----\n\n";
+        cout << " ID: " << id << endl;
+        cout << " Name: " << name << endl;
+        cout << " Department: " << dept->getName() << "\n";
+        cout << "\n --<{ Manager Controls }>--\n";
+        cout << " a: View Assigned Job\n";
+        cout << " b: \n";
+        cout << " f: Log Out\n";
+        cout << " >";
+        cin >> opt;
+
+        if (opt == 'a' || opt == 'b' || opt == 'f')
+            valid = true;
+
+        else {
+            cout << "\n Invalid!! \n";
+            Sleep(700);
+        }
+    } while (!valid);
+
+    return opt;
 }
 
 void Employee::printDetail()

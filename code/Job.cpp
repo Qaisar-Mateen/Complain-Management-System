@@ -11,6 +11,17 @@ Job::Job(int c_id, Manager* m, vector<int> e) : com_id(c_id), man(m) {
 		emps.back()->addJob(this);
 	}
 	date = new Date();
+	jobs.push_back(this); //add to global;
+}
+
+Job::Job(int iD, int c_id, Manager* m, vector<int> e, int day, int month, int year): com_id(c_id), man(m) {
+	id = iD;
+	for (int i = 0; i < e.size(); i++) {
+		emps.push_back(search(emp, e[i]));
+		emps.back()->addJob(this);
+	}
+	date = new Date(day, month, year);
+	man->addJob(this);
 }
 
 int Job::getUniqueID()

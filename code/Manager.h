@@ -18,13 +18,15 @@ private:
     int id;
     string name;
     Department* dept;
-    vector<Job*> jobs;
+    vector<Job*> job;
 public: 
     Manager();
 
     Manager(int ID, string Name);
 
     void addDept(Department* d);
+
+    void addJob(Job* j);
 
     void control();
 

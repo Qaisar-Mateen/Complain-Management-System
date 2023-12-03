@@ -15,6 +15,7 @@ class Manager;
 class Teacher;
 class Complaint;
 class Director;
+class Job;
 
 using namespace std;
 
@@ -25,9 +26,11 @@ extern vector<Manager*> man;
 extern vector<Teacher*> tea;
 extern vector<Department*> depts;
 extern vector<Complaint*> coms;
+extern vector<Job*> jobs;
 
 void populateDepartment(string);
 void populateComplaint(string);
+void populateJob(string);
 void init(string, string, string, string, string);
 
 

@@ -17,6 +17,7 @@ vector<Manager*> man;
 vector<Teacher*> tea;
 vector<Department*> depts;
 vector<Complaint*> coms;
+vector<Job*> jobs;
 
 void populateDepartment(string filename)
 {
@@ -112,6 +113,57 @@ void populateComplaint(string Filename) {
 			exit(1);
 		}
 		coms.push_back(new Complaint(id, description, dept_id, teacher_Id, state, day, month, year));
+	}
+	file.close();
+}
+
+void populateJob(string Filename) {
+
+	ifstream file(Filename);
+	if (!file.is_open()) {
+		cerr << "Failed to open file\n";
+		return;
+	}
+	string line;
+	while (getline(file, line)) {
+		istringstream iss(line);
+		string field;
+
+		getline(iss, field, ',');
+		int id = stoi(field);
+
+		getline(iss, field, ',');
+		int com_Id = stoi(field);
+
+		getline(iss, field, ',');
+		int man_id = stoi(field);
+
+		getline(iss, field, ',');
+		istringstream iss2(field);
+		vector<int> empIds;
+		while (iss2 >> field) {
+			empIds.push_back(stoi(field));
+		}
+
+		getline(iss, field, ',');
+		int day = stoi(field);
+
+		getline(iss, field, ',');
+		int month = stoi(field);
+
+		getline(iss, field, ',');
+		int year = stoi(field);
+
+		Manager* m = search(man, man_id);
+		for(int i=0;i<empIds.size();i++)
+			if(!search(emp,empIds[i])) cerr << "\n ERROR: Employee with id: " << empIds[i] << " does not exists!!\n";
+
+		if (!m ) {
+			cerr << "\n ERROR: Manager with id: " << man_id << " does not exists!!\n";
+			exit(1);
+		}
+
+		jobs.push_back(new Job(id, com_Id, m, empIds, day, month, year));
 	}
 	file.close();
 }

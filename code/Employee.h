@@ -28,6 +28,8 @@ public:
 
     void control();
 
+    char printInterface();
+
     static void writeToFile(const Employee& emp);
 
     static int getUniqueID();

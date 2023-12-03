@@ -26,6 +26,8 @@ void Manager::addDept(Department* d)
         dept = d;
 }
 
+void Manager::addJob(Job* j) { job.push_back(j); }
+
 void Manager::control()
 {
     char opt = 'd';
@@ -57,14 +59,16 @@ char Manager::printInterface() {
         cout << "\t\t\t ----<><><><><><><><><><><><( Manager )><><><><><><><><><><><>----\n\n";
         cout << " ID: " << id << endl;
         cout << " Name: " << name << endl;
+        cout << " Department: " << dept->getName() << "\n";
         cout << "\n --<{ Manager Controls }>--\n";
         cout << " a: View New Complaints\n";
-        cout << " b: \n";
+        cout << " b: View Notifications\n";
+        cout << " c: View All Complaints\n";
         cout << " f: Log Out\n";
         cout << " >";
         cin >> opt;
 
-        if (opt == 'a' || opt == 'b' || opt == 'f')
+        if (opt == 'a' || opt == 'b' || opt == 'c' || opt == 'f')
             valid = true;
 
         else {
@@ -88,7 +92,8 @@ void Manager::reviewComplaint() {
         system("cls");
         cout << "\t\t\t ----<><><><><><><><><><><><( Manager )><><><><><><><><><><><>----\n\n";
         cout << " ID: " << id << endl;
-        cout << " Name: " << name << "\n\n";
+        cout << " Name: " << name << "\n";
+        cout << " Department: " << dept->getName() << "\n\n";
         vector<int> v = dept->NewComplaint();
         if (v.empty())
             return;
@@ -126,7 +131,9 @@ void Manager::reviewComplaint() {
                 else if (e_Id != 0) assignEmp.push_back(e_Id);
             }
 
-            
+            dept->setCompState(opt);
+
+            job.push_back(new Job(opt, this, assignEmp));
 
         }
 

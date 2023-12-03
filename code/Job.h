@@ -20,6 +20,8 @@ class Job {
 public:
 	Job(int c_id, Manager* m, vector<int> e);
 
+	Job(int iD, int c_id, Manager* m, vector<int> e, int day, int month, int year);
+
 	int getUniqueID();
 };
 

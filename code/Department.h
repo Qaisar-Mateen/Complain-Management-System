@@ -53,6 +53,8 @@ public:
     vector<int> NewComplaint();
 
     vector<int> inDeptAndAval();
+
+    void setCompState(int c_id);
 };
 
 #endif //_DEPARTMENT_H
