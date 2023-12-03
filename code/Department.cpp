@@ -86,13 +86,33 @@ vector<int> Department::NewComplaint() {
         cout << "\n No Complaints to Display\n";
         return v;
     }
-    cout << "\n\t\t\t--<{ All Complaints Detail }>--\n";
+    cout << "\n\t\t\t--<{ UnAssigned Complaints Detail }>--\n";
     for (int i = 0; i < complaints.size(); i++)
         if (complaints[i]->getState() == State::New) {
             complaints[i]->printDetail();
             v.push_back(complaints[i]->getID());
         }
     return v;
+}
+
+void Department::pendingComplaint() {
+    if (complaints.empty()) {
+        cout << "\n No Complaints to Display\n";
+        return;
+    }
+    cout << "\n\t\t\t--<{ Pending Complaints Detail }>--\n";
+    for (int i = 0; i < complaints.size(); i++)
+        if (complaints[i]->getState() != State::Resolved || complaints[i]->getState() != State::Closed) complaints[i]->printDetail();
+}
+
+void Department::viewComplaint() {
+    if (complaints.empty()) {
+        cout << "\n No Complaints to Display\n";
+        return;
+    }
+    cout << "\n\t\t\t--<{ Pending Complaints Detail }>--\n";
+    for (int i = 0; i < complaints.size(); i++)
+        complaints[i]->printDetail();
 }
 
 vector<int> Department::inDeptAndAval() {

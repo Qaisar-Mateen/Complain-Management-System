@@ -39,9 +39,24 @@ void Manager::control()
 
         if (opt == 'a') reviewComplaint();
 
-        if (opt == 'b') {
-            viewNotif_E();
-            //opt = viewNotif();
+        else if (opt == 'b') viewNotif_E();
+
+        else if (opt == 'c') {
+            system("cls");
+            cout << "\t\t\t ----<><><><><><><><><><><><( Manager )><><><><><><><><><><><>----\n\n";
+            cout << " ID: " << id << endl;
+            cout << " Name: " << name << endl;
+            cout << " Department: " << dept->getName() << "\n";
+            dept->viewComplaint();
+        }
+
+        else if (opt == 'd') {
+            system("cls");
+            cout << "\t\t\t ----<><><><><><><><><><><><( Manager )><><><><><><><><><><><>----\n\n";
+            cout << " ID: " << id << endl;
+            cout << " Name: " << name << endl;
+            cout << " Department: " << dept->getName() << "\n";
+            dept->pendingComplaint();
         }
 
         if (opt != 'f' && opt != 'l')
@@ -69,38 +84,12 @@ char Manager::printInterface() {
         cout << " a: View New Complaints\n";
         cout << " b: View Notifications\n";
         cout << " c: View All Complaints\n";
+        cout << " d: View Pending Complaints\n";
         cout << " f: Log Out\n";
         cout << " >";
         cin >> opt;
 
-        if (opt == 'a' || opt == 'b' || opt == 'c' || opt == 'f')
-            valid = true;
-
-        else {
-            cout << "\n Invalid!! \n";
-            Sleep(700);
-        }
-    } while (!valid);
-    return opt;
-}
-
-char Manager::viewNotif() {
-    bool valid = false;
-    char opt;
-    do {
-        system("cls");
-        cout << "\t\t\t ----<><><><><><><><><><><><( Manager )><><><><><><><><><><><>----\n\n";
-        cout << " ID: " << id << endl;
-        cout << " Name: " << name << endl;
-        cout << " Department: " << dept->getName() << "\n";
-        cout << "\n --<{ Manager Controls }>--\n";
-        cout << " a: View Notifcation from Employees\n";
-        cout << " b: View Notifcation from Teachers\n";
-        cout << " l: Go Back\n";
-        cout << " >";
-        cin >> opt;
-
-        if (opt == 'a' || opt == 'b' || opt =='l')
+        if (opt == 'a' || opt == 'b' || opt == 'c' || opt == 'f' || opt == 'd')
             valid = true;
 
         else {

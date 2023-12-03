@@ -20,6 +20,8 @@ public:
     virtual vector<int> inDeptAndAval() = 0;
     virtual void setCompState(int c_id, int st) = 0;
     virtual bool removeManager(Manager* m) = 0;
+    virtual void pendingComplaint() = 0;
+    virtual void viewComplaint() = 0;
 };
 
 class WorksIn {
@@ -64,6 +66,10 @@ public:
     void addComplaint(Complaint* c);
 
     vector<int> NewComplaint();
+
+    void pendingComplaint();
+
+    void viewComplaint();
 
     vector<int> inDeptAndAval();
 
