@@ -3,8 +3,10 @@
 #include "Department.h"
 #include "Global.h"
 
-Complaint::Complaint(int ID, string des, int d, int t, int st, int day, int month, int year) : description(des), From(search(tea,t)), To(search(depts, d))
+Complaint::Complaint(int ID, string des, int d, int t, int st, int day, int month, int year, int noT, int nom) : description(des), From(search(tea,t)), To(search(depts, d))
 {
+    notify_m = (bool)nom;
+    notify_t = (bool)noT;
     id = ID;
     date = new Date(day, month, year);
     switch (st) {
@@ -37,6 +39,7 @@ Complaint::Complaint(string des, int d, int t) : description(des), From(search(t
     From->addComplaint(this);
     writeToFile(t, d);
     coms.push_back(this); //add to global
+    notify_m = notify_t = false;
 }
 
 int Complaint::getID() { return id; }

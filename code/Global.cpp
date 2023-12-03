@@ -106,6 +106,12 @@ void populateComplaint(string Filename) {
 			getline(iss, field, ',');
 			int state = stoi(field);
 
+			getline(iss, field, ',');
+			int noT = stoi(field);
+
+			getline(iss, field, ',');
+			int nom = stoi(field);
+
 			Department* d = search(depts, dept_id);
 			Teacher* t = search(tea, teacher_Id);
 
@@ -113,7 +119,7 @@ void populateComplaint(string Filename) {
 				cerr << "\n ERROR: Either a Teacher with id: " << teacher_Id << " or Department with id: " << dept_id << " does not exists!!\n";
 				exit(1);
 			}
-			coms.push_back(new Complaint(id, description, dept_id, teacher_Id, state, day, month, year));
+			coms.push_back(new Complaint(id, description, dept_id, teacher_Id, state, day, month, year, noT, nom));
 		}
 	}
 	file.close();
