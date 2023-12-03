@@ -83,7 +83,7 @@ void Department::addComplaint(Complaint* c)
 vector<int> Department::NewComplaint() {
     vector<int> v;
     if(complaints.empty()) {
-        cout << "\n No New Complaints to Display\n";
+        cout << "\n No Complaints to Display\n";
         return v;
     }
     cout << "\n\t\t\t--<{ All Complaints Detail }>--\n";
@@ -104,7 +104,25 @@ vector<int> Department::inDeptAndAval() {
     return v;
 }
 
-void Department::setCompState(int c_id) {
+void Department::setCompState(int c_id, int st) {
+    State s;
+    switch (st) {
+    case 0:
+        s = State::New;
+        break;
+    case 1:
+        s = State::Assigned;
+        break;
+    case 2:
+        s = State::Resolved;
+        break;
+    case 3:
+        s = State::Closed;
+        break;
+    default:
+        s = State::New;
+        break;
+    }
     for (int i = 0; i < complaints.size(); i++)
-        if (complaints[i]->getID() == c_id) complaints[i]->setState(State::Assigned);
+        if (complaints[i]->getID() == c_id) complaints[i]->setState(s);
 }

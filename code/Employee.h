@@ -28,7 +28,7 @@ public:
 
     void control();
 
-    void manageJob();
+    void viewJobs();
 
     char printInterface();
 

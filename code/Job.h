@@ -24,11 +24,17 @@ public:
 
 	Job(int iD, int c_id, Manager* m, vector<int> e, int day, int month, int year, int com, int hi);
 
+	int getID();
+
+	int getComID();
+
 	int getUniqueID();
 
 	bool isCompleted();
 
-	bool highlight();
+	bool isHighlight();
+
+	void Complete();
 
 	void printDetail();
 

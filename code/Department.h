@@ -54,7 +54,7 @@ public:
 
     vector<int> inDeptAndAval();
 
-    void setCompState(int c_id);
+    void setCompState(int c_id, int st);
 };
 
 #endif //_DEPARTMENT_H

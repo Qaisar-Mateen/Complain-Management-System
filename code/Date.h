@@ -3,6 +3,8 @@
 
 using namespace std;
 
+#ifndef _Date_H
+#define _Date_H
 class Date 
 {
 private:
@@ -71,3 +73,5 @@ public:
         return !(*this == other);
     }
 };
+
+#endif //_Date_H

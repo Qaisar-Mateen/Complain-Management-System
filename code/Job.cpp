@@ -2,6 +2,7 @@
 #include "Date.h"
 #include "Manager.h"
 #include "Employee.h"
+#include "Complaint.h"
 #include "Global.h"
 
 Job::Job(int c_id, Manager* m, vector<int> e) : com_id(c_id), man(m) {
@@ -28,6 +29,10 @@ Job::Job(int iD, int c_id, Manager* m, vector<int> e, int day, int month, int ye
 	Man_high = (bool)hi;
 }
 
+int Job::getID() { return id; }
+
+int Job::getComID() { return com_id; }
+
 int Job::getUniqueID()
 {
 	ifstream file("Job.txt");
@@ -46,7 +51,9 @@ int Job::getUniqueID()
 
 bool Job::isCompleted() { return completed; }
 
-bool Job::highlight() { return Man_high; }
+bool Job::isHighlight() { return Man_high; }
+
+void Job::Complete() { completed = Man_high = true; }
 
 void Job::printDetail(){
 	cout << "\n ID: " << id << "\t Complaint Id: " << com_id << "\t Assigned to: ";

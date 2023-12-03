@@ -95,8 +95,10 @@ void Manager::reviewComplaint() {
         cout << " Name: " << name << "\n";
         cout << " Department: " << dept->getName() << "\n\n";
         vector<int> v = dept->NewComplaint();
-        if (v.empty())
+        if (v.empty()) {
+            cout << "\n No New Complaints to Display\n";
             return;
+        }
        
         cout << "\n\n Enter ID of Complaint to Assign: \n";
         cout << " 0: Go Back\n";
@@ -131,7 +133,7 @@ void Manager::reviewComplaint() {
                 else if (e_Id != 0) assignEmp.push_back(e_Id);
             }
 
-            dept->setCompState(opt);
+            dept->setCompState(opt, 1); //1 = assigned
 
             job.push_back(new Job(opt, this, assignEmp));
 

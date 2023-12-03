@@ -34,7 +34,9 @@ void Employee::control()
     {
         opt = printInterface();
 
-        if (opt == 'a') manageJob();
+        if (opt == 'a') viewJobs();
+
+        else if (opt == 'b') updateSystem();
 
         if (opt != 'f' && opt != 'l') {
             cin.ignore();
@@ -47,7 +49,7 @@ void Employee::control()
     system("cls");
 }
 
-void Employee::manageJob() {
+void Employee::viewJobs() {
     bool valid = false;
     char opt;
     do {
@@ -86,7 +88,7 @@ char Employee::printInterface() {
         cout << " Department: " << dept->getName() << "\n";
         cout << "\n --<{ Employee Controls }>--\n";
         cout << " a: View Assigned Job\n";
-        cout << " b: \n";
+        cout << " b: Manage Active Job\n";
         cout << " f: Log Out\n";
         cout << " >";
         cin >> opt;
@@ -107,9 +109,42 @@ void Employee::printDetail()
     cout << "\n ID: " << id << "\tName: " << name << "\tDepartment: " << dept->getName() << ((Available) ? "\t Available " : "\t Not Available") << "\n";
 }
 
-void Employee::updateSystem()
-{
+void Employee::updateSystem() {
+    bool valid = false;
+    char opt;
+    do {
+        system("cls");
+        cout << "\t\t\t ----<><><><><><><><><><><><( Employee )><><><><><><><><><><><>----\n\n";
+        cout << " ID: " << id << endl;
+        cout << " Name: " << name << endl;
+        cout << " Department: " << dept->getName() << "\n\n";
+        cout << "\n\t\t\t--<{ Active Job }>--\n";
+        int c_id = 0, cur = 0;
+        for (int i = 0; i < job.size(); i++)
+            if (!job[i]->isCompleted()) {
+                job[i]->printDetail();
+                c_id = job[i]->getID();
+                cur = i;
+            }
 
+        cout << " a: Mark as Complete\n";
+        cout << " l: Go Back\n";
+        cout << " >";
+        cin >> opt;
+
+        if (opt == 'l')
+            valid = true;
+
+        else if (opt == 'a') {
+            job[cur]->Complete();
+            dept->setCompState(c_id, 2); // 2 = resolved
+        }
+
+        else {
+            cout << "\n Invalid!! \n";
+            Sleep(700);
+        }
+    } while (!valid);
 }
 
 Employee::~Employee()
