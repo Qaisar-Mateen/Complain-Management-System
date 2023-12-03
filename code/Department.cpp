@@ -95,11 +95,11 @@ vector<int> Department::NewComplaint() {
     return v;
 }
 
-bool Department::inDept(int iD) {
-    bool present = false;
+vector<int> Department::inDeptAndAval() {
+    vector<int> v;
     for (auto it : emps)
-        if (it->getID() == iD)
-            present = true;
+        if (it->isAvailable())
+            v.push_back(it->getID());
 
-    return present;
+    return v;
 }

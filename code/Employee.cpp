@@ -7,12 +7,14 @@ Employee::Employee()
 {
     id = -1;
     name = "Invalid";
+    Available = true;
 }
 
 Employee::Employee(int ID, string Name)
 {
     id = ID;
     name = Name;
+    Available = true;
 }
 
 void Employee::addDept(Department* d)
@@ -29,7 +31,7 @@ void Employee::control()
 
 void Employee::printDetail()
 {
-    cout << "\n ID: " << id << "\tName: " << name << "\tDepartment: " << dept->getName() <<"\n";
+    cout << "\n ID: " << id << "\tName: " << name << "\tDepartment: " << dept->getName() << ((Available) ? "\t Available " : "\t Not Available") << "\n";
 }
 
 void Employee::updateSystem()
@@ -50,6 +52,8 @@ int Employee::getID() const {
 string Employee::getName() const {
     return name;
 }
+
+bool Employee::isAvailable() { return Available; }
 
 void Employee::writeToFile(const Employee& emp) {
     ofstream file("Employee.txt", ios::app);
@@ -104,6 +108,6 @@ void Employee::markAsUnallocated(int empId) {
 
     // Rename the temp file to replace the original file
     remove("Employee.txt");
-    rename("temp.txt", "Employee.txt");
+    int chk = rename("temp.txt", "Employee.txt");
 }
 

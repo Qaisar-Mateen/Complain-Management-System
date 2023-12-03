@@ -105,23 +105,26 @@ void Manager::reviewComplaint() {
 
         else if (valid) {
             dept->printEmployees();
-            int e_Id = -1;
-            vector<int> assignEmp;
+            int e_Id = -1, exists = 0;
+            vector<int> assignEmp, aval = dept->inDeptAndAval();
             cout << "\n Enter IDs of Employees to Assign Job (enter 0 when done): \n";
             while (e_Id != 0) {
                 cout << " >";
                 cin >> e_Id;
-                if (e_Id == 0 && assignEmp.empty()) {
-                    cerr << "\n Minimum One Employee Needed!!\n";
-                    e_Id = -1;
-                }
-                else if (e_Id == 0)
-                    break;
-                else if (!dept->inDept(e_Id) || !search(emp, e_Id))
-                    cerr << "\n ERROR: Either Employee Doesn't Exist or is Not in "<< dept->getName() << " Dept\n";
-                else if (e_Id != 0)
-                    assignEmp.push_back(e_Id);
+
+                for (int i = 0; i < aval.size(); i++)
+                    if (e_Id == aval[i]) exists = 1;
+
+                if (e_Id == 0 && assignEmp.empty()) { cerr << "\n Minimum One Employee Needed!!\n"; e_Id = -1; }
+
+                else if (e_Id == 0) break;
+
+                else if (!exists)
+                    cerr << "\n ERROR: Employee is Not in "<< dept->getName() << " Dept or is Not Avaliable\n";
+
+                else if (e_Id != 0) assignEmp.push_back(e_Id);
             }
+
         }
 
         else {

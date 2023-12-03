@@ -38,6 +38,7 @@
     <ClInclude Include="code\Director.h" />
     <ClInclude Include="code\Employee.h" />
     <ClInclude Include="code\Global.h" />
+    <ClInclude Include="code\Job.h" />
     <ClInclude Include="code\Manager.h" />
     <ClInclude Include="code\Person.h" />
     <ClInclude Include="code\Teacher.h" />

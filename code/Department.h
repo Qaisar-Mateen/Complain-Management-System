@@ -42,7 +42,7 @@ public:
 
     vector<int> NewComplaint();
 
-    bool inDept(int id);
+    vector<int> inDeptAndAval();
 };
 
 #endif //_DEPARTMENT_H

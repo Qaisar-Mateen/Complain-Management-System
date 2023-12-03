@@ -13,6 +13,7 @@ class Employee: virtual public Person {
     int id;
     string name;
     Department* dept;
+    bool Available;
 
 public:
     Employee();
@@ -30,6 +31,8 @@ public:
     int getID() const;
 
     string getName() const;
+
+    bool isAvailable();
 
     void printDetail();
 
