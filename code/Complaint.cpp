@@ -46,6 +46,10 @@ int Complaint::getID() { return id; }
 
 State Complaint::getState() { return state; }
 
+bool Complaint::notifyManager() { return notify_m; }
+
+bool Complaint::notifyTeacher() { return notify_t; }
+
 void Complaint::setState(State s)
 {
     state = s;
@@ -99,6 +103,10 @@ int Complaint::getUniqueID() {
 
     return maxID;
 }
+
+void Complaint::setNotifyMan(bool t) { notify_m = t; }
+
+void Complaint::setNotifyTea(bool t) { notify_t = t; }
 
 void Complaint::writeToFile(int t, int d) {
     ofstream file("Complaint.txt", ios::app);
