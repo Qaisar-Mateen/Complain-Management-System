@@ -11,12 +11,14 @@ using namespace std;
 #ifndef _MANAGER_H
 #define _MANAGER_H
 
+class Job;
+
 class Manager : virtual public Person {
 private:
     int id;
     string name;
     Department* dept;
-
+    vector<Job*> jobs;
 public: 
     Manager();
 

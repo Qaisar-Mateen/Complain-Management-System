@@ -25,6 +25,8 @@ void Employee::addDept(Department* d)
         dept = d;
 }
 
+void Employee::addJob(Job* j) { job.push_back(j); Available = 0; }
+
 void Employee::control()
 {
 }

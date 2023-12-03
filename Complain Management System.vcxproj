@@ -26,6 +26,7 @@
     <ClCompile Include="code\Director.cpp" />
     <ClCompile Include="code\Employee.cpp" />
     <ClCompile Include="code\Global.cpp" />
+    <ClCompile Include="code\Job.cpp" />
     <ClCompile Include="code\main.cpp" />
     <ClCompile Include="code\Manager.cpp" />
     <ClCompile Include="code\Teacher.cpp" />

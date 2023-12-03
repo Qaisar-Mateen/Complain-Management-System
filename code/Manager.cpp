@@ -2,6 +2,7 @@
 #include "Department.h"
 #include "Employee.h"
 #include "Global.h"
+#include "Job.h"
 
 Manager::Manager()
 {
@@ -124,6 +125,8 @@ void Manager::reviewComplaint() {
 
                 else if (e_Id != 0) assignEmp.push_back(e_Id);
             }
+
+            
 
         }
 

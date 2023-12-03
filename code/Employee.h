@@ -2,6 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include "Person.h"
+#include "Job.h"
 using namespace std;
 
 #ifndef _EMPLOYEE_H
@@ -13,6 +14,7 @@ class Employee: virtual public Person {
     int id;
     string name;
     Department* dept;
+    vector<Job*> job;
     bool Available;
 
 public:
@@ -21,6 +23,8 @@ public:
     Employee(int ID, string Name);
 
     void addDept(Department *d);
+
+    void addJob(Job* j);
 
     void control();
 

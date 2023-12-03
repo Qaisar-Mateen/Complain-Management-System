@@ -6,6 +6,7 @@
 #include "Teacher.h"
 #include "Complaint.h"
 #include "Director.h"
+#include "Job.h"
 
 using namespace std;
 
