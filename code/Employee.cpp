@@ -65,6 +65,9 @@ char Employee::printInterface() {
     bool valid = false;
     char opt;
     do {
+        int b = 0;
+        for (int i = 0; i < job.size(); i++)
+            if (!job[i]->isCompleted()) b = 1;
         system("cls");
         cout << "\t\t\t ----<><><><><><><><><><><><( Employee )><><><><><><><><><><><>----\n\n";
         cout << " ID: " << id << endl;
@@ -72,12 +75,12 @@ char Employee::printInterface() {
         cout << " Department: " << dept->getName() << "\n";
         cout << "\n --<{ Employee Controls }>--\n";
         cout << " a: View Assigned Jobs\n";
-        cout << " b: Manage Active Job\n";
+        if(b) cout << " b: Manage Active Job\n";
         cout << " f: Log Out\n";
         cout << " >";
         cin >> opt;
 
-        if (opt == 'a' || opt == 'b' || opt == 'f')
+        if (opt == 'a' || (opt == 'b' && b) || opt == 'f')
             valid = true;
 
         else {
