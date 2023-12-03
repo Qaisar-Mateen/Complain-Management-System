@@ -9,11 +9,12 @@ using namespace std;
 #define _EMPLOYEE_H
 
 class Department;
+class WorksIn;
 
 class Employee: virtual public Person {
     int id;
     string name;
-    Department* dept;
+    WorksIn* dept;
     vector<Job*> job;
     bool Available;
 
@@ -27,8 +28,6 @@ public:
     void addJob(Job* j);
 
     void control();
-
-    void viewJobs();
 
     char printInterface();
 

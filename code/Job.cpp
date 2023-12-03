@@ -29,6 +29,8 @@ Job::Job(int iD, int c_id, Manager* m, vector<int> e, int day, int month, int ye
 	Man_high = (bool)hi;
 }
 
+void Job::read() { Man_high = false; }
+
 int Job::getID() { return id; }
 
 int Job::getComID() { return com_id; }
@@ -53,7 +55,7 @@ bool Job::isCompleted() { return completed; }
 
 bool Job::isHighlight() { return Man_high; }
 
-void Job::Complete() { completed = Man_high = true; }
+void Job::Complete(bool t) { completed = Man_high = t; }
 
 void Job::printDetail(){
 	cout << "\n ID: " << id << "\t Complaint Id: " << com_id << "\t Assigned to: ";

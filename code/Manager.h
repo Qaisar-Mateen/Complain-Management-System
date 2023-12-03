@@ -17,7 +17,7 @@ class Manager : virtual public Person {
 private:
     int id;
     string name;
-    Department* dept;
+    Manages* dept;
     vector<Job*> job;
 public: 
     Manager();
@@ -31,6 +31,12 @@ public:
     void control();
 
     char printInterface();
+
+    char viewNotif();
+
+    void viewNotif_E();
+
+    void viewNotif_T();
 
     void printDetail();
 

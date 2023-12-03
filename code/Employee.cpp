@@ -34,7 +34,18 @@ void Employee::control()
     {
         opt = printInterface();
 
-        if (opt == 'a') viewJobs();
+        if (opt == 'a') {
+            system("cls");
+            cout << "\t\t\t ----<><><><><><><><><><><><( Employee )><><><><><><><><><><><>----\n\n";
+            cout << " ID: " << id << endl;
+            cout << " Name: " << name << endl;
+            cout << " Department: " << dept->getName() << "\n\n";
+            if (job.empty()) cout << "\n No Jobs to Display\n";
+            else {
+                cout << "\n\t\t\t--<{ All Jobs Assigned }>--\n";
+                for (int i = 0; i < job.size(); i++) job[i]->printDetail();
+            }
+        }
 
         else if (opt == 'b') updateSystem();
 
@@ -49,33 +60,6 @@ void Employee::control()
     system("cls");
 }
 
-void Employee::viewJobs() {
-    bool valid = false;
-    char opt;
-    do {
-        system("cls");
-        cout << "\t\t\t ----<><><><><><><><><><><><( Employee )><><><><><><><><><><><>----\n\n";
-        cout << " ID: " << id << endl;
-        cout << " Name: " << name << endl;
-        cout << " Department: " << dept->getName() << "\n\n";
-        cout << "\n\t\t\t--<{ All Job Assigned }>--\n";
-
-        for (int i = 0; i < job.size(); i++)
-            job[i]->printDetail();
-
-        cout << " l: Go Back\n";
-        cout << " >";
-        cin >> opt;
-
-        if (opt == 'l')
-            valid = true;
-
-        else {
-            cout << "\n Invalid!! \n";
-            Sleep(700);
-        }
-    } while (!valid);
-}
 
 char Employee::printInterface() {
     bool valid = false;
@@ -87,7 +71,7 @@ char Employee::printInterface() {
         cout << " Name: " << name << endl;
         cout << " Department: " << dept->getName() << "\n";
         cout << "\n --<{ Employee Controls }>--\n";
-        cout << " a: View Assigned Job\n";
+        cout << " a: View Assigned Jobs\n";
         cout << " b: Manage Active Job\n";
         cout << " f: Log Out\n";
         cout << " >";
@@ -126,8 +110,7 @@ void Employee::updateSystem() {
                 c_id = job[i]->getID();
                 cur = i;
             }
-
-        cout << " a: Mark as Complete\n";
+        cout << "\n a: Mark as Complete\n";
         cout << " l: Go Back\n";
         cout << " >";
         cin >> opt;
@@ -136,8 +119,9 @@ void Employee::updateSystem() {
             valid = true;
 
         else if (opt == 'a') {
-            job[cur]->Complete();
+            job[cur]->Complete(true);
             dept->setCompState(c_id, 2); // 2 = resolved
+            valid = true;
         }
 
         else {

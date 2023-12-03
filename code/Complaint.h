@@ -20,7 +20,8 @@ class Complaint
     Teacher* From;
     Date* date;
     State state;
-
+//    bool not_M;
+    //bool not_T;
 public:    
     Complaint(int ID, string des, int d, int t, int st, int day, int month, int year);
     Complaint(string des, int d, int t);

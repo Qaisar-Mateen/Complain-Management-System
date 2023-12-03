@@ -105,23 +105,12 @@ vector<int> Department::inDeptAndAval() {
 }
 
 void Department::setCompState(int c_id, int st) {
-    State s;
+    State s = State::New;
     switch (st) {
-    case 0:
-        s = State::New;
-        break;
-    case 1:
-        s = State::Assigned;
-        break;
-    case 2:
-        s = State::Resolved;
-        break;
-    case 3:
-        s = State::Closed;
-        break;
-    default:
-        s = State::New;
-        break;
+    case 0: s = State::New; break;
+    case 1: s = State::Assigned; break;
+    case 2: s = State::Resolved; break;
+    case 3: s = State::Closed;
     }
     for (int i = 0; i < complaints.size(); i++)
         if (complaints[i]->getID() == c_id) complaints[i]->setState(s);

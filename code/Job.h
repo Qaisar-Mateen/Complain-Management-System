@@ -24,6 +24,8 @@ public:
 
 	Job(int iD, int c_id, Manager* m, vector<int> e, int day, int month, int year, int com, int hi);
 
+	void read();
+
 	int getID();
 
 	int getComID();
@@ -34,7 +36,7 @@ public:
 
 	bool isHighlight();
 
-	void Complete();
+	void Complete(bool t);
 
 	void printDetail();
 

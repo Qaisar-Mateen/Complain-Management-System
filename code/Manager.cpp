@@ -2,6 +2,7 @@
 #include "Department.h"
 #include "Employee.h"
 #include "Global.h"
+#include "Complaint.h"
 #include "Job.h"
 
 Manager::Manager()
@@ -36,8 +37,13 @@ void Manager::control()
     {
         opt = printInterface();
 
-        if (opt == 'a')
-            reviewComplaint();
+        if (opt == 'a') reviewComplaint();
+
+        if (opt == 'b') {
+            opt = viewNotif();
+            if (opt == 'a') viewNotif_E();
+            else if (opt == 'b') viewNotif_T();
+        }
 
         if (opt != 'f' && opt != 'l')
         {
@@ -76,8 +82,114 @@ char Manager::printInterface() {
             Sleep(700);
         }
     } while (!valid);
-
     return opt;
+}
+
+char Manager::viewNotif() {
+    bool valid = false;
+    char opt;
+    do {
+        system("cls");
+        cout << "\t\t\t ----<><><><><><><><><><><><( Manager )><><><><><><><><><><><>----\n\n";
+        cout << " ID: " << id << endl;
+        cout << " Name: " << name << endl;
+        cout << " Department: " << dept->getName() << "\n";
+        cout << "\n --<{ Manager Controls }>--\n";
+        cout << " a: View Notifcation from Employees\n";
+        cout << " b: View Notifcation from Teachers\n";
+        cout << " l: Go Back\n";
+        cout << " >";
+        cin >> opt;
+
+        if (opt == 'a' || opt == 'b' || opt =='l')
+            valid = true;
+
+        else {
+            cout << "\n Invalid!! \n";
+            Sleep(700);
+        }
+    } while (!valid);
+    return opt;
+}
+
+void Manager::viewNotif_E() {
+    bool valid = false;
+    int opt;
+    do {
+        vector<int> v;
+        system("cls");
+        cout << "\t\t\t ----<><><><><><><><><><><><( Manager )><><><><><><><><><><><>----\n\n";
+        cout << " ID: " << id << endl;
+        cout << " Name: " << name << endl;
+        cout << " Department: " << dept->getName() << "\n\n";
+        cout << "\n\t\t\t--<{ Notification from Employees }>--\n";
+        for (int i = 0; i < job.size(); i++)
+            if (job[i]->isHighlight()) { job[i]->printDetail(); v.push_back(job[i]->getID()); }
+
+        if (v.empty()) cout << "\n No Notification From Employees\n";
+        else {
+            cout << "\n\n Enter ID: \n";
+            cout << " 0: Go Back\n";
+            cout << " >";
+            cin >> opt;
+            int val = 0;
+
+            for (int i = 0; i < v.size(); i++)
+                if (v[i] == opt) val = 1;
+
+                if (opt == 0) valid = true;
+
+                else if (val) {
+                    valid = true;
+                    bool valid2 = false;
+                    do {
+                        char op;
+                        cout << " a: Accept\n";
+                        cout << " r: Reject\n";
+                        cout << " l: Go Back\n >";
+                        cin >> op;
+                        if (op == 'l') valid2 = true;
+
+                        else if (op == 'a') {
+                            valid2 = true;
+                            for (int i = 0; i < job.size(); i++)
+                                if (job[i]->getID() == opt) {
+                                    job[i]->read();
+                                    int c_id = job[i]->getComID();
+                                    //search(coms, c_id)->notif_T();
+                                }
+                        }
+                            
+                        else if (op == 'r') {
+                            valid2 = true;
+                            for (int i = 0; i < job.size(); i++)
+                                if (job[i]->getID() == opt) {
+                                    job[i]->Complete(false);
+                                    int c_id = job[i]->getComID();
+                                    Complaint* c = search(coms, c_id);
+                                    dept->setCompState(c_id, 1);
+                                }
+                        }
+
+                    } while (!valid2);
+                }
+
+                else {
+                    cout << "\n Invalid!! \n";
+                    Sleep(700);
+                }
+        }
+    } while (!valid);
+}
+
+void Manager::viewNotif_T() {
+    system("cls");
+    cout << "\t\t\t ----<><><><><><><><><><><><( Manager )><><><><><><><><><><><>----\n\n";
+    cout << " ID: " << id << endl;
+    cout << " Name: " << name << endl;
+    cout << " Department: " << dept->getName() << "\n\n";
+    cout << "\n\t\t\t--<{ All Jobs Assigned }>--\n";
+    for (int i = 0; i < job.size(); i++) job[i]->printDetail();
 }
 
 void Manager::printDetail()
@@ -226,6 +338,6 @@ void Manager::markAsUnallocated(int manageId) {
     outFile.close();
 
     // Rename the temp file to replace the original file
-    remove("Manager.txt");
+    ::remove("Manager.txt");
     int chk = rename("temp.txt", "Manager.txt");
 }
