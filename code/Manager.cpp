@@ -232,6 +232,7 @@ void Manager::reviewComplaint() {
             if (e_Id != -1) {
                 dept->setCompState(opt, 1); //1 = assigned
                 job.push_back(new Job(opt, this, assignEmp));
+                cout << "\n Job Assigned to Employees\n";
             }
         }
 

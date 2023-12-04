@@ -123,7 +123,6 @@ void Employee::updateSystem() {
 
         else if (opt == 'a') {
             job[cur]->Complete(true);
-
             dept->setCompState(c_id, 2); // 2 = resolved
             valid = true;
             cout << "\n Job Completed successfully\n";

@@ -92,34 +92,36 @@ void Job::updateFile() {
 	string line;
 
 	while (std::getline(fileIn, line)) {
-		istringstream iss(line);
-		string field;
-		getline(iss, field, ',');
-		int complaintId = std::stoi(field);
+		if (!line.empty()) {
+			istringstream iss(line);
+			string field;
+			getline(iss, field, ',');
+			int complaintId = std::stoi(field);
 
-		if (complaintId == id) {
-			ostringstream oss;
-			oss << id << ',';
-			getline(iss, field, ',');  // complaint_id
-			oss << field << ',';
-			getline(iss, field, ',');  // manager_id
-			oss << field << ',';
-			getline(iss, field, ',');  // employee_ids
-			oss << field << ',';
-			getline(iss, field, ',');  // day
-			oss << field << ',';
-			getline(iss, field, ',');  // month
-			oss << field << ',';
-			getline(iss, field, ',');  // year
-			oss << field << ',';
-			oss << (int)completed << ',' << (int)Man_high;
-			line = oss.str();
+			if (complaintId == id) {
+				ostringstream oss;
+				oss << id << ',';
+				getline(iss, field, ',');  // complaint_id
+				oss << field << ',';
+				getline(iss, field, ',');  // manager_id
+				oss << field << ',';
+				getline(iss, field, ',');  // employee_ids
+				oss << field << ',';
+				getline(iss, field, ',');  // day
+				oss << field << ',';
+				getline(iss, field, ',');  // month
+				oss << field << ',';
+				getline(iss, field, ',');  // year
+				oss << field << ',';
+				oss << (int)completed << ',' << (int)Man_high;
+				line = oss.str();
+			}
+			fileOut << line << '\n';
 		}
-		fileOut << line << '\n';
 	}
 	fileIn.close();
 	fileOut.close();
 
-	remove("Complaint.txt");
-	int chk = rename("Temp.txt", "Complaint.txt");
+	remove("Job.txt");
+	int chk = rename("Temp.txt", "Job.txt");
 }
