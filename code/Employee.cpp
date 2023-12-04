@@ -10,11 +10,11 @@ Employee::Employee()
     Available = true;
 }
 
-Employee::Employee(int ID, string Name)
+Employee::Employee(int ID, string Name, bool aval)
 {
     id = ID;
     name = Name;
-    Available = true;
+    Available = aval;
 }
 
 void Employee::addDept(Department* d)
@@ -25,7 +25,12 @@ void Employee::addDept(Department* d)
         dept = d;
 }
 
-void Employee::addJob(Job* j) { job.push_back(j); Available = 0; }
+void Employee::addJob(Job* j) { 
+    job.push_back(j); 
+    if (!job.back()->isCompleted()) {
+        Available = false;
+    }
+}
 
 void Employee::control()
 {
@@ -208,4 +213,3 @@ void Employee::markAsUnallocated(int empId) {
     remove("Employee.txt");
     int chk = rename("temp.txt", "Employee.txt");
 }
-

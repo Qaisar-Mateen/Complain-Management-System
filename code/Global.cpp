@@ -126,7 +126,7 @@ void populateComplaint(string Filename) {
 }
 
 void populateJob(string Filename) {
-
+	
 	ifstream file(Filename);
 	if (!file.is_open()) {
 		cerr << "Failed to open file\n";
@@ -183,12 +183,41 @@ void populateJob(string Filename) {
 	file.close();
 }
 
+void populateEmployee(string Filename) {
+
+	ifstream file(Filename);
+	if (!file.is_open()) {
+		cerr << "Failed to open file\n";
+		return;
+	}
+	
+	string line;
+	while (getline(file, line)) {
+		if (!line.empty()) {
+			istringstream iss(line);
+			string field;
+
+			getline(iss, field, ',');
+			int id = stoi(field);
+
+			getline(iss, field, ',');
+			string name = field;
+	
+			getline(iss, field, '\n');
+			int aval = stoi(field);
+
+			emp.push_back(new Employee(id, name, (bool)aval));
+		}
+	}
+	file.close();
+}
+
 void init(string e_file, string m_file, string t_file, string d_file, string c_file, string j_file)
 {
 	adm = new Admin(emp, man, tea);
 	dir = new Director(depts);
 
-	populateFromFile(e_file, emp);
+	populateEmployee(e_file);
 	populateFromFile(m_file, man);
 	populateFromFile(t_file, tea);
 

@@ -31,6 +31,7 @@ extern vector<Job*> jobs;
 void populateDepartment(string);
 void populateComplaint(string);
 void populateJob(string);
+void populateEmployee(string);
 void init(string, string, string, string, string, string);
 
 

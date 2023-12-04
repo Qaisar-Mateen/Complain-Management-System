@@ -265,7 +265,7 @@ void Admin::addEmployee()
 		cerr << "\n Invalid Department Id!!\n";
 		return;
 	}
-	Employee* e = new Employee(id, nam);
+	Employee* e = new Employee(id, nam, true);
 
 	e->addDept(d);
 	Emps->push_back(e);
@@ -375,7 +375,7 @@ bool Admin::emp_delete(int Id)
 	{
 		if ((*it)->getID() == Id)
 		{
-			if ((*it)->isAvailable()) {
+			if (!(*it)->isAvailable()) {
 				cout << "\n Can't Remove Employee: Currently Assigned a Job\n";
 				return false;
 			}

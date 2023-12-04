@@ -1,7 +1,10 @@
 # Complain-Management-System
 
-FILE FORMAT FOR MANAGER/EMPLOYEE/TEACHER:
+FILE FORMAT FOR MANAGER/TEACHER:
 id name
+
+FILE FORMAT FOR EMPLOYEE:
+id,name,available?
 
 FILE FORMAT FOR DEPARTMENT:
 deptid dept name' managerId "employee ids"

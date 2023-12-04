@@ -21,7 +21,7 @@ class Employee: virtual public Person {
 public:
     Employee();
 
-    Employee(int ID, string Name);
+    Employee(int ID, string Name, bool aval);
 
     void setAvailable(bool t);
 
