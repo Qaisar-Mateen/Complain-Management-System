@@ -85,8 +85,7 @@ char Manager::printInterface() {
         cout << " Department: " << dept->getName() << "\n";
         cout << "\n --<{ Manager Controls }>--\n";
         cout << " a: View New Complaints\n";
-        if(b)
-            cout << " b: View Notifications\n";
+        if(b) cout << " b: View Notifications\n";
         cout << " c: View All Complaints\n";
         cout << " d: View Pending Complaints\n";
         cout << " f: Log Out\n";

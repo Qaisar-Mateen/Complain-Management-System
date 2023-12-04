@@ -5,7 +5,7 @@
 
 using namespace std;
 
-Department::Department(int ID, string Name, Manager * m)//, vector<int> v)
+Department::Department(int ID, string Name, Manager * m)
 {
     id = ID;
     name = Name;

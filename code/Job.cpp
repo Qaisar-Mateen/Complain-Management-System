@@ -61,7 +61,9 @@ void Job::printDetail(){
 	cout << "\n ID: " << id << "\t Complaint Id: " << com_id << "\t Assigned to: ";
 	for (auto it : emps)
 		cout << it->getName() << ", ";
-	cout << "\t Completed: "<< completed <<"\n";
+	cout << "\t Assigned on ";
+	date->displayDate();
+	cout << (completed? "\t Completed" : "\t Not Completed") << "\n";
 }
 
 void Job::writeToFile() {

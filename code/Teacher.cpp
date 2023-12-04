@@ -23,11 +23,11 @@ void Teacher::control()
 	{
 		opt = printInterface();
 
-		if (opt == 'a')
-			makeComplaint();
+        if (opt == 'a') makeComplaint();
 
-		else if (opt == 'b')
-			complaintDetail();
+        else if (opt == 'b') complaintDetail();
+
+        else if (opt == 'c') reocordFeedback();
 
 		if (opt != 'f' && opt != 'l')
 		{
@@ -45,6 +45,9 @@ char Teacher::printInterface() {
 	bool valid = false;
 	char opt;
 	do {
+		int c = 0;
+		for (auto it : comps)
+			if (it->notifyTeacher()) c = 1;
 		system("cls");
 		cout << "\t\t\t ----<><><><><><><><><><><><( Teacher )><><><><><><><><><><><>----\n\n";
 		cout << " ID: " << id << endl;
@@ -52,12 +55,12 @@ char Teacher::printInterface() {
 		cout << "\n --<{ Teacher Controls }>--\n";
 		cout << " a: Make a Complaint\n";
 		cout << " b: Display Complaints\n";
-		cout << " c: View pending FeedBack\n";
+		if(c) cout << " c: View pending FeedBack\n";
 		cout << " f: Log out\n";
 		cout << " >";
 		cin >> opt;
 
-		if (opt == 'a' || opt == 'b' || opt == 'f')
+		if (opt == 'a' || opt == 'b' || opt == 'f' || (c && opt == 'c'))
 			valid = true;
 		else {
 			cout << "\n Invalid!! \n";
@@ -127,6 +130,71 @@ void Teacher::makeComplaint() {
 }
 
 void Teacher::reocordFeedback() {
+    bool valid = false;
+    int opt;
+    do {
+        vector<int> v;
+        system("cls");
+        cout << "\t\t\t ----<><><><><><><><><><><><( Teacher )><><><><><><><><><><><>----\n\n";
+        cout << " ID: " << id << endl;
+        cout << " Name: " << name << "\n\n";
+        cout << "\n\t\t\t--<{ Pending FeedBacks }>--\n";
+        for (int i = 0; i < comps.size(); i++)
+            if (comps[i]->notifyTeacher()) { comps[i]->printDetail(); v.push_back(comps[i]->getID()); }
+
+        if (v.empty()) {
+            cout << "\n No Pending FeedBacks\n";
+            valid = true;
+        }
+        else {
+            cout << "\n\n Enter ID: \n";
+            cout << " 0: Go Back\n";
+            cout << " >";
+            cin >> opt;
+            int val = 0;
+
+            for (int i = 0; i < v.size(); i++)
+                if (v[i] == opt) val = 1;
+
+            if (opt == 0) valid = true;
+
+            else if (val) {
+                valid = true;
+                bool valid2 = false;
+                do {
+                    char op;
+                    cout << " s: Satisfied\n";
+                    cout << " n: Not Satisfied\n";
+                    cout << " l: Go Back\n >";
+                    cin >> op;
+                    if (op == 'l') valid2 = true;
+
+                    else if (op == 's') {
+                        valid2 = true;
+                        for (int i = 0; i < comps.size(); i++)
+                            if (comps[i]->getID() == opt) {
+                                comps[i]->setState(State::Closed);
+                                comps[i]->setNotifyTea(false);
+                            }
+                    }
+
+                    else if (op == 'n') {
+                        valid2 = true;
+                        for (int i = 0; i < comps.size(); i++)
+                            if (comps[i]->getID() == opt) {
+                                comps[i]->setNotifyTea(false);
+                            }
+                    }
+
+                } while (!valid2);
+            }
+
+            else {
+                cout << "\n Invalid!! \n";
+                Sleep(700);
+            }
+        }
+    } while (!valid);
 
 }
 
