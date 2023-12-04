@@ -49,6 +49,8 @@ public:
     int getUniqueID();
 
     void writeToFile(int, int);
+
+    void updateFile(State newState, bool newNotifyTeacher, bool newNotifyManager);
 };
 
 #endif //_COMPLAINT_H

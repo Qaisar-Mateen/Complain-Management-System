@@ -52,6 +52,7 @@ bool Complaint::notifyTeacher() { return notify_t; }
 void Complaint::setState(State s)
 {
     state = s;
+    updateFile(state, notify_t, notify_m);
 }
 
 void Complaint::displayState()
@@ -103,9 +104,9 @@ int Complaint::getUniqueID() {
     return maxID;
 }
 
-void Complaint::setNotifyMan(bool t) { notify_m = t; }
+void Complaint::setNotifyMan(bool t) { notify_m = t; updateFile(state,notify_t, notify_m); }
 
-void Complaint::setNotifyTea(bool t) { notify_t = t; }
+void Complaint::setNotifyTea(bool t) { notify_t = t; updateFile(state, notify_t, notify_m); }
 
 void Complaint::writeToFile(int t, int d) {
     ofstream file("Complaint.txt", ios::app);
@@ -129,4 +130,42 @@ void Complaint::writeToFile(int t, int d) {
         file << date->getYear() << ',' << st << ',' << notify_t << ',' << notify_m << endl;
         file.close();
     }
+}
+
+void Complaint::updateFile(State newState, bool newNotifyTeacher, bool newNotifyManager) {
+    ifstream fileIn("Complaint.txt");
+    ofstream fileOut("Temp.txt");
+    string line;
+
+    while (std::getline(fileIn, line)) {
+        istringstream iss(line);
+        string field;
+        getline(iss, field, ',');
+        int complaintId = std::stoi(field);
+
+        if (complaintId == id) {
+            ostringstream oss;
+            oss << id << ',';
+            getline(iss, field, ',');  // Description
+            oss << field << ',';
+            getline(iss, field, ',');  // teacher_id
+            oss << field << ',';
+            getline(iss, field, ',');  // dept_id
+            oss << field << ',';
+            getline(iss, field, ',');  // day
+            oss << field << ',';
+            getline(iss, field, ',');  // month
+            oss << field << ',';
+            getline(iss, field, ',');  // year
+            oss << field << ',';
+            oss << static_cast<int>(newState) << ',' << (int)newNotifyTeacher << ',' << (int)newNotifyManager;
+            line = oss.str();
+        }
+        fileOut << line << '\n';
+    }
+    fileIn.close();
+    fileOut.close();
+
+    remove("Complaint.txt");
+    int chk = rename("Temp.txt", "Complaint.txt");
 }

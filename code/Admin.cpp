@@ -375,6 +375,10 @@ bool Admin::emp_delete(int Id)
 	{
 		if ((*it)->getID() == Id)
 		{
+			if ((*it)->isAvailable()) {
+				cout << "\n Can't Remove Employee \n";
+				return false;
+			}
 			delete *it; // Delete the Employee object
 			it = Emps->erase(it);
 			return true;

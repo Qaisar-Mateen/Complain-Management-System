@@ -41,6 +41,8 @@ public:
 	void printDetail();
 
 	void writeToFile();
+
+	void updateFile();
 };
 
 #endif //_JOB_H

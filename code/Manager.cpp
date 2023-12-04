@@ -229,11 +229,10 @@ void Manager::reviewComplaint() {
 
                 else if (e_Id != 0) assignEmp.push_back(e_Id);
             }
-
-            dept->setCompState(opt, 1); //1 = assigned
-
-            job.push_back(new Job(opt, this, assignEmp));
-
+            if (e_Id != -1) {
+                dept->setCompState(opt, 1); //1 = assigned
+                job.push_back(new Job(opt, this, assignEmp));
+            }
         }
 
         else {
@@ -241,10 +240,6 @@ void Manager::reviewComplaint() {
             Sleep(700);
         }
     } while (!valid);
-}
-
-void Manager::reviewJob() {
-
 }
 
 void Manager::writeToFile(const Manager& manage) {
@@ -275,8 +270,7 @@ int Manager::getID() const {
     return id;
 }
 
-int Manager::getDeptId()
-{
+int Manager::getDeptId() {
     return dept->getID();
 }
 
@@ -296,7 +290,6 @@ Manager::~Manager()
                 it = man.erase(it);
     }
 }
-
 
 void Manager::markAsUnallocated(int manageId) {
     ifstream inFile("Manager.txt");

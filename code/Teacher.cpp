@@ -183,6 +183,7 @@ void Teacher::reocordFeedback() {
                         for (int i = 0; i < comps.size(); i++)
                             if (comps[i]->getID() == opt) {
                                 comps[i]->setNotifyTea(false);
+                                comps[i]->setState(State::New);
                             }
                     }
 
