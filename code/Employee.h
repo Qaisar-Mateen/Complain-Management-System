@@ -23,6 +23,8 @@ public:
 
     Employee(int ID, string Name);
 
+    void setAvailable(bool t);
+
     void addDept(Department *d);
 
     void addJob(Job* j);

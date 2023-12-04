@@ -29,7 +29,7 @@ Job::Job(int iD, int c_id, Manager* m, vector<int> e, int day, int month, int ye
 	Man_high = (bool)hi;
 }
 
-void Job::read() { Man_high = false; }
+void Job::read() { Man_high = false; updateFile(); }
 
 int Job::getID() { return id; }
 
@@ -55,7 +55,12 @@ bool Job::isCompleted() { return completed; }
 
 bool Job::isHighlight() { return Man_high; }
 
-void Job::Complete(bool t) { completed = Man_high = t; }
+void Job::Complete(bool t) { 
+	completed = Man_high = t; 
+	for (auto it : emps)
+		it->setAvailable(t);
+	updateFile();
+}
 
 void Job::printDetail(){
 	cout << "\n ID: " << id << "\t Complaint Id: " << com_id << "\t Assigned to: ";
