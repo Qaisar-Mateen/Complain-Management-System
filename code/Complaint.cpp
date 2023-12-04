@@ -36,7 +36,6 @@ Complaint::Complaint(string des, int d, int t) : description(des), From(search(t
     date = new Date();
 	state = State::New;
     To->addComplaint(this);
-    From->addComplaint(this);
     writeToFile(t, d);
     coms.push_back(this); //add to global
     notify_m = notify_t = false;
@@ -126,7 +125,8 @@ void Complaint::writeToFile(int t, int d) {
             st = 3;
             break;
         }
-        file << id << ',' << description << ',' << t << ',' << d << ',' << date->getDay() << ',' << date->getMonth() << ',' << date->getYear() << ',' << st << endl;
+        file << id << ',' << description << ',' << t << ',' << d << ',' << date->getDay() << ',' << date->getMonth() << ',';
+        file << date->getYear() << ',' << st << ',' << notify_t << ',' << notify_m << endl;
         file.close();
     }
 }

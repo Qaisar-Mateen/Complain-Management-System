@@ -52,6 +52,7 @@ char Teacher::printInterface() {
 		cout << "\n --<{ Teacher Controls }>--\n";
 		cout << " a: Make a Complaint\n";
 		cout << " b: Display Complaints\n";
+		cout << " c: View pending FeedBack\n";
 		cout << " f: Log out\n";
 		cout << " >";
 		cin >> opt;
@@ -87,10 +88,11 @@ void Teacher::complaintDetail() {
 		cout << " 0: Go Back\n";
 		cout << " >";
 		cin >> opt;
+		Complaint* c = search(comps, opt);
+
 		if (opt == 0)
 			valid = true;
-		Complaint* c = search(comps, opt);
-		if (c) {
+		else if (c) {
 			valid = true;
 			c->printFullDetail();
 		}

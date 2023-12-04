@@ -102,7 +102,7 @@ void Department::pendingComplaint() {
     }
     cout << "\n\t\t\t--<{ Pending Complaints Detail }>--\n";
     for (int i = 0; i < complaints.size(); i++)
-        if (complaints[i]->getState() != State::Resolved || complaints[i]->getState() != State::Closed) complaints[i]->printDetail();
+        if (complaints[i]->getState() != State::Resolved && complaints[i]->getState() != State::Closed) complaints[i]->printDetail();
 }
 
 void Department::viewComplaint() {
@@ -110,7 +110,7 @@ void Department::viewComplaint() {
         cout << "\n No Complaints to Display\n";
         return;
     }
-    cout << "\n\t\t\t--<{ Pending Complaints Detail }>--\n";
+    cout << "\n\t\t\t--<{ All Complaints Detail }>--\n";
     for (int i = 0; i < complaints.size(); i++)
         complaints[i]->printDetail();
 }
