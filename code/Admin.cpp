@@ -340,9 +340,10 @@ void Admin::removeEmployee() {
 	cin.ignore();
 	cout << "\n Enter Employee ID to remove: ";
 	cin >> empId;
-	if(emp_delete(empId))
+	int flag = emp_delete(empId);
+	if(flag == 1)
 		Employee::markAsUnallocated(empId);
-	else
+	else if(flag == 0)
 		cerr << "\n Error: Failed to Remove, invalid ID!!\n";
 }
 
@@ -369,7 +370,7 @@ void Admin::removeManager() {
 		cerr << "\n Error: Failed to Remove, invalid ID!!\n";
 }
 
-bool Admin::emp_delete(int Id)
+int Admin::emp_delete(int Id)
 {
 	for (auto it = Emps->begin(); it != Emps->end(); ++it)
 	{
@@ -377,14 +378,14 @@ bool Admin::emp_delete(int Id)
 		{
 			if (!(*it)->isAvailable()) {
 				cout << "\n Can't Remove Employee: Currently Assigned a Job\n";
-				return false;
+				return -1;
 			}
 			delete *it; // Delete the Employee object
 			it = Emps->erase(it);
-			return true;
+			return 1;
 		}
 	}
-	return false;
+	return 0;
 }
 
 bool Admin::man_delete(int Id)

@@ -61,7 +61,7 @@ public:
     
     void removeManager();
 
-    bool emp_delete(int Id);
+    int emp_delete(int Id);
 
     bool man_delete(int Id);
 

@@ -50,10 +50,12 @@ void Department::changeManager(Manager* m)
 
     man = m;
     man->addDept(this);
+    updateDept_file(id, -1, m->getID(), -1);
 }
 
 bool Department::removeEmployee(Employee* e)
 {
+    updateDept_file(id,e->getID(),-1, -1);
     if (!emps.empty())
     {
         auto it = find(emps.begin(), emps.end(), e);
@@ -134,4 +136,55 @@ void Department::setCompState(int c_id, int st) {
     }
     for (int i = 0; i < complaints.size(); i++)
         if (complaints[i]->getID() == c_id) complaints[i]->setState(s);
+}
+
+void Department::updateDept_file(int deptId, int emp_rem_id = -1, int man_id = -1, int emp_add_id = -1) {
+    ifstream fileIn("Department.txt");
+    ofstream fileOut("Temp.txt");
+    string line;
+
+    while (getline(fileIn, line)) {
+        istringstream iss(line);
+        string field;
+
+        getline(iss, field, ' ');
+        int id = stoi(field);
+
+        if (id == deptId) {
+            ostringstream oss;
+            oss << deptId << ' ';
+            getline(iss, field, '\'');  // dept name
+            oss << field << "' ";
+            iss.get();
+            if (man_id == -1) {
+                getline(iss, field, ' ');  // managerId
+                oss << field << ' ';
+            }
+            else {
+                getline(iss, field, ' ');  // replace manager
+                oss << man_id << ' ';
+            }
+
+            iss.get();
+            vector<int> empIds;
+            while (iss >> field) {
+                int emp = stoi(field);
+                if (emp != emp_rem_id) empIds.push_back(emp);
+            }
+
+            oss << '"';
+            for (size_t i = 0; i < empIds.size(); ++i) {
+                if (i > 0) oss << ' ';
+                oss << empIds[i];
+            }
+            oss << '"';
+            line = oss.str();
+        }
+        fileOut << line << '\n';
+    }
+
+    fileIn.close();
+    fileOut.close();
+    remove("Department.txt");
+    int chk = rename("Temp.txt", "Department.txt");
 }

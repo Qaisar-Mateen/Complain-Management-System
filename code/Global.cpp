@@ -39,7 +39,6 @@ void populateDepartment(string filename)
 			getline(iss, name, '\'');
 			iss >> man_id >> ws;
 
-			// Process the employee ids
 			iss.ignore(); // Skip the opening quote
 			int employee_id;
 			while (iss >> employee_id >> ws)

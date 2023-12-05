@@ -1,6 +1,8 @@
 #pragma once
 #include<string>
 #include<vector>
+#include <fstream>
+#include <sstream>
 
 using namespace std;
 
@@ -74,6 +76,8 @@ public:
     vector<int> inDeptAndAval();
 
     void setCompState(int c_id, int st);
+
+    void updateDept_file(int deptId, int emp_rem_id, int man_id, int emp_add_id);
 };
 
 #endif //_DEPARTMENT_H
