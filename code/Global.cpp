@@ -49,20 +49,14 @@ void populateDepartment(string filename)
 				cerr << "\n ERROR: Manager with id: " << man_id << " does not exists\n";
 				exit(1);
 			}
-			Department* d = new Department(dept_id, name, m);
-			depts.push_back(d);
 
-			for (int i = 0; i < emp_id.size(); i++) {
-				Employee* e = search(emp, emp_id[i]);
-				if (e) {
-					e->addDept(d);
-					depts.back()->addEmployee(e);
-				}
-				else {
+			for (int i = 0; i < emp_id.size(); i++)
+				if (!search(emp, emp_id[i])) {
 					cerr << "\n ERROR: Employee with id: " << emp_id[i] << " does not exists\n";
 					exit(1);
 				}
-			}
+
+			depts.push_back(new Department(dept_id, name, m, emp_id));
 		}
 	}
 	file.close();
