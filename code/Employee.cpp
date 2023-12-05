@@ -161,7 +161,7 @@ bool Employee::isAvailable() { return Available; }
 void Employee::writeToFile(const Employee& emp) {
     ofstream file("Employee.txt", ios::app);
     if (file.is_open()) {
-        file << emp.getID() << " " << emp.getName() << endl;
+        file << emp.getID() << "," << emp.getName() << "," << (int)emp.Available << endl;
         file.close();
     }
 }

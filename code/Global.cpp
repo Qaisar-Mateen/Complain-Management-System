@@ -163,13 +163,16 @@ void populateJob(string Filename) {
 
 			Manager* m = search(man, man_id);
 			for (int i = 0; i < empIds.size(); i++)
-				if (!search(emp, empIds[i])) cerr << "\n ERROR: Employee with id: " << empIds[i] << " does not exists!!\n";
+				if (!search(emp, empIds[i])) {
+					cerr << "\n ERROR: Employee with id: " << empIds[i] << " does not exists!!\n";
+					exit(1);
+				}
 
 			if (!m) {
 				cerr << "\n ERROR: Manager with id: " << man_id << " does not exists!!\n";
 				exit(1);
 			}
-
+ 
 			jobs.push_back(new Job(id, com_Id, m, empIds, day, month, year, com, hi));
 		}
 	}
