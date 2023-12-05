@@ -78,13 +78,14 @@ char Manager::printInterface() {
         int b = 0;
         for (auto it : job)
             if (it->isHighlight()) b = 1;
+        vector<int> v = dept->NewComplaint();
         system("cls");
         cout << "\t\t\t ----<><><><><><><><><><><><( Manager )><><><><><><><><><><><>----\n\n";
         cout << " ID: " << id << endl;
         cout << " Name: " << name << endl;
         cout << " Department: " << dept->getName() << "\n";
         cout << "\n --<{ Manager Controls }>--\n";
-        cout << " a: View New Complaints\n";
+        if (!v.empty()) cout << " a: View New Complaints\n";
         if(b) cout << " b: View Notifications\n";
         cout << " c: View All Complaints\n";
         cout << " d: View Pending Complaints\n";
@@ -92,7 +93,7 @@ char Manager::printInterface() {
         cout << " >";
         cin >> opt;
 
-        if (opt == 'a' || (opt == 'b' && b) || opt == 'c' || opt == 'f' || opt == 'd')
+        if ((opt == 'a' && !v.empty()) || (opt == 'b' && b) || opt == 'c' || opt == 'f' || opt == 'd')
             valid = true;
 
         else {
