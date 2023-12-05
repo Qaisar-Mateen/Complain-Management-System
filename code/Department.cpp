@@ -2,15 +2,21 @@
 #include "Employee.h"
 #include "Manager.h"
 #include "Complaint.h"
+#include "Global.h"
 
 using namespace std;
 
-Department::Department(int ID, string Name, Manager * m)
+Department::Department(int ID, string Name, Manager * m, vector<int> emp_id)
 {
     id = ID;
     name = Name;
     man = m;
     man->addDept(this);
+    for (int i = 0; i < emp_id.size(); i++) {
+        Employee* e = search(emp, emp_id[i]);
+        e->addDept(this);
+        emps.push_back(e);
+    }
 }
 
 int Department::getID()

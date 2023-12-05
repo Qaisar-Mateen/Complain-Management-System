@@ -47,7 +47,7 @@ public:
     vector<Complaint*> complaints;
 
 public:
-    Department(int ID, string Name, Manager* m);
+    Department(int ID, string Name, Manager* m, vector<int> emp_id);
 
     int getID();
    
