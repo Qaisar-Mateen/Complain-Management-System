@@ -5,8 +5,6 @@
 #include <vector>
 #include "Person.h"
 
-
-
 using namespace std;
 
 #ifndef _ADMIN_H
