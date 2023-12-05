@@ -47,9 +47,11 @@ public:
 
     void updateSystem();
 
-    ~Employee();
-
     static void markAsUnallocated(int empId);
+
+    void updateFile();
+
+    ~Employee();
 };
 
 #endif //_EMPLOYEE_H

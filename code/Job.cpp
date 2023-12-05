@@ -91,12 +91,12 @@ void Job::updateFile() {
 	ofstream fileOut("Temp.txt");
 	string line;
 
-	while (std::getline(fileIn, line)) {
+	while (getline(fileIn, line)) {
 		if (!line.empty()) {
 			istringstream iss(line);
 			string field;
 			getline(iss, field, ',');
-			int complaintId = std::stoi(field);
+			int complaintId = stoi(field);
 
 			if (complaintId == id) {
 				ostringstream oss;

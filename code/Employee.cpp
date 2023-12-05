@@ -140,7 +140,7 @@ void Employee::updateSystem() {
     } while (!valid);
 }
 
-void Employee::setAvailable(bool t) { Available = t; }
+void Employee::setAvailable(bool t) { Available = t; updateFile(); }
 
 Employee::~Employee()
 {
@@ -212,4 +212,34 @@ void Employee::markAsUnallocated(int empId) {
     // Rename the temp file to replace the original file
     remove("Employee.txt");
     int chk = rename("temp.txt", "Employee.txt");
+}
+
+void Employee::updateFile() {
+    ifstream fileIn("Employee.txt");
+    ofstream fileOut("Temp.txt");
+    string line;
+
+    while (getline(fileIn, line)) {
+        if (!line.empty()) {
+            istringstream iss(line);
+            string field;
+            getline(iss, field, ',');
+            int empId = stoi(field);
+
+            if (empId == id) {
+                ostringstream oss;
+                oss << id << ',';
+                getline(iss, field, ',');  //name
+                oss << field << ',';
+                oss << (int)Available;
+                line = oss.str();
+            }
+            fileOut << line << '\n';
+        }
+    }
+    fileIn.close();
+    fileOut.close();
+
+    remove("Employee.txt");
+    int chk = rename("Temp.txt", "Employee.txt");
 }
