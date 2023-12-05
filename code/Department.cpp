@@ -47,6 +47,7 @@ void Department::printDetail()
 void Department::addEmployee(Employee* e)
 {   
     emps.push_back(e);
+    updateDept_file(id,-1,-1,e->getID());
 }
 
 void Department::changeManager(Manager* m)
@@ -177,6 +178,8 @@ void Department::updateDept_file(int deptId, int emp_rem_id = -1, int man_id = -
                 int emp = stoi(field);
                 if (emp != emp_rem_id) empIds.push_back(emp);
             }
+
+            if(emp_add_id != -1) empIds.push_back(emp_add_id);
 
             oss << '"';
             for (size_t i = 0; i < empIds.size(); ++i) {
