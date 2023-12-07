@@ -13,9 +13,7 @@ private:
     int year;
 
 public:
-    Date() {
-        storeCurrentDate();
-    }
+    Date() { storeCurrentDate(); }
 
     Date(int d, int m, int y) : day(d), month(m), year(y) {}
 
@@ -33,16 +31,6 @@ public:
 
     void displayDate() {
         cout << "Date: " << day << "/" << month << '/' << year;
-    }
-
-    void storeCurrentDate() {
-        time_t t = time(nullptr);
-        tm currentTime;
-        localtime_s(&currentTime, &t);
- 
-        day = currentTime.tm_mday;
-        month = currentTime.tm_mon + 1;
-        year = currentTime.tm_year + 1900;
     }
 
     bool operator==(const Date& other) const {
@@ -69,8 +57,15 @@ public:
         return !(*this < other);
     }
 
-    bool operator!=(const Date& other) const {
-        return !(*this == other);
+private:
+    void storeCurrentDate() {
+        time_t t = time(nullptr);
+        tm currentTime;
+        localtime_s(&currentTime, &t);
+
+        day = currentTime.tm_mday;
+        month = currentTime.tm_mon + 1;
+        year = currentTime.tm_year + 1900;
     }
 };
 

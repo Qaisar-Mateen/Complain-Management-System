@@ -16,22 +16,11 @@ class Teacher : virtual public Person {
     vector<Complaint*> comps;
 
 public:
-
-    Teacher();
-
     Teacher(int, string);
 
     void control();
 
-    char printInterface();
-
-    void complaintDetail();
-
     void printDetail();
-
-    void makeComplaint();
-        
-    void reocordFeedback();
 
     static void writeToFile(const Teacher& teach);
 
@@ -44,6 +33,12 @@ public:
     void addComplaint(Complaint* c);
 
     static void markAsUnallocated(int teachId);
+private:
+    Teacher();
+    char printInterface();
+    void complaintDetail();
+    void makeComplaint();
+    void reocordFeedback();
 };
 
 #endif //_TEACHER_H
