@@ -103,11 +103,11 @@ char Director::printInterface() {
 		cout << "\n --<{ Director Controls }>--\n";
 		cout << " a: View Complaint Summary\n";
 		cout << " b: View Detail of Specific Complaint\n";
-		cout << " l: Go Back\n";
+		cout << " f: Log Out\n";
 		cout << " >";
 		cin >> opt;
 
-		if (opt == 'a' || opt == 'b' || opt == 'c' || opt == 'l')
+		if (opt == 'a' || opt == 'b' || opt == 'f')
 			valid = true;
 
 		else {

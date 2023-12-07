@@ -211,7 +211,6 @@ void populateEmployee(string Filename) {
 void init(string e_file, string m_file, string t_file, string d_file, string c_file, string j_file)
 {
 	adm = new Admin(emp, man, tea);
-	dir = new Director(depts);
 
 	populateEmployee(e_file);
 	populateFromFile(m_file, man);
@@ -220,4 +219,5 @@ void init(string e_file, string m_file, string t_file, string d_file, string c_f
 	populateDepartment(d_file);
 	populateComplaint(c_file);
 	populateJob(j_file);
+	dir = new Director(depts);
 }
