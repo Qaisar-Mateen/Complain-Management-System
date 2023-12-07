@@ -76,7 +76,7 @@ public:
     vector<int> inDeptAndAval();
 
     void setCompState(int c_id, int st);
-
+private:
     void updateDept_file(int deptId, int emp_rem_id, int man_id, int emp_add_id);
 };
 

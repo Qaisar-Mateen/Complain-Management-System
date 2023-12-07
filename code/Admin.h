@@ -29,6 +29,9 @@ public:
 
     int getID() const;
 
+    void control();
+
+private:
     string getName() const;
 
     char printInterface();
@@ -39,8 +42,6 @@ public:
 
     char printDetailInterface();
 
-    void control();
-
     void displayEmployees();
 
     void displayManagers();
@@ -48,15 +49,15 @@ public:
     void displayTeachers();
 
     void addEmployee();
-    
+
     void addManager();
-        
+
     void addTeacher();
-    
+
     void removeEmployee();
-    
+
     void removeTeacher();
-    
+
     void removeManager();
 
     int emp_delete(int Id);

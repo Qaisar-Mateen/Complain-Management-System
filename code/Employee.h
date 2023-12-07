@@ -23,6 +23,10 @@ public:
 
     Employee(int ID, string Name, bool aval);
 
+    int getID() const;
+
+    string getName() const;
+
     void setAvailable(bool t);
 
     void addDept(Department *d);
@@ -31,27 +35,21 @@ public:
 
     void control();
 
-    char printInterface();
-
-    static void writeToFile(const Employee& emp);
-
-    static int getUniqueID();
-
-    int getID() const;
-
-    string getName() const;
-
     bool isAvailable();
 
     void printDetail();
 
-    void updateSystem();
+    static void writeToFile(const Employee& emp);
 
     static void markAsUnallocated(int empId);
 
-    void updateFile();
+    static int getUniqueID();
 
     ~Employee();
+private:
+    void updateFile();
+    char printInterface();
+    void updateSystem();
 };
 
 #endif //_EMPLOYEE_H
