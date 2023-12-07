@@ -145,6 +145,20 @@ void Department::setCompState(int c_id, int st) {
         if (complaints[i]->getID() == c_id) complaints[i]->setState(s);
 }
 
+void Department::summary(Date st, Date end) {
+    cout << "\n\t\t\t--<{ Summary for " << name << " }>--\n";
+    int n = 0, a = 0, r = 0, c = 0;
+    for (auto it : complaints) {
+        if (st <= it->getDate() && it->getDate() <= end) {
+            if (it->getState() == State::New) n++;
+            else if (it->getState() == State::Assigned) a++;
+            else if (it->getState() == State::Resolved) r++;
+            else if (it->getState() == State::Closed) c++;
+        }
+    }
+    cout << " New: " << n << "\t Assigned: " << a << "\t Resolved: " << r << "\t Clossed: " << c << "\n\n";
+}
+
 void Department::updateDept_file(int deptId, int emp_rem_id = -1, int man_id = -1, int emp_add_id = -1) {
     ifstream fileIn("Department.txt");
     ofstream fileOut("Temp.txt");

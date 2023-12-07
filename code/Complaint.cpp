@@ -55,6 +55,8 @@ void Complaint::setState(State s)
     updateFile(state, notify_t, notify_m);
 }
 
+Date Complaint::getDate() { return *date; }
+
 void Complaint::displayState()
 {
     switch (state) {

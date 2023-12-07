@@ -12,7 +12,7 @@ class Department;
 class Director: virtual public Person {
     int id;
     string Name;
-    vector<Department*>* depts;
+    vector<Reports*> depts;
 
 public: 
 
@@ -24,11 +24,10 @@ public:
     
     void control();
 
+private:
+    char printInterface();
     void complains_in_Dept();
-    
-    void complainsSummary();
-    
-    void complainDetail();
+    void viewComplaintSummary();
 };
 
 #endif //_DIRECTOR_H

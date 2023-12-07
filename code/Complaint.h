@@ -30,6 +30,8 @@ public:
 
     State getState();
 
+    Date getDate();
+
     void setState(State s);
 
     bool notifyManager();
@@ -45,11 +47,9 @@ public:
     void printDetail();
 
     void printFullDetail();
-
+private:
     int getUniqueID();
-
     void writeToFile(int, int);
-
     void updateFile(State newState, bool newNotifyTeacher, bool newNotifyManager);
 };
 

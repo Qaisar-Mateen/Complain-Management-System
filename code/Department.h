@@ -3,6 +3,7 @@
 #include<vector>
 #include <fstream>
 #include <sstream>
+#include "Date.h"
 
 using namespace std;
 
@@ -35,10 +36,11 @@ public:
 };
 
 class Reports {
-    
+public:
+    virtual void summary(Date st, Date end) = 0;
 };
 
-class Department: public Manages, public WorksIn{
+class Department: public Manages, public WorksIn, public Reports {
 public:
     int id;
     string name;
@@ -76,6 +78,8 @@ public:
     vector<int> inDeptAndAval();
 
     void setCompState(int c_id, int st);
+
+    void summary(Date st, Date end);
 private:
     void updateDept_file(int deptId, int emp_rem_id, int man_id, int emp_add_id);
 };
