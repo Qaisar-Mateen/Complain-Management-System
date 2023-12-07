@@ -1,7 +1,8 @@
 #include "Director.h"
-//#include <windows.h>
 #include <iostream>
 #include "Date.h"
+#include "Global.h"
+#include "Complaint.h"
 
 Director::Director(vector<Department*>& d)
 {
@@ -30,6 +31,8 @@ void Director::control()
 		opt = printInterface();
 
 		if (opt == 'a') viewComplaintSummary();
+
+		else if (opt == 'b') complains_in_Dept();
 		
 		if (opt != 'f' && opt != 'l')
 		{
@@ -44,34 +47,68 @@ void Director::control()
 }
 
 void Director::complains_in_Dept() {
+	int opt;
+	bool valid = false;
+	do {
+		vector<int> v;
+		system("cls");
+		cout << "\t\t\t ----<><><><><><><><><><><><( Director )><><><><><><><><><><><>----\n\n";
+		cout << " ID: " << id << endl;
+		cout << " Name: " << Name << "\n\n";
+		cout << "\n\t\t\t--<{ All Complaint's ID }>--\n";
+		for (auto it : coms) {
+			v.push_back(it->getID());
+			cout << "\n ID: " << v.back();
+		}
 
+		cout << "\n\n Enter Complaint ID for Detail: \n";
+		cout << " 0: Go Back\n";
+		cout << " >";
+		cin >> opt;
+		Complaint* c = search(coms, opt);
+
+		if (opt == 0)
+			valid = true;
+		else if (c) {
+			cin.ignore();
+			c->printFullDetail();
+			cout << "\n Press any key to continue...";
+			cin.get();
+		}
+
+		else {
+			cout << "\n Invalid!! \n";
+			Sleep(700);
+		}
+
+	} while (!valid);
 }
 
 void Director::viewComplaintSummary() {
 	int startDay, startMonth, startYear, endDay, endMonth, endYear;
 	while (true) {
-		cout << "Enter the starting date (DDMMYYYY): ";
+		cout << " Enter the starting date (DDMMYYYY): ";
 		int startDate;
 		cin >> startDate;
 		startDay = startDate / 1000000;
 		startMonth = (startDate / 10000) % 100;
 		startYear = startDate % 10000;
 		if (startDay < 1 || startDay > 31 || startMonth < 1 || startMonth > 12) {
-			cout << "Invalid date: Please enter a date in the format DDMMYYYY.\n";
+			cout << " Invalid date: Please enter a date in the format DDMMYYYY.\n";
 			continue;
 		}
-		cout << "Enter the ending date (DDMMYYYY): ";
+		cout << " Enter the ending date (DDMMYYYY): ";
 		int endDate;
 		cin >> endDate;
 		endDay = endDate / 1000000;
 		endMonth = (endDate / 10000) % 100;
 		endYear = endDate % 10000;
 		if (endDay < 1 || endDay > 31 || endMonth < 1 || endMonth > 12) {
-			cout << "Invalid: Please enter a date in the format DDMMYYYY.\n";
+			cout << " Invalid: Please enter a date in the format DDMMYYYY.\n";
 			continue;
 		}
 		if (endYear < startYear || (endYear == startYear && endMonth < startMonth) || (endYear == startYear && endMonth == startMonth && endDay < startDay)) {
-			cout << "The ending date cannot be earlier than the starting date.\n";
+			cout << " ERROR: The ending date cannot be earlier than the starting date.\n";
 			continue;
 		}
 

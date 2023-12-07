@@ -15,16 +15,13 @@ class Director: virtual public Person {
     vector<Reports*> depts;
 
 public: 
-
     Director(vector<Department*>& depts);
 
     int getID() const;
 
-    string getName() const;
-    
     void control();
-
 private:
+    string getName() const;
     char printInterface();
     void complains_in_Dept();
     void viewComplaintSummary();
