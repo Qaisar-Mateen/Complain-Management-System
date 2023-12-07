@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Detailed report on module Job-->
+<CCCC_Project>
+<module_summary>
+<lines_of_code value="129" level="0" />
+<lines_of_code_per_member_function value="******" level="0" />
+<McCabes_cyclomatic_complexity value="18" level="0" />
+<McCabes_cyclomatic_complexity_per_member_function value="******" level="2" />
+<lines_of_code value="9" level="0" />
+<lines_of_code_per_member_function value="********" level="2" />
+<lines_of_code_per_line_of_comment value="14.333" level="1" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="2.000" level="0" />
+<weighted_methods_per_class_unity value="12" level="0" />
+<weighted_methods_per_class_visibility value="12" level="0" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="6" level="0" />
+<IF4 value="64" level="0" />
+<IF4_per_member_function value="********" level="2" />
+<IF4_visible value="36" level="1" />
+<IF4_visible_per_member_function value="********" level="2" />
+<IF4_concrete value="0" level="0" />
+<IF4_concrete_per_member_function value="********" level="0" />
+</module_summary>
+<module_detail>
+<description>declaration</description>
+<source_reference file="Global.h" line="18" />
+<lines_of_code value="1" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+<description>definition</description>
+<source_reference file="Job.h" line="13" />
+<lines_of_code value="10" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+<description>declaration</description>
+<source_reference file="Manager.h" line="14" />
+<lines_of_code value="1" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</module_detail>
+<procedural_detail>
+<member_function>
+<name>Complete(bool)</name>
+<extent>
+<description>definition</description>
+<source_reference file="Job.cpp" line="58" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="Job.h" line="39" />
+</extent>
+<lines_of_code value="7" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>Job(int,Manager *,vector)</name>
+<extent>
+<description>definition</description>
+<source_reference file="Job.cpp" line="8" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="Job.h" line="23" />
+</extent>
+<lines_of_code value="12" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>Job(int,int,Manager *,vector,int,int,int,int,int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="Job.cpp" line="20" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="Job.h" line="25" />
+</extent>
+<lines_of_code value="12" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getComID()</name>
+<extent>
+<description>definition</description>
+<source_reference file="Job.cpp" line="36" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="Job.h" line="31" />
+</extent>
+<lines_of_code value="2" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getID()</name>
+<extent>
+<description>definition</description>
+<source_reference file="Job.cpp" line="34" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="Job.h" line="29" />
+</extent>
+<lines_of_code value="2" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getUniqueID()</name>
+<extent>
+<description>definition</description>
+<source_reference file="Job.cpp" line="38" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="Job.h" line="33" />
+</extent>
+<lines_of_code value="16" level="0" />
+<McCabes_cyclomatic_complexity value="3" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>isCompleted()</name>
+<extent>
+<description>definition</description>
+<source_reference file="Job.cpp" line="54" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="Job.h" line="35" />
+</extent>
+<lines_of_code value="2" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>isHighlight()</name>
+<extent>
+<description>definition</description>
+<source_reference file="Job.cpp" line="56" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="Job.h" line="37" />
+</extent>
+<lines_of_code value="2" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>printDetail()</name>
+<extent>
+<description>definition</description>
+<source_reference file="Job.cpp" line="65" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="Job.h" line="41" />
+</extent>
+<lines_of_code value="9" level="0" />
+<McCabes_cyclomatic_complexity value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>read()</name>
+<extent>
+<description>definition</description>
+<source_reference file="Job.cpp" line="32" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="Job.h" line="27" />
+</extent>
+<lines_of_code value="2" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>updateFile()</name>
+<extent>
+<description>definition</description>
+<source_reference file="Job.cpp" line="89" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="Job.h" line="45" />
+</extent>
+<lines_of_code value="36" level="1" />
+<McCabes_cyclomatic_complexity value="3" level="0" />
+<lines_of_comment value="6" level="0" />
+<lines_of_code_per_line_of_comment value="6.000" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>writeToFile()</name>
+<extent>
+<description>definition</description>
+<source_reference file="Job.cpp" line="74" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="Job.h" line="43" />
+</extent>
+<lines_of_code value="15" level="0" />
+<McCabes_cyclomatic_complexity value="3" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+</procedural_detail>
+<structural_detail>
+<module>
+<name>Job</name>
+<client_module>
+<name>Employee</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Employee.cpp" line="28" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Employee.h" line="33" />
+</extent>
+<name>Manager</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Manager.cpp" line="30" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Manager.h" line="29" />
+</extent>
+</client_module>
+<supplier_module>
+<name>Date</name>
+<visible>false</visible>
+<concrete>false</concrete>
+<extent>
+<description>has by reference</description>
+<source_reference file="Job.h" line="16" />
+</extent>
+<name>Manager</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Job.cpp" line="8" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Job.cpp" line="20" />
+</extent>
+<extent>
+<description>has by reference</description>
+<source_reference file="Job.h" line="17" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Job.h" line="23" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Job.h" line="25" />
+</extent>
+<name>bool</name>
+<visible>true</visible>
+<concrete>true</concrete>
+<extent>
+<description>pass by value</description>
+<source_reference file="Job.cpp" line="58" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="Job.h" line="19" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="Job.h" line="20" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="Job.h" line="39" />
+</extent>
+<name>vector</name>
+<visible>true</visible>
+<concrete>true</concrete>
+<extent>
+<description>pass by value</description>
+<source_reference file="Job.cpp" line="8" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="Job.cpp" line="20" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="Job.h" line="18" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="Job.h" line="23" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="Job.h" line="25" />
+</extent>
+</supplier_module>
+</module>
+</structural_detail>
+</CCCC_Project>

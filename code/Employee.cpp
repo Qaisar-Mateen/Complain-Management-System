@@ -31,7 +31,7 @@ void Employee::addJob(Job* j) {
         Available = false;
     }
 }
-
+//
 void Employee::control()
 {
     char opt = 'd';
@@ -142,10 +142,13 @@ void Employee::updateSystem() {
 
 void Employee::setAvailable(bool t) { Available = t; updateFile(); }
 
+//constructor for proper deletion of object
 Employee::~Employee()
 {
     dept->removeEmployee(this); //remove employee from dept frist
     Employee::markAsUnallocated(id);
+    for (auto it : job)
+        it->removeEmp(this);
 }
 
 int Employee::getID() const {
@@ -215,31 +218,30 @@ void Employee::markAsUnallocated(int empId) {
 }
 
 void Employee::updateFile() {
-    ifstream fileIn("Employee.txt");
-    ofstream fileOut("Temp.txt");
+    ifstream fileIn("Employee.txt");  // Open the existing employee file for reading
+    ofstream fileOut("Temp.txt");  // Open a temporary file for writing
     string line;
 
-    while (getline(fileIn, line)) {
+    while (getline(fileIn, line)) {  // Read the file line by line
         if (!line.empty()) {
             istringstream iss(line);
             string field;
             getline(iss, field, ',');
             int empId = stoi(field);
 
-            if (empId == id) {
+            if (empId == id) {  // If the employee ID matches the current employee's ID
                 ostringstream oss;
                 oss << id << ',';
-                getline(iss, field, ',');  //name
+                getline(iss, field, ',');  // Read the name
                 oss << field << ',';
-                oss << (int)Available;
-                line = oss.str();
+                oss << (int)Available;  
+                line = oss.str();  // Update the line with the new details
             }
-            fileOut << line << '\n';
+            fileOut << line << '\n';  // Write the line to the temporary file
         }
     }
-    fileIn.close();
-    fileOut.close();
-
-    remove("Employee.txt");
-    int chk = rename("Temp.txt", "Employee.txt");
+    fileIn.close();  
+    fileOut.close();  
+    remove("Employee.txt");  // Delete the original file
+    int chk = rename("Temp.txt", "Employee.txt");  // Rename the temporary file to the original file name
 }

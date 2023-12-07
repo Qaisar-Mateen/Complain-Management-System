@@ -21,7 +21,6 @@ class Job {
 
 public:
 	Job(int c_id, Manager* m, vector<int> e);
-
 	Job(int iD, int c_id, Manager* m, vector<int> e, int day, int month, int year, int com, int hi);
 
 	void read();
@@ -29,8 +28,6 @@ public:
 	int getID();
 
 	int getComID();
-
-	int getUniqueID();
 
 	bool isCompleted();
 
@@ -40,9 +37,11 @@ public:
 
 	void printDetail();
 
+	void removeEmp(Employee* e);
+private:
 	void writeToFile();
-
-	void updateFile();
+	int getUniqueID();
+	void updateFile(int emp_id);
 };
 
 #endif //_JOB_H

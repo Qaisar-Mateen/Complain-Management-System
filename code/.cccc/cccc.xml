@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Report on software metrics-->
+<CCCC_Project>
+<timestamp>Thu Dec 07 12:01:56 2023
+</timestamp>
+<project_summary>
+<number_of_modules value="18" level="0" />
+<lines_of_code value="2081" level="0" />
+<lines_of_code_per_module value="115.611" level="0" />
+<McCabes_cyclomatic_complexity value="424" level="0" />
+<McCabes_cyclomatic_complexity_per_module value="23.556" level="0" />
+<lines_of_comment value="54" level="0" />
+<lines_of_comment_per_module value="3.000" level="0" />
+<lines_of_code_per_line_of_comment value="38.537" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="7.852" level="1" />
+<IF4 value="1482" level="0" />
+<IF4_per_module value="82.333" level="0" />
+<IF4_visible value="742" level="0" />
+<IF4_visible_per_module value="41.222" level="0" />
+<IF4_concrete value="1" level="0" />
+<IF4_concrete value="0.056" level="0" />
+<rejected_lines_of_code value="51" level="0" />
+</project_summary>
+<procedural_summary>
+<module>
+<name>Admin</name>
+<lines_of_code value="383" level="0" />
+<McCabes_cyclomatic_complexity value="84" level="0" />
+<lines_of_comment value="8" level="0" />
+<lines_of_code_per_line_of_comment value="47.875" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="10.500" level="2" />
+</module>
+<module>
+<name>Complaint</name>
+<lines_of_code value="180" level="0" />
+<McCabes_cyclomatic_complexity value="28" level="0" />
+<lines_of_comment value="9" level="0" />
+<lines_of_code_per_line_of_comment value="20.000" level="1" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="3.111" level="0" />
+</module>
+<module>
+<name>Date</name>
+<lines_of_code value="54" level="0" />
+<McCabes_cyclomatic_complexity value="21" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+</module>
+<module>
+<name>Department</name>
+<lines_of_code value="178" level="0" />
+<McCabes_cyclomatic_complexity value="44" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+</module>
+<module>
+<name>Director</name>
+<lines_of_code value="146" level="0" />
+<McCabes_cyclomatic_complexity value="34" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+</module>
+<module>
+<name>Employee</name>
+<lines_of_code value="231" level="0" />
+<McCabes_cyclomatic_complexity value="36" level="0" />
+<lines_of_comment value="10" level="0" />
+<lines_of_code_per_line_of_comment value="23.100" level="1" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="3.600" level="0" />
+</module>
+<module>
+<name>Job</name>
+<lines_of_code value="129" level="0" />
+<McCabes_cyclomatic_complexity value="18" level="0" />
+<lines_of_comment value="9" level="0" />
+<lines_of_code_per_line_of_comment value="14.333" level="1" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="2.000" level="0" />
+</module>
+<module>
+<name>Manager</name>
+<lines_of_code value="296" level="0" />
+<McCabes_cyclomatic_complexity value="68" level="0" />
+<lines_of_comment value="8" level="0" />
+<lines_of_code_per_line_of_comment value="37.000" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="8.500" level="1" />
+</module>
+<module>
+<name>Manages</name>
+<lines_of_code value="12" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</module>
+<module>
+<name>Person</name>
+<lines_of_code value="6" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</module>
+<module>
+<name>Reports</name>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</module>
+<module>
+<name>State</name>
+<lines_of_code value="1" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</module>
+<module>
+<name>Teacher</name>
+<lines_of_code value="236" level="0" />
+<McCabes_cyclomatic_complexity value="48" level="0" />
+<lines_of_comment value="6" level="0" />
+<lines_of_code_per_line_of_comment value="39.333" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="8.000" level="1" />
+</module>
+<module>
+<name>WorksIn</name>
+<lines_of_code value="8" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</module>
+<module>
+<name>anonymous</name>
+<lines_of_code value="166" level="0" />
+<McCabes_cyclomatic_complexity value="43" level="0" />
+<lines_of_comment value="3" level="0" />
+<lines_of_code_per_line_of_comment value="55.333" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="14.333" level="2" />
+</module>
+<module>
+<name>bool</name>
+<lines_of_code value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</module>
+<module>
+<name>string</name>
+<lines_of_code value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</module>
+<module>
+<name>vector</name>
+<lines_of_code value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</module>
+</procedural_summary>
+<oo_design>
+<module>
+<name>Admin</name>
+<weighted_methods_per_class_unity value="21" level="0" />
+<weighted_methods_per_class_visibility value="4" level="0" />
+<depth_of_inheritance_tree value="1" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="3" level="0" />
+</module>
+<module>
+<name>Complaint</name>
+<weighted_methods_per_class_unity value="16" level="0" />
+<weighted_methods_per_class_visibility value="13" level="1" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="8" level="0" />
+</module>
+<module>
+<name>Date</name>
+<weighted_methods_per_class_unity value="9" level="0" />
+<weighted_methods_per_class_visibility value="8" level="0" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="4" level="0" />
+</module>
+<module>
+<name>Department</name>
+<weighted_methods_per_class_unity value="17" level="0" />
+<weighted_methods_per_class_visibility value="16" level="1" />
+<depth_of_inheritance_tree value="1" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="12" level="0" />
+</module>
+<module>
+<name>Director</name>
+<weighted_methods_per_class_unity value="7" level="0" />
+<weighted_methods_per_class_visibility value="3" level="0" />
+<depth_of_inheritance_tree value="1" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="3" level="0" />
+</module>
+<module>
+<name>Employee</name>
+<weighted_methods_per_class_unity value="17" level="0" />
+<weighted_methods_per_class_visibility value="13" level="1" />
+<depth_of_inheritance_tree value="1" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="9" level="0" />
+</module>
+<module>
+<name>Job</name>
+<weighted_methods_per_class_unity value="12" level="0" />
+<weighted_methods_per_class_visibility value="12" level="1" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="6" level="0" />
+</module>
+<module>
+<name>Manager</name>
+<weighted_methods_per_class_unity value="19" level="0" />
+<weighted_methods_per_class_visibility value="19" level="1" />
+<depth_of_inheritance_tree value="1" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="9" level="0" />
+</module>
+<module>
+<name>Manages</name>
+<weighted_methods_per_class_unity value="9" level="0" />
+<weighted_methods_per_class_visibility value="9" level="0" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="1" level="0" />
+<coupling_between_objects value="3" level="0" />
+</module>
+<module>
+<name>Person</name>
+<weighted_methods_per_class_unity value="2" level="0" />
+<weighted_methods_per_class_visibility value="2" level="0" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="5" level="1" />
+<coupling_between_objects value="5" level="0" />
+</module>
+<module>
+<name>Reports</name>
+<weighted_methods_per_class_unity value="1" level="0" />
+<weighted_methods_per_class_visibility value="1" level="0" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="1" level="0" />
+<coupling_between_objects value="2" level="0" />
+</module>
+<module>
+<name>State</name>
+<weighted_methods_per_class_unity value="0" level="0" />
+<weighted_methods_per_class_visibility value="0" level="0" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="1" level="0" />
+</module>
+<module>
+<name>Teacher</name>
+<weighted_methods_per_class_unity value="14" level="0" />
+<weighted_methods_per_class_visibility value="9" level="0" />
+<depth_of_inheritance_tree value="1" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="5" level="0" />
+</module>
+<module>
+<name>WorksIn</name>
+<weighted_methods_per_class_unity value="4" level="0" />
+<weighted_methods_per_class_visibility value="4" level="0" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="1" level="0" />
+<coupling_between_objects value="3" level="0" />
+</module>
+<module>
+<name>anonymous</name>
+<weighted_methods_per_class_unity value="9" level="0" />
+<weighted_methods_per_class_visibility value="0" level="0" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="0" level="0" />
+</module>
+<module>
+<name>bool</name>
+<weighted_methods_per_class_unity value="0" level="0" />
+<weighted_methods_per_class_visibility value="0" level="0" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="3" level="0" />
+</module>
+<module>
+<name>string</name>
+<weighted_methods_per_class_unity value="0" level="0" />
+<weighted_methods_per_class_visibility value="0" level="0" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="7" level="0" />
+</module>
+<module>
+<name>vector</name>
+<weighted_methods_per_class_unity value="0" level="0" />
+<weighted_methods_per_class_visibility value="0" level="0" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="7" level="0" />
+</module>
+</oo_design>
+<structural_summary>
+<module>
+<name>Admin</name>
+<fan_out_visible value="0" level="0" />
+<fan_out_concrete value="0" level="0" />
+<fan_out value="0" level="0" />
+<fan_in_visible value="3" level="0" />
+<fan_in_concrete value="2" level="0" />
+<fan_in value="3" level="0" />
+<IF4_visible value="0" level="0" />
+<IF4_concrete value="0" level="0" />
+<IF4 value="0" level="0" />
+</module>
+<module>
+<name>Complaint</name>
+<fan_out_visible value="2" level="0" />
+<fan_out_concrete value="0" level="0" />
+<fan_out value="2" level="0" />
+<fan_in_visible value="3" level="0" />
+<fan_in_concrete value="3" level="0" />
+<fan_in value="6" level="0" />
+<IF4_visible value="36" level="1" />
+<IF4_concrete value="0" level="0" />
+<IF4 value="144" level="1" />
+</module>
+<module>
+<name>Date</name>
+<fan_out_visible value="2" level="0" />
+<fan_out_concrete value="2" level="0" />
+<fan_out value="4" level="0" />
+<fan_in_visible value="0" level="0" />
+<fan_in_concrete value="0" level="0" />
+<fan_in value="0" level="0" />
+<IF4_visible value="0" level="0" />
+<IF4_concrete value="0" level="0" />
+<IF4 value="0" level="0" />
+</module>
+<module>
+<name>Department</name>
+<fan_out_visible value="2" level="0" />
+<fan_out_concrete value="0" level="0" />
+<fan_out value="3" level="0" />
+<fan_in_visible value="9" level="1" />
+<fan_in_concrete value="6" level="0" />
+<fan_in value="9" level="0" />
+<IF4_visible value="324" level="2" />
+<IF4_concrete value="0" level="0" />
+<IF4 value="729" level="1" />
+</module>
+<module>
+<name>Director</name>
+<fan_out_visible value="0" level="0" />
+<fan_out_concrete value="0" level="0" />
+<fan_out value="0" level="0" />
+<fan_in_visible value="3" level="0" />
+<fan_in_concrete value="3" level="0" />
+<fan_in value="3" level="0" />
+<IF4_visible value="0" level="0" />
+<IF4_concrete value="0" level="0" />
+<IF4 value="0" level="0" />
+</module>
+<module>
+<name>Employee</name>
+<fan_out_visible value="2" level="0" />
+<fan_out_concrete value="0" level="0" />
+<fan_out value="2" level="0" />
+<fan_in_visible value="7" level="1" />
+<fan_in_concrete value="4" level="0" />
+<fan_in value="7" level="0" />
+<IF4_visible value="196" level="2" />
+<IF4_concrete value="0" level="0" />
+<IF4 value="196" level="1" />
+</module>
+<module>
+<name>Job</name>
+<fan_out_visible value="2" level="0" />
+<fan_out_concrete value="0" level="0" />
+<fan_out value="2" level="0" />
+<fan_in_visible value="3" level="0" />
+<fan_in_concrete value="2" level="0" />
+<fan_in value="4" level="0" />
+<IF4_visible value="36" level="1" />
+<IF4_concrete value="0" level="0" />
+<IF4 value="64" level="0" />
+</module>
+<module>
+<name>Manager</name>
+<fan_out_visible value="3" level="0" />
+<fan_out_concrete value="0" level="0" />
+<fan_out value="3" level="0" />
+<fan_in_visible value="4" level="0" />
+<fan_in_concrete value="3" level="0" />
+<fan_in value="6" level="0" />
+<IF4_visible value="144" level="2" />
+<IF4_concrete value="0" level="0" />
+<IF4 value="324" level="1" />
+</module>
+<module>
+<name>Manages</name>
+<fan_out_visible value="1" level="0" />
+<fan_out_concrete value="1" level="0" />
+<fan_out value="2" level="0" />
+<fan_in_visible value="1" level="0" />
+<fan_in_concrete value="0" level="0" />
+<fan_in value="1" level="0" />
+<IF4_visible value="1" level="0" />
+<IF4_concrete value="0" level="0" />
+<IF4 value="4" level="0" />
+</module>
+<module>
+<name>Person</name>
+<fan_out_visible value="5" level="0" />
+<fan_out_concrete value="5" level="0" />
+<fan_out value="5" level="0" />
+<fan_in_visible value="0" level="0" />
+<fan_in_concrete value="0" level="0" />
+<fan_in value="0" level="0" />
+<IF4_visible value="0" level="0" />
+<IF4_concrete value="0" level="0" />
+<IF4 value="0" level="0" />
+</module>
+<module>
+<name>Reports</name>
+<fan_out_visible value="1" level="0" />
+<fan_out_concrete value="1" level="0" />
+<fan_out value="1" level="0" />
+<fan_in_visible value="1" level="0" />
+<fan_in_concrete value="1" level="0" />
+<fan_in value="1" level="0" />
+<IF4_visible value="1" level="0" />
+<IF4_concrete value="1" level="0" />
+<IF4 value="1" level="0" />
+</module>
+<module>
+<name>State</name>
+<fan_out_visible value="1" level="0" />
+<fan_out_concrete value="1" level="0" />
+<fan_out value="1" level="0" />
+<fan_in_visible value="0" level="0" />
+<fan_in_concrete value="0" level="0" />
+<fan_in value="0" level="0" />
+<IF4_visible value="0" level="0" />
+<IF4_concrete value="0" level="0" />
+<IF4 value="0" level="0" />
+</module>
+<module>
+<name>Teacher</name>
+<fan_out_visible value="0" level="0" />
+<fan_out_concrete value="0" level="0" />
+<fan_out value="1" level="0" />
+<fan_in_visible value="4" level="0" />
+<fan_in_concrete value="3" level="0" />
+<fan_in value="4" level="0" />
+<IF4_visible value="0" level="0" />
+<IF4_concrete value="0" level="0" />
+<IF4 value="16" level="0" />
+</module>
+<module>
+<name>WorksIn</name>
+<fan_out_visible value="2" level="0" />
+<fan_out_concrete value="1" level="0" />
+<fan_out value="2" level="0" />
+<fan_in_visible value="1" level="0" />
+<fan_in_concrete value="0" level="0" />
+<fan_in value="1" level="0" />
+<IF4_visible value="4" level="0" />
+<IF4_concrete value="0" level="0" />
+<IF4 value="4" level="0" />
+</module>
+<module>
+<name>anonymous</name>
+<fan_out_visible value="0" level="0" />
+<fan_out_concrete value="0" level="0" />
+<fan_out value="0" level="0" />
+<fan_in_visible value="0" level="0" />
+<fan_in_concrete value="0" level="0" />
+<fan_in value="0" level="0" />
+<IF4_visible value="0" level="0" />
+<IF4_concrete value="0" level="0" />
+<IF4 value="0" level="0" />
+</module>
+<module>
+<name>bool</name>
+<fan_out_visible value="3" level="0" />
+<fan_out_concrete value="3" level="0" />
+<fan_out value="3" level="0" />
+<fan_in_visible value="0" level="0" />
+<fan_in_concrete value="0" level="0" />
+<fan_in value="0" level="0" />
+<IF4_visible value="0" level="0" />
+<IF4_concrete value="0" level="0" />
+<IF4 value="0" level="0" />
+</module>
+<module>
+<name>string</name>
+<fan_out_visible value="7" level="1" />
+<fan_out_concrete value="7" level="1" />
+<fan_out value="7" level="0" />
+<fan_in_visible value="0" level="0" />
+<fan_in_concrete value="0" level="0" />
+<fan_in value="0" level="0" />
+<IF4_visible value="0" level="0" />
+<IF4_concrete value="0" level="0" />
+<IF4 value="0" level="0" />
+</module>
+<module>
+<name>vector</name>
+<fan_out_visible value="6" level="0" />
+<fan_out_concrete value="6" level="0" />
+<fan_out value="7" level="0" />
+<fan_in_visible value="0" level="0" />
+<fan_in_concrete value="0" level="0" />
+<fan_in value="0" level="0" />
+<IF4_visible value="0" level="0" />
+<IF4_concrete value="0" level="0" />
+<IF4 value="0" level="0" />
+</module>
+</structural_summary>
+<other_extents>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="Admin.cpp" line="1" />
+<lines_of_code value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="Complaint.cpp" line="1" />
+<lines_of_code value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="Date.cpp" line="1" />
+<lines_of_code value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="Department.cpp" line="1" />
+<lines_of_code value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="Director.cpp" line="1" />
+<lines_of_code value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="Employee.cpp" line="1" />
+<lines_of_code value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="Global.cpp" line="1" />
+<lines_of_code value="10" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="Job.cpp" line="1" />
+<lines_of_code value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="main.cpp" line="1" />
+<lines_of_code value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="Manager.cpp" line="1" />
+<lines_of_code value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="Teacher.cpp" line="1" />
+<lines_of_code value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="Admin.h" line="1" />
+<lines_of_code value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="Complaint.h" line="1" />
+<lines_of_code value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="Date.h" line="1" />
+<lines_of_code value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="Department.h" line="1" />
+<lines_of_code value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="Director.h" line="1" />
+<lines_of_code value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="Employee.h" line="1" />
+<lines_of_code value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="Global.h" line="1" />
+<lines_of_code value="12" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="Job.h" line="1" />
+<lines_of_code value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="Manager.h" line="1" />
+<lines_of_code value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="Person.h" line="1" />
+<lines_of_code value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="Teacher.h" line="1" />
+<lines_of_code value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+</other_extents>
+</CCCC_Project>

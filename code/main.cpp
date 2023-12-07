@@ -20,7 +20,6 @@ int main()
 			break;
 		user->control();
 	}
-
 	return 0;
 }
 

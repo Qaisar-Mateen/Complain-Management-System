@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Detailed report on module Teacher-->
+<CCCC_Project>
+<module_summary>
+<lines_of_code value="236" level="0" />
+<lines_of_code_per_member_function value="******" level="0" />
+<McCabes_cyclomatic_complexity value="48" level="0" />
+<McCabes_cyclomatic_complexity_per_member_function value="******" level="2" />
+<lines_of_code value="6" level="0" />
+<lines_of_code_per_member_function value="********" level="2" />
+<lines_of_code_per_line_of_comment value="39.333" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="8.000" level="1" />
+<weighted_methods_per_class_unity value="14" level="0" />
+<weighted_methods_per_class_visibility value="9" level="0" />
+<depth_of_inheritance_tree value="1" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="5" level="0" />
+<IF4 value="16" level="0" />
+<IF4_per_member_function value="********" level="2" />
+<IF4_visible value="0" level="0" />
+<IF4_visible_per_member_function value="********" level="0" />
+<IF4_concrete value="0" level="0" />
+<IF4_concrete_per_member_function value="********" level="0" />
+</module_summary>
+<module_detail>
+<description>declaration</description>
+<source_reference file="Admin.h" line="15" />
+<lines_of_code value="1" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+<description>declaration</description>
+<source_reference file="Complaint.h" line="13" />
+<lines_of_code value="1" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+<description>declaration</description>
+<source_reference file="Global.h" line="15" />
+<lines_of_code value="1" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+<description>definition</description>
+<source_reference file="Teacher.h" line="13" />
+<lines_of_code value="7" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</module_detail>
+<procedural_detail>
+<member_function>
+<name>Teacher()</name>
+<extent>
+<description>definition</description>
+<source_reference file="Teacher.cpp" line="6" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="Teacher.h" line="37" />
+</extent>
+<lines_of_code value="6" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>Teacher(int,string)</name>
+<extent>
+<description>definition</description>
+<source_reference file="Teacher.cpp" line="12" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="Teacher.h" line="19" />
+</extent>
+<lines_of_code value="6" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>addComplaint(Complaint *)</name>
+<extent>
+<description>definition</description>
+<source_reference file="Teacher.cpp" line="231" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="Teacher.h" line="33" />
+</extent>
+<lines_of_code value="2" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>complaintDetail()</name>
+<extent>
+<description>definition</description>
+<source_reference file="Teacher.cpp" line="74" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="Teacher.h" line="39" />
+</extent>
+<lines_of_code value="33" level="1" />
+<McCabes_cyclomatic_complexity value="6" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+</member_function>
+<member_function>
+<name>control()</name>
+<extent>
+<description>definition</description>
+<source_reference file="Teacher.cpp" line="18" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="Teacher.h" line="21" />
+</extent>
+<lines_of_code value="21" level="0" />
+<McCabes_cyclomatic_complexity value="6" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+</member_function>
+<member_function>
+<name>getID()</name>
+<extent>
+<description>definition</description>
+<source_reference file="Teacher.cpp" line="227" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="Teacher.h" line="29" />
+</extent>
+<lines_of_code value="2" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getName()</name>
+<extent>
+<description>definition</description>
+<source_reference file="Teacher.cpp" line="229" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="Teacher.h" line="31" />
+</extent>
+<lines_of_code value="2" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getUniqueID()</name>
+<extent>
+<description>definition</description>
+<source_reference file="Teacher.cpp" line="210" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="Teacher.h" line="27" />
+</extent>
+<lines_of_code value="15" level="0" />
+<McCabes_cyclomatic_complexity value="3" level="0" />
+<lines_of_comment value="2" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>makeComplaint()</name>
+<extent>
+<description>definition</description>
+<source_reference file="Teacher.cpp" line="116" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="Teacher.h" line="40" />
+</extent>
+<lines_of_code value="16" level="0" />
+<McCabes_cyclomatic_complexity value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>markAsUnallocated(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="Teacher.cpp" line="233" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="Teacher.h" line="35" />
+</extent>
+<lines_of_code value="21" level="0" />
+<McCabes_cyclomatic_complexity value="2" level="0" />
+<lines_of_comment value="4" level="0" />
+<lines_of_code_per_line_of_comment value="5.250" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>printDetail()</name>
+<extent>
+<description>definition</description>
+<source_reference file="Teacher.cpp" line="111" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="Teacher.h" line="23" />
+</extent>
+<lines_of_code value="5" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>printInterface()</name>
+<extent>
+<description>definition</description>
+<source_reference file="Teacher.cpp" line="44" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="Teacher.h" line="38" />
+</extent>
+<lines_of_code value="28" level="0" />
+<McCabes_cyclomatic_complexity value="10" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+</member_function>
+<member_function>
+<name>reocordFeedback()</name>
+<extent>
+<description>definition</description>
+<source_reference file="Teacher.cpp" line="132" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="Teacher.h" line="41" />
+</extent>
+<lines_of_code value="61" level="1" />
+<McCabes_cyclomatic_complexity value="16" level="1" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+</member_function>
+<member_function>
+<name>writeToFile(const Teacher &amp;)</name>
+<extent>
+<description>definition</description>
+<source_reference file="Teacher.cpp" line="202" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="Teacher.h" line="25" />
+</extent>
+<lines_of_code value="8" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+</procedural_detail>
+<structural_detail>
+<module>
+<name>Teacher</name>
+<client_module>
+<name>Complaint</name>
+<visible>false</visible>
+<concrete>false</concrete>
+<extent>
+<description>has by reference</description>
+<source_reference file="Complaint.h" line="20" />
+</extent>
+</client_module>
+<supplier_module>
+<name>Complaint</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Teacher.cpp" line="231" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Teacher.h" line="33" />
+</extent>
+<name>Person</name>
+<visible>true</visible>
+<concrete>true</concrete>
+<extent>
+<description>inheritance</description>
+<source_reference file="Teacher.h" line="13" />
+</extent>
+<name>string</name>
+<visible>true</visible>
+<concrete>true</concrete>
+<extent>
+<description>pass by value</description>
+<source_reference file="Teacher.cpp" line="12" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="Teacher.h" line="15" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="Teacher.h" line="19" />
+</extent>
+<name>vector</name>
+<visible>true</visible>
+<concrete>true</concrete>
+<extent>
+<description>has by value</description>
+<source_reference file="Teacher.h" line="16" />
+</extent>
+</supplier_module>
+</module>
+</structural_detail>
+</CCCC_Project>

@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Detailed report on module Admin-->
+<CCCC_Project>
+<module_summary>
+<lines_of_code value="383" level="0" />
+<lines_of_code_per_member_function value="******" level="0" />
+<McCabes_cyclomatic_complexity value="84" level="0" />
+<McCabes_cyclomatic_complexity_per_member_function value="******" level="2" />
+<lines_of_code value="8" level="0" />
+<lines_of_code_per_member_function value="********" level="2" />
+<lines_of_code_per_line_of_comment value="47.875" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="10.500" level="2" />
+<weighted_methods_per_class_unity value="21" level="0" />
+<weighted_methods_per_class_visibility value="4" level="0" />
+<depth_of_inheritance_tree value="1" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="3" level="0" />
+<IF4 value="0" level="0" />
+<IF4_per_member_function value="********" level="0" />
+<IF4_visible value="0" level="0" />
+<IF4_visible_per_member_function value="********" level="0" />
+<IF4_concrete value="0" level="0" />
+<IF4_concrete_per_member_function value="********" level="0" />
+</module_summary>
+<module_detail>
+<description>definition</description>
+<source_reference file="Admin.h" line="17" />
+<lines_of_code value="9" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+<description>declaration</description>
+<source_reference file="Global.h" line="11" />
+<lines_of_code value="1" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</module_detail>
+<procedural_detail>
+<member_function>
+<name>Admin()</name>
+<extent>
+<description>definition</description>
+<source_reference file="Admin.cpp" line="9" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="Admin.h" line="26" />
+</extent>
+<lines_of_code value="6" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>Admin(vector &amp;,vector &amp;,vector &amp;)</name>
+<extent>
+<description>definition</description>
+<source_reference file="Admin.cpp" line="15" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="Admin.h" line="28" />
+</extent>
+<lines_of_code value="9" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>addEmployee()</name>
+<extent>
+<description>definition</description>
+<source_reference file="Admin.cpp" line="252" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="Admin.h" line="51" />
+</extent>
+<lines_of_code value="23" level="0" />
+<McCabes_cyclomatic_complexity value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>addManager()</name>
+<extent>
+<description>definition</description>
+<source_reference file="Admin.cpp" line="280" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="Admin.h" line="53" />
+</extent>
+<lines_of_code value="22" level="0" />
+<McCabes_cyclomatic_complexity value="2" level="0" />
+<lines_of_comment value="3" level="0" />
+<lines_of_code_per_line_of_comment value="7.333" level="1" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>addTeacher()</name>
+<extent>
+<description>definition</description>
+<source_reference file="Admin.cpp" line="316" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="Admin.h" line="55" />
+</extent>
+<lines_of_code value="13" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="3" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>control()</name>
+<extent>
+<description>definition</description>
+<source_reference file="Admin.cpp" line="161" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="Admin.h" line="32" />
+</extent>
+<lines_of_code value="48" level="1" />
+<McCabes_cyclomatic_complexity value="15" level="1" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+</member_function>
+<member_function>
+<name>displayEmployees()</name>
+<extent>
+<description>definition</description>
+<source_reference file="Admin.cpp" line="213" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="Admin.h" line="45" />
+</extent>
+<lines_of_code value="12" level="0" />
+<McCabes_cyclomatic_complexity value="3" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>displayManagers()</name>
+<extent>
+<description>definition</description>
+<source_reference file="Admin.cpp" line="226" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="Admin.h" line="47" />
+</extent>
+<lines_of_code value="12" level="0" />
+<McCabes_cyclomatic_complexity value="3" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>displayTeachers()</name>
+<extent>
+<description>definition</description>
+<source_reference file="Admin.cpp" line="239" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="Admin.h" line="49" />
+</extent>
+<lines_of_code value="12" level="0" />
+<McCabes_cyclomatic_complexity value="3" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>emp_delete(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="Admin.cpp" line="373" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="Admin.h" line="63" />
+</extent>
+<lines_of_code value="18" level="0" />
+<McCabes_cyclomatic_complexity value="6" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="6.000" level="1" />
+</member_function>
+<member_function>
+<name>getID()</name>
+<extent>
+<description>definition</description>
+<source_reference file="Admin.cpp" line="24" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="Admin.h" line="30" />
+</extent>
+<lines_of_code value="5" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getName()</name>
+<extent>
+<description>definition</description>
+<source_reference file="Admin.cpp" line="29" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="Admin.h" line="35" />
+</extent>
+<lines_of_code value="5" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>man_delete(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="Admin.cpp" line="391" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="Admin.h" line="65" />
+</extent>
+<lines_of_code value="25" level="0" />
+<McCabes_cyclomatic_complexity value="4" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>printAddInterface()</name>
+<extent>
+<description>definition</description>
+<source_reference file="Admin.cpp" line="65" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="Admin.h" line="39" />
+</extent>
+<lines_of_code value="26" level="0" />
+<McCabes_cyclomatic_complexity value="6" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+</member_function>
+<member_function>
+<name>printDetailInterface()</name>
+<extent>
+<description>definition</description>
+<source_reference file="Admin.cpp" line="131" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="Admin.h" line="43" />
+</extent>
+<lines_of_code value="26" level="0" />
+<McCabes_cyclomatic_complexity value="6" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+</member_function>
+<member_function>
+<name>printInterface()</name>
+<extent>
+<description>definition</description>
+<source_reference file="Admin.cpp" line="34" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="Admin.h" line="37" />
+</extent>
+<lines_of_code value="29" level="0" />
+<McCabes_cyclomatic_complexity value="12" level="1" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+</member_function>
+<member_function>
+<name>printRemoveInterface()</name>
+<extent>
+<description>definition</description>
+<source_reference file="Admin.cpp" line="94" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="Admin.h" line="41" />
+</extent>
+<lines_of_code value="35" level="1" />
+<McCabes_cyclomatic_complexity value="12" level="1" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+</member_function>
+<member_function>
+<name>removeEmployee()</name>
+<extent>
+<description>definition</description>
+<source_reference file="Admin.cpp" line="338" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="Admin.h" line="57" />
+</extent>
+<lines_of_code value="12" level="0" />
+<McCabes_cyclomatic_complexity value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>removeManager()</name>
+<extent>
+<description>definition</description>
+<source_reference file="Admin.cpp" line="362" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="Admin.h" line="61" />
+</extent>
+<lines_of_code value="11" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>removeTeacher()</name>
+<extent>
+<description>definition</description>
+<source_reference file="Admin.cpp" line="350" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="Admin.h" line="59" />
+</extent>
+<lines_of_code value="11" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>tea_delete(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="Admin.cpp" line="419" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="Admin.h" line="67" />
+</extent>
+<lines_of_code value="13" level="0" />
+<McCabes_cyclomatic_complexity value="4" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+</procedural_detail>
+<structural_detail>
+<module>
+<name>Admin</name>
+<client_module>
+</client_module>
+<supplier_module>
+<name>Person</name>
+<visible>true</visible>
+<concrete>true</concrete>
+<extent>
+<description>inheritance</description>
+<source_reference file="Admin.h" line="17" />
+</extent>
+<name>string</name>
+<visible>true</visible>
+<concrete>true</concrete>
+<extent>
+<description>has by value</description>
+<source_reference file="Admin.h" line="19" />
+</extent>
+<name>vector</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Admin.cpp" line="15" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Admin.cpp" line="15" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Admin.cpp" line="15" />
+</extent>
+<extent>
+<description>has by reference</description>
+<source_reference file="Admin.h" line="20" />
+</extent>
+<extent>
+<description>has by reference</description>
+<source_reference file="Admin.h" line="21" />
+</extent>
+<extent>
+<description>has by reference</description>
+<source_reference file="Admin.h" line="22" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Admin.h" line="28" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Admin.h" line="28" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Admin.h" line="28" />
+</extent>
+</supplier_module>
+</module>
+</structural_detail>
+</CCCC_Project>

@@ -20,8 +20,6 @@ private:
     Manages* dept;
     vector<Job*> job;
 public: 
-    Manager();
-
     Manager(int ID, string Name);
 
     void addDept(Department* d);
@@ -30,21 +28,7 @@ public:
 
     void control();
 
-    char printInterface();
-
-    char viewNotif();
-
-    void viewNotif_E();
-
-    //void viewNotif_T();
-
     void printDetail();
-
-    void reviewComplaint();
-    
-    void assignJob();
-    
-    void reviewJob();
 
     static void writeToFile(const Manager& manage);
 
@@ -56,9 +40,14 @@ public:
 
     string getName() const;
 
-    ~Manager();
-
     static void markAsUnallocated(int manageId);
+
+    ~Manager();
+private:
+    char printInterface();
+    void viewNotif_E();
+    void reviewComplaint();
+    Manager();
 };
 
 #endif //_MANAGER_H

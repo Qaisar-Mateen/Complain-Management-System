@@ -34,11 +34,7 @@ public:
 
     void setState(State s);
 
-    bool notifyManager();
-
     bool notifyTeacher();
-
-    void setNotifyMan(bool t);
 
     void setNotifyTea(bool t);
 

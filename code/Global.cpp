@@ -75,35 +75,35 @@ void populateComplaint(string Filename) {
 			istringstream iss(line);
 			string field;
 
-			getline(iss, field, ',');
+			getline(iss, field, ','); //complaint_id
 			int id = stoi(field);
 
-			getline(iss, field, ',');
+			getline(iss, field, ','); //complaint Description
 			string description = field;
 
 			getline(iss, field, ',');
-			int teacher_Id = stoi(field);
+			int teacher_Id = stoi(field); //teacher id
 
-			getline(iss, field, ',');
+			getline(iss, field, ',');	//department id
 			int dept_id = stoi(field);
 
 			getline(iss, field, ',');
-			int day = stoi(field);
+			int day = stoi(field); //day 
 
 			getline(iss, field, ',');
-			int month = stoi(field);
+			int month = stoi(field); //month
 
 			getline(iss, field, ',');
-			int year = stoi(field);
+			int year = stoi(field); //year
 
 			getline(iss, field, ',');
-			int state = stoi(field);
+			int state = stoi(field); //complaint state
 
 			getline(iss, field, ',');
-			int noT = stoi(field);
+			int noT = stoi(field);	//notify to teacher bool
 
 			getline(iss, field, ',');
-			int nom = stoi(field);
+			int nom = stoi(field); //notify manager bool
 
 			Department* d = search(depts, dept_id);
 			Teacher* t = search(tea, teacher_Id);
@@ -132,22 +132,22 @@ void populateJob(string Filename) {
 			string field;
 
 			getline(iss, field, ',');
-			int id = stoi(field);
+			int id = stoi(field);	//job id
 
 			getline(iss, field, ',');
-			int com_Id = stoi(field);
+			int com_Id = stoi(field);	//complaint id
 
 			getline(iss, field, ',');
-			int man_id = stoi(field);
+			int man_id = stoi(field);	//manager id
 
-			getline(iss, field, ',');
+			getline(iss, field, ',');	//employee id list
 			istringstream iss2(field);
 			vector<int> empIds;
 			while (iss2 >> field)
 				empIds.push_back(stoi(field));
 
 			getline(iss, field, ',');
-			int day = stoi(field);
+			int day = stoi(field);	
 
 			getline(iss, field, ',');
 			int month = stoi(field);
@@ -156,7 +156,7 @@ void populateJob(string Filename) {
 			int year = stoi(field);
 
 			getline(iss, field, ',');
-			int com = stoi(field);
+			int com = stoi(field);	//complete bool
 
 			getline(iss, field, ',');
 			int hi = stoi(field);
@@ -169,8 +169,9 @@ void populateJob(string Filename) {
 				}
 
 			if (!m) {
-				cerr << "\n ERROR: Manager with id: " << man_id << " does not exists!!\n";
-				exit(1);
+				m = nullptr;
+				//cerr << "\n ERROR: Manager with id: " << man_id << " does not exists!!\n";
+				//exit(1);
 			}
  
 			jobs.push_back(new Job(id, com_Id, m, empIds, day, month, year, com, hi));
@@ -194,13 +195,13 @@ void populateEmployee(string Filename) {
 			string field;
 
 			getline(iss, field, ',');
-			int id = stoi(field);
+			int id = stoi(field);	// emp id
 
 			getline(iss, field, ',');
-			string name = field;
+			string name = field;	//name
 	
 			getline(iss, field, '\n');
-			int aval = stoi(field);
+			int aval = stoi(field);	//availability bool
 
 			emp.push_back(new Employee(id, name, (bool)aval));
 		}

@@ -3,6 +3,7 @@
 #include "Department.h"
 #include "Global.h"
 
+//constructor for reading from file
 Complaint::Complaint(int ID, string des, int d, int t, int st, int day, int month, int year, int noT, int nom) : description(des), From(search(tea,t)), To(search(depts, d))
 {
     notify_m = (bool)nom;
@@ -30,6 +31,7 @@ Complaint::Complaint(int ID, string des, int d, int t, int st, int day, int mont
     From->addComplaint(this);
 }
 
+//constructor for new complaint
 Complaint::Complaint(string des, int d, int t) : description(des), From(search(tea, t)), To(search(depts, d))
 {
 	id = getUniqueID();
@@ -41,14 +43,13 @@ Complaint::Complaint(string des, int d, int t) : description(des), From(search(t
     notify_m = notify_t = false;
 }
 
+//getters
 int Complaint::getID() { return id; }
 
 State Complaint::getState() { return state; }
 
-bool Complaint::notifyManager() { return notify_m; }
-
 bool Complaint::notifyTeacher() { return notify_t; }
-
+//setters
 void Complaint::setState(State s)
 {
     state = s;
@@ -57,6 +58,7 @@ void Complaint::setState(State s)
 
 Date Complaint::getDate() { return *date; }
 
+//some display functions
 void Complaint::displayState()
 {
     switch (state) {
@@ -106,10 +108,9 @@ int Complaint::getUniqueID() {
     return maxID;
 }
 
-void Complaint::setNotifyMan(bool t) { notify_m = t; updateFile(state,notify_t, notify_m); }
-
 void Complaint::setNotifyTea(bool t) { notify_t = t; updateFile(state, notify_t, notify_m); }
 
+//function to write to file
 void Complaint::writeToFile(int t, int d) {
     ofstream file("Complaint.txt", ios::app);
     if (file.is_open()) {
@@ -134,6 +135,7 @@ void Complaint::writeToFile(int t, int d) {
     }
 }
 
+//function to update the file data to the latest
 void Complaint::updateFile(State newState, bool newNotifyTeacher, bool newNotifyManager) {
     ifstream fileIn("Complaint.txt");
     ofstream fileOut("Temp.txt");
