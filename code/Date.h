@@ -33,28 +33,28 @@ public:
         cout << "Date: " << day << "/" << month << '/' << year;
     }
 
-    bool operator==(const Date& other) const {
-        return (day == other.day && month == other.month && year == other.year);
-    }
-
-    bool operator<(const Date& other) const {
-        if (year != other.year)
-            return year < other.year;
-        if (month != other.month)
-            return month < other.month;
-        return day < other.day;
-    }
-
-    bool operator>(const Date& other) const {
-        return (!(*this < other) && !(*this == other));
-    }
-
     bool operator<=(const Date& other) const {
-        return !(*this > other);
+        if ((day == other.day && month == other.month && year == other.year))
+            return true;
+        else {
+            if (year != other.year)
+                return year < other.year;
+            if (month != other.month)
+                return month < other.month;
+            return day < other.day;
+        }
     }
 
     bool operator>=(const Date& other) const {
-        return !(*this < other);
+        if ((day == other.day && month == other.month && year == other.year))
+            return true;
+        else {
+            if (year != other.year)
+                return year > other.year;
+            if (month != other.month)
+                return month > other.month;
+            return day > other.day;
+        }
     }
 
 private:
