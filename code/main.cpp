@@ -164,4 +164,6 @@ Person* Login()
 
         return p; // Return the pointer to the logged-in user
     }
+
+    return p;
 }
