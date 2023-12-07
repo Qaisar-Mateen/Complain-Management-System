@@ -2,16 +2,16 @@
 <!--Detailed report on module Complaint-->
 <CCCC_Project>
 <module_summary>
-<lines_of_code value="180" level="0" />
+<lines_of_code value="168" level="0" />
 <lines_of_code_per_member_function value="******" level="0" />
 <McCabes_cyclomatic_complexity value="28" level="0" />
 <McCabes_cyclomatic_complexity_per_member_function value="******" level="2" />
-<lines_of_code value="9" level="0" />
+<lines_of_code value="30" level="0" />
 <lines_of_code_per_member_function value="********" level="2" />
-<lines_of_code_per_line_of_comment value="20.000" level="1" />
-<McCabes_cyclomatic_complexity_per_line_of_comment value="3.111" level="0" />
-<weighted_methods_per_class_unity value="16" level="0" />
-<weighted_methods_per_class_visibility value="13" level="0" />
+<lines_of_code_per_line_of_comment value="5.600" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="0.933" level="0" />
+<weighted_methods_per_class_unity value="14" level="0" />
+<weighted_methods_per_class_visibility value="11" level="0" />
 <depth_of_inheritance_tree value="0" level="0" />
 <number_of_children value="0" level="0" />
 <coupling_between_objects value="8" level="0" />
@@ -57,7 +57,7 @@
 <name>Complaint(int,string,int,int,int,int,int,int,int,int)</name>
 <extent>
 <description>definition</description>
-<source_reference file="Complaint.cpp" line="6" />
+<source_reference file="Complaint.cpp" line="8" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -65,15 +65,15 @@
 </extent>
 <lines_of_code value="27" level="0" />
 <McCabes_cyclomatic_complexity value="6" level="0" />
-<lines_of_comment value="0" level="0" />
-<lines_of_code_per_line_of_comment value="******" level="2" />
-<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+<lines_of_comment value="7" level="0" />
+<lines_of_code_per_line_of_comment value="3.857" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="0.857" level="0" />
 </member_function>
 <member_function>
 <name>Complaint(string,int,int)</name>
 <extent>
 <description>definition</description>
-<source_reference file="Complaint.cpp" line="33" />
+<source_reference file="Complaint.cpp" line="41" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -81,7 +81,7 @@
 </extent>
 <lines_of_code value="11" level="0" />
 <McCabes_cyclomatic_complexity value="0" level="0" />
-<lines_of_comment value="1" level="0" />
+<lines_of_comment value="2" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
 <McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
 </member_function>
@@ -89,23 +89,23 @@
 <name>displayState()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Complaint.cpp" line="60" />
+<source_reference file="Complaint.cpp" line="68" />
 </extent>
 <extent>
 <description>declaration</description>
-<source_reference file="Complaint.h" line="45" />
+<source_reference file="Complaint.h" line="41" />
 </extent>
 <lines_of_code value="18" level="0" />
 <McCabes_cyclomatic_complexity value="5" level="0" />
-<lines_of_comment value="0" level="0" />
+<lines_of_comment value="1" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
-<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="5.000" level="0" />
 </member_function>
 <member_function>
 <name>getDate()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Complaint.cpp" line="58" />
+<source_reference file="Complaint.cpp" line="65" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -121,7 +121,7 @@
 <name>getID()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Complaint.cpp" line="44" />
+<source_reference file="Complaint.cpp" line="53" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -129,7 +129,7 @@
 </extent>
 <lines_of_code value="2" level="0" />
 <McCabes_cyclomatic_complexity value="1" level="0" />
-<lines_of_comment value="0" level="0" />
+<lines_of_comment value="1" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
 <McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
 </member_function>
@@ -137,7 +137,7 @@
 <name>getState()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Complaint.cpp" line="46" />
+<source_reference file="Complaint.cpp" line="55" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -153,11 +153,11 @@
 <name>getUniqueID()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Complaint.cpp" line="92" />
+<source_reference file="Complaint.cpp" line="100" />
 </extent>
 <extent>
 <description>declaration</description>
-<source_reference file="Complaint.h" line="51" />
+<source_reference file="Complaint.h" line="47" />
 </extent>
 <lines_of_code value="14" level="0" />
 <McCabes_cyclomatic_complexity value="3" level="0" />
@@ -166,10 +166,10 @@
 <McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
 </member_function>
 <member_function>
-<name>notifyManager()</name>
+<name>notifyTeacher()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Complaint.cpp" line="48" />
+<source_reference file="Complaint.cpp" line="57" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -182,30 +182,14 @@
 <McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
 </member_function>
 <member_function>
-<name>notifyTeacher()</name>
-<extent>
-<description>definition</description>
-<source_reference file="Complaint.cpp" line="50" />
-</extent>
-<extent>
-<description>declaration</description>
-<source_reference file="Complaint.h" line="39" />
-</extent>
-<lines_of_code value="2" level="0" />
-<McCabes_cyclomatic_complexity value="1" level="0" />
-<lines_of_comment value="0" level="0" />
-<lines_of_code_per_line_of_comment value="------" level="0" />
-<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
-</member_function>
-<member_function>
 <name>printDetail()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Complaint.cpp" line="78" />
+<source_reference file="Complaint.cpp" line="86" />
 </extent>
 <extent>
 <description>declaration</description>
-<source_reference file="Complaint.h" line="47" />
+<source_reference file="Complaint.h" line="43" />
 </extent>
 <lines_of_code value="6" level="0" />
 <McCabes_cyclomatic_complexity value="0" level="0" />
@@ -217,29 +201,13 @@
 <name>printFullDetail()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Complaint.cpp" line="84" />
+<source_reference file="Complaint.cpp" line="92" />
 </extent>
 <extent>
 <description>declaration</description>
-<source_reference file="Complaint.h" line="49" />
+<source_reference file="Complaint.h" line="45" />
 </extent>
 <lines_of_code value="8" level="0" />
-<McCabes_cyclomatic_complexity value="0" level="0" />
-<lines_of_comment value="0" level="0" />
-<lines_of_code_per_line_of_comment value="------" level="0" />
-<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
-</member_function>
-<member_function>
-<name>setNotifyMan(bool)</name>
-<extent>
-<description>definition</description>
-<source_reference file="Complaint.cpp" line="109" />
-</extent>
-<extent>
-<description>declaration</description>
-<source_reference file="Complaint.h" line="41" />
-</extent>
-<lines_of_code value="2" level="0" />
 <McCabes_cyclomatic_complexity value="0" level="0" />
 <lines_of_comment value="0" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
@@ -249,11 +217,11 @@
 <name>setNotifyTea(bool)</name>
 <extent>
 <description>definition</description>
-<source_reference file="Complaint.cpp" line="111" />
+<source_reference file="Complaint.cpp" line="117" />
 </extent>
 <extent>
 <description>declaration</description>
-<source_reference file="Complaint.h" line="43" />
+<source_reference file="Complaint.h" line="39" />
 </extent>
 <lines_of_code value="2" level="0" />
 <McCabes_cyclomatic_complexity value="0" level="0" />
@@ -265,7 +233,7 @@
 <name>setState(State)</name>
 <extent>
 <description>definition</description>
-<source_reference file="Complaint.cpp" line="52" />
+<source_reference file="Complaint.cpp" line="59" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -273,7 +241,7 @@
 </extent>
 <lines_of_code value="6" level="0" />
 <McCabes_cyclomatic_complexity value="0" level="0" />
-<lines_of_comment value="0" level="0" />
+<lines_of_comment value="1" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
 <McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
 </member_function>
@@ -281,33 +249,33 @@
 <name>updateFile(State,bool,bool)</name>
 <extent>
 <description>definition</description>
-<source_reference file="Complaint.cpp" line="137" />
+<source_reference file="Complaint.cpp" line="145" />
 </extent>
 <extent>
 <description>declaration</description>
-<source_reference file="Complaint.h" line="53" />
+<source_reference file="Complaint.h" line="49" />
 </extent>
-<lines_of_code value="36" level="1" />
-<McCabes_cyclomatic_complexity value="3" level="0" />
-<lines_of_comment value="6" level="0" />
-<lines_of_code_per_line_of_comment value="6.000" level="0" />
+<lines_of_code value="28" level="0" />
+<McCabes_cyclomatic_complexity value="4" level="0" />
+<lines_of_comment value="15" level="0" />
+<lines_of_code_per_line_of_comment value="1.867" level="0" />
 <McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
 </member_function>
 <member_function>
 <name>writeToFile(int,int)</name>
 <extent>
 <description>definition</description>
-<source_reference file="Complaint.cpp" line="113" />
+<source_reference file="Complaint.cpp" line="120" />
 </extent>
 <extent>
 <description>declaration</description>
-<source_reference file="Complaint.h" line="52" />
+<source_reference file="Complaint.h" line="48" />
 </extent>
 <lines_of_code value="24" level="0" />
 <McCabes_cyclomatic_complexity value="6" level="0" />
-<lines_of_comment value="0" level="0" />
-<lines_of_code_per_line_of_comment value="******" level="2" />
-<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="24.000" level="1" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="6.000" level="1" />
 </member_function>
 </procedural_detail>
 <structural_detail>
@@ -357,11 +325,11 @@
 <concrete>true</concrete>
 <extent>
 <description>pass by value</description>
-<source_reference file="Complaint.cpp" line="52" />
+<source_reference file="Complaint.cpp" line="59" />
 </extent>
 <extent>
 <description>pass by value</description>
-<source_reference file="Complaint.cpp" line="137" />
+<source_reference file="Complaint.cpp" line="145" />
 </extent>
 <extent>
 <description>has by value</description>
@@ -373,7 +341,7 @@
 </extent>
 <extent>
 <description>pass by value</description>
-<source_reference file="Complaint.h" line="53" />
+<source_reference file="Complaint.h" line="49" />
 </extent>
 <name>Teacher</name>
 <visible>false</visible>
@@ -387,19 +355,15 @@
 <concrete>true</concrete>
 <extent>
 <description>pass by value</description>
-<source_reference file="Complaint.cpp" line="109" />
+<source_reference file="Complaint.cpp" line="117" />
 </extent>
 <extent>
 <description>pass by value</description>
-<source_reference file="Complaint.cpp" line="111" />
+<source_reference file="Complaint.cpp" line="145" />
 </extent>
 <extent>
 <description>pass by value</description>
-<source_reference file="Complaint.cpp" line="137" />
-</extent>
-<extent>
-<description>pass by value</description>
-<source_reference file="Complaint.cpp" line="137" />
+<source_reference file="Complaint.cpp" line="145" />
 </extent>
 <extent>
 <description>has by value</description>
@@ -411,30 +375,26 @@
 </extent>
 <extent>
 <description>pass by value</description>
-<source_reference file="Complaint.h" line="41" />
+<source_reference file="Complaint.h" line="39" />
 </extent>
 <extent>
 <description>pass by value</description>
-<source_reference file="Complaint.h" line="43" />
+<source_reference file="Complaint.h" line="49" />
 </extent>
 <extent>
 <description>pass by value</description>
-<source_reference file="Complaint.h" line="53" />
-</extent>
-<extent>
-<description>pass by value</description>
-<source_reference file="Complaint.h" line="53" />
+<source_reference file="Complaint.h" line="49" />
 </extent>
 <name>string</name>
 <visible>true</visible>
 <concrete>true</concrete>
 <extent>
 <description>pass by value</description>
-<source_reference file="Complaint.cpp" line="6" />
+<source_reference file="Complaint.cpp" line="8" />
 </extent>
 <extent>
 <description>pass by value</description>
-<source_reference file="Complaint.cpp" line="33" />
+<source_reference file="Complaint.cpp" line="41" />
 </extent>
 <extent>
 <description>has by value</description>

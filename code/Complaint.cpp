@@ -4,12 +4,17 @@
 #include "Global.h"
 
 //constructor for reading from file
-Complaint::Complaint(int ID, string des, int d, int t, int st, int day, int month, int year, int noT, int nom) : description(des), From(search(tea,t)), To(search(depts, d))
+// Constructor for the Complaint class
+Complaint::Complaint(int ID, string des, int d, int t, int st, int day, int month, int year, int noT, int nom) : description(des), From(search(tea, t)), To(search(depts, d))
 {
+    // Convert integer values to boolean and assign to notify_m and notify_t
     notify_m = (bool)nom;
     notify_t = (bool)noT;
+    // Assign ID to id
     id = ID;
+    // Create a new Date object and assign to date
     date = new Date(day, month, year);
+    // Switch case to assign the correct state based on the integer value st
     switch (st) {
     case 0:
         state = State::New;
@@ -27,6 +32,7 @@ Complaint::Complaint(int ID, string des, int d, int t, int st, int day, int mont
         state = State::New;
         break;
     }
+    // Add this complaint to the To and From objects
     To->addComplaint(this);
     From->addComplaint(this);
 }
@@ -135,43 +141,49 @@ void Complaint::writeToFile(int t, int d) {
     }
 }
 
-//function to update the file data to the latest
+// Function to update the complaint's state and notification settings in the file
 void Complaint::updateFile(State newState, bool newNotifyTeacher, bool newNotifyManager) {
+    // Open the file for reading
     ifstream fileIn("Complaint.txt");
+    // Open a temporary file for writing
     ofstream fileOut("Temp.txt");
     string line;
 
+    // Read the file line by line
     while (std::getline(fileIn, line)) {
+        // Skip empty lines
         if (!line.empty()) {
             istringstream iss(line);
             string field;
+            // Get the complaint ID
             getline(iss, field, ',');
             int complaintId = std::stoi(field);
 
+            // If the complaint ID matches the current complaint's ID
             if (complaintId == id) {
                 ostringstream oss;
+                // Write the complaint ID
                 oss << id << ',';
-                getline(iss, field, ',');  // Description
-                oss << field << ',';
-                getline(iss, field, ',');  // teacher_id
-                oss << field << ',';
-                getline(iss, field, ',');  // dept_id
-                oss << field << ',';
-                getline(iss, field, ',');  // day
-                oss << field << ',';
-                getline(iss, field, ',');  // month
-                oss << field << ',';
-                getline(iss, field, ',');  // year
-                oss << field << ',';
+                // Copy the description, teacher ID, department ID, and date
+                for (int i = 0; i < 6; ++i) {
+                    getline(iss, field, ',');
+                    oss << field << ',';
+                }
+                // Write the new state and notification settings
                 oss << static_cast<int>(newState) << ',' << (int)newNotifyTeacher << ',' << (int)newNotifyManager;
+                // Replace the line with the updated data
                 line = oss.str();
             }
+            // Write the line to the temporary file
             fileOut << line << '\n';
         }
     }
+    // Close the files
     fileIn.close();
     fileOut.close();
 
+    // Delete the original file
     remove("Complaint.txt");
+    // Rename the temporary file to the original file's name
     int chk = rename("Temp.txt", "Complaint.txt");
 }

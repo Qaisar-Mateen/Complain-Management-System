@@ -2,22 +2,22 @@
 <!--Detailed report on module Employee-->
 <CCCC_Project>
 <module_summary>
-<lines_of_code value="231" level="0" />
+<lines_of_code value="232" level="0" />
 <lines_of_code_per_member_function value="******" level="0" />
-<McCabes_cyclomatic_complexity value="36" level="0" />
+<McCabes_cyclomatic_complexity value="37" level="0" />
 <McCabes_cyclomatic_complexity_per_member_function value="******" level="2" />
-<lines_of_code value="10" level="0" />
+<lines_of_code value="54" level="0" />
 <lines_of_code_per_member_function value="********" level="2" />
-<lines_of_code_per_line_of_comment value="23.100" level="1" />
-<McCabes_cyclomatic_complexity_per_line_of_comment value="3.600" level="0" />
+<lines_of_code_per_line_of_comment value="4.296" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="0.685" level="0" />
 <weighted_methods_per_class_unity value="17" level="0" />
 <weighted_methods_per_class_visibility value="13" level="0" />
 <depth_of_inheritance_tree value="1" level="0" />
 <number_of_children value="0" level="0" />
-<coupling_between_objects value="9" level="0" />
-<IF4 value="196" level="1" />
+<coupling_between_objects value="10" level="0" />
+<IF4 value="441" level="1" />
 <IF4_per_member_function value="********" level="2" />
-<IF4_visible value="196" level="2" />
+<IF4_visible value="441" level="2" />
 <IF4_visible_per_member_function value="********" level="2" />
 <IF4_concrete value="0" level="0" />
 <IF4_concrete_per_member_function value="********" level="0" />
@@ -64,7 +64,7 @@
 <name>Employee()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Employee.cpp" line="6" />
+<source_reference file="Employee.cpp" line="7" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -72,7 +72,7 @@
 </extent>
 <lines_of_code value="7" level="0" />
 <McCabes_cyclomatic_complexity value="0" level="0" />
-<lines_of_comment value="0" level="0" />
+<lines_of_comment value="4" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
 <McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
 </member_function>
@@ -80,7 +80,7 @@
 <name>Employee(int,string,bool)</name>
 <extent>
 <description>definition</description>
-<source_reference file="Employee.cpp" line="13" />
+<source_reference file="Employee.cpp" line="15" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -88,7 +88,7 @@
 </extent>
 <lines_of_code value="7" level="0" />
 <McCabes_cyclomatic_complexity value="0" level="0" />
-<lines_of_comment value="0" level="0" />
+<lines_of_comment value="4" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
 <McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
 </member_function>
@@ -96,7 +96,7 @@
 <name>addDept(Department *)</name>
 <extent>
 <description>definition</description>
-<source_reference file="Employee.cpp" line="20" />
+<source_reference file="Employee.cpp" line="23" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -104,7 +104,7 @@
 </extent>
 <lines_of_code value="8" level="0" />
 <McCabes_cyclomatic_complexity value="1" level="0" />
-<lines_of_comment value="0" level="0" />
+<lines_of_comment value="3" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
 <McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
 </member_function>
@@ -112,7 +112,7 @@
 <name>addJob(Job *)</name>
 <extent>
 <description>definition</description>
-<source_reference file="Employee.cpp" line="28" />
+<source_reference file="Employee.cpp" line="34" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -120,7 +120,7 @@
 </extent>
 <lines_of_code value="7" level="0" />
 <McCabes_cyclomatic_complexity value="1" level="0" />
-<lines_of_comment value="0" level="0" />
+<lines_of_comment value="3" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
 <McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
 </member_function>
@@ -128,7 +128,7 @@
 <name>control()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Employee.cpp" line="35" />
+<source_reference file="Employee.cpp" line="43" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -136,15 +136,15 @@
 </extent>
 <lines_of_code value="30" level="0" />
 <McCabes_cyclomatic_complexity value="7" level="0" />
-<lines_of_comment value="0" level="0" />
-<lines_of_code_per_line_of_comment value="******" level="2" />
-<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+<lines_of_comment value="11" level="0" />
+<lines_of_code_per_line_of_comment value="2.727" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="0.636" level="0" />
 </member_function>
 <member_function>
 <name>getID()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Employee.cpp" line="151" />
+<source_reference file="Employee.cpp" line="180" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -160,7 +160,7 @@
 <name>getName()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Employee.cpp" line="155" />
+<source_reference file="Employee.cpp" line="184" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -176,7 +176,7 @@
 <name>getUniqueID()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Employee.cpp" line="169" />
+<source_reference file="Employee.cpp" line="198" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -192,7 +192,7 @@
 <name>isAvailable()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Employee.cpp" line="159" />
+<source_reference file="Employee.cpp" line="188" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -208,7 +208,7 @@
 <name>markAsUnallocated(int)</name>
 <extent>
 <description>definition</description>
-<source_reference file="Employee.cpp" line="187" />
+<source_reference file="Employee.cpp" line="216" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -224,7 +224,7 @@
 <name>printDetail()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Employee.cpp" line="99" />
+<source_reference file="Employee.cpp" line="125" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -240,7 +240,7 @@
 <name>printInterface()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Employee.cpp" line="69" />
+<source_reference file="Employee.cpp" line="88" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -248,15 +248,15 @@
 </extent>
 <lines_of_code value="28" level="0" />
 <McCabes_cyclomatic_complexity value="9" level="0" />
-<lines_of_comment value="0" level="0" />
-<lines_of_code_per_line_of_comment value="******" level="2" />
-<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+<lines_of_comment value="10" level="0" />
+<lines_of_code_per_line_of_comment value="2.800" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="0.900" level="0" />
 </member_function>
 <member_function>
 <name>setAvailable(bool)</name>
 <extent>
 <description>definition</description>
-<source_reference file="Employee.cpp" line="143" />
+<source_reference file="Employee.cpp" line="169" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -272,23 +272,23 @@
 <name>updateFile()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Employee.cpp" line="217" />
+<source_reference file="Employee.cpp" line="246" />
 </extent>
 <extent>
 <description>declaration</description>
 <source_reference file="Employee.h" line="49" />
 </extent>
-<lines_of_code value="27" level="0" />
+<lines_of_code value="26" level="0" />
 <McCabes_cyclomatic_complexity value="3" level="0" />
-<lines_of_comment value="1" level="0" />
-<lines_of_code_per_line_of_comment value="27.000" level="1" />
+<lines_of_comment value="9" level="0" />
+<lines_of_code_per_line_of_comment value="2.889" level="0" />
 <McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
 </member_function>
 <member_function>
 <name>updateSystem()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Employee.cpp" line="104" />
+<source_reference file="Employee.cpp" line="130" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -304,7 +304,7 @@
 <name>writeToFile(const Employee &amp;)</name>
 <extent>
 <description>definition</description>
-<source_reference file="Employee.cpp" line="161" />
+<source_reference file="Employee.cpp" line="190" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -320,15 +320,15 @@
 <name>~Employee()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Employee.cpp" line="145" />
+<source_reference file="Employee.cpp" line="172" />
 </extent>
 <extent>
 <description>declaration</description>
 <source_reference file="Employee.h" line="47" />
 </extent>
-<lines_of_code value="6" level="0" />
-<McCabes_cyclomatic_complexity value="0" level="0" />
-<lines_of_comment value="1" level="0" />
+<lines_of_code value="8" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="2" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
 <McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
 </member_function>
@@ -342,11 +342,11 @@
 <concrete>false</concrete>
 <extent>
 <description>pass by reference</description>
-<source_reference file="Department.cpp" line="47" />
+<source_reference file="Department.cpp" line="48" />
 </extent>
 <extent>
 <description>pass by reference</description>
-<source_reference file="Department.cpp" line="63" />
+<source_reference file="Department.cpp" line="65" />
 </extent>
 <extent>
 <description>pass by reference</description>
@@ -355,6 +355,17 @@
 <extent>
 <description>pass by reference</description>
 <source_reference file="Department.h" line="66" />
+</extent>
+<name>Job</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Job.cpp" line="77" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Job.h" line="40" />
 </extent>
 <name>WorksIn</name>
 <visible>true</visible>
@@ -370,7 +381,7 @@
 <concrete>false</concrete>
 <extent>
 <description>pass by reference</description>
-<source_reference file="Employee.cpp" line="20" />
+<source_reference file="Employee.cpp" line="23" />
 </extent>
 <extent>
 <description>pass by reference</description>
@@ -381,7 +392,7 @@
 <concrete>false</concrete>
 <extent>
 <description>pass by reference</description>
-<source_reference file="Employee.cpp" line="28" />
+<source_reference file="Employee.cpp" line="34" />
 </extent>
 <extent>
 <description>pass by reference</description>
@@ -406,11 +417,11 @@
 <concrete>true</concrete>
 <extent>
 <description>pass by value</description>
-<source_reference file="Employee.cpp" line="13" />
+<source_reference file="Employee.cpp" line="15" />
 </extent>
 <extent>
 <description>pass by value</description>
-<source_reference file="Employee.cpp" line="143" />
+<source_reference file="Employee.cpp" line="169" />
 </extent>
 <extent>
 <description>has by value</description>
@@ -429,7 +440,7 @@
 <concrete>true</concrete>
 <extent>
 <description>pass by value</description>
-<source_reference file="Employee.cpp" line="13" />
+<source_reference file="Employee.cpp" line="15" />
 </extent>
 <extent>
 <description>has by value</description>

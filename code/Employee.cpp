@@ -3,99 +3,125 @@
 #include "Global.h"
 #include <limits>
 
+// Default constructor for Employee
 Employee::Employee()
 {
-    id = -1;
-    name = "Invalid";
-    Available = true;
+    id = -1; // Initialize id to -1
+    name = "Invalid"; // Initialize name to "Invalid"
+    Available = true; // Initialize Available to true
 }
 
+// Parameterized constructor for Employee
 Employee::Employee(int ID, string Name, bool aval)
 {
-    id = ID;
-    name = Name;
-    Available = aval;
+    id = ID; // Set id to the provided ID
+    name = Name; // Set name to the provided Name
+    Available = aval; // Set Available to the provided availability status
 }
 
+// Function to add a Department to the Employee
 void Employee::addDept(Department* d)
 {
+    // If the Employee is already assigned to a Department, print a message
     if (dept)
         cout << "\n Employee already assigned to '" << dept->getName() << "' Department";
+    // Otherwise, assign the provided Department to the Employee
     else
         dept = d;
 }
 
-void Employee::addJob(Job* j) { 
-    job.push_back(j); 
+// Function to add a Job to the Employee
+void Employee::addJob(Job* j) {
+    job.push_back(j); // Add the provided Job to the Employee's job list
+    // If the added Job is not completed, set Available to false
     if (!job.back()->isCompleted()) {
         Available = false;
     }
 }
-//
+
+// Function that controls the Employee module
 void Employee::control()
 {
     char opt = 'd';
+
+    // Keep running until the user chooses to log out
     while (opt != 'f')
     {
+        // Print the main interface and get the user's option
         opt = printInterface();
 
+        // If the user chooses to view details
         if (opt == 'a') {
+            // Clear the console
             system("cls");
+            // Print the Employee's details
             cout << "\t\t\t ----<><><><><><><><><><><><( Employee )><><><><><><><><><><><>----\n\n";
             cout << " ID: " << id << endl;
             cout << " Name: " << name << endl;
             cout << " Department: " << dept->getName() << "\n\n";
+            // If the Employee has no jobs, print a message
             if (job.empty()) cout << "\n No Jobs to Display\n";
+            // Otherwise, print the details of all jobs
             else {
                 cout << "\n\t\t\t--<{ All Jobs Assigned }>--\n";
                 for (int i = 0; i < job.size(); i++) job[i]->printDetail();
             }
         }
 
+        // If the user chooses to update the system
         else if (opt == 'b') updateSystem();
 
+        // If the user doesn't choose to log out or go back, wait for the user to press a key before continuing
         if (opt != 'f' && opt != 'l') {
             cin.ignore();
             cout << "\n Press any key to continue...";
             cin.get();
-        } 
+        }
     }
+    // Log out
     cout << "\n Logging out...";
     Sleep(700);
     system("cls");
 }
 
-
+// Function to print the Employee's interface and get the user's option
 char Employee::printInterface() {
     bool valid = false;
     char opt;
     do {
         int b = 0;
+        // Check if there are any incomplete jobs
         for (int i = 0; i < job.size(); i++)
             if (!job[i]->isCompleted()) b = 1;
+        // Clear the console
         system("cls");
+        // Print the Employee's details
         cout << "\t\t\t ----<><><><><><><><><><><><( Employee )><><><><><><><><><><><>----\n\n";
         cout << " ID: " << id << endl;
         cout << " Name: " << name << endl;
         cout << " Department: " << dept->getName() << "\n";
+        // Print the available options
         cout << "\n --<{ Employee Controls }>--\n";
         cout << " a: View Assigned Jobs\n";
-        if(b) cout << " b: Manage Active Job\n";
+        // If there are any incomplete jobs, print the option to manage them
+        if (b) cout << " b: Manage Active Job\n";
         cout << " f: Log Out\n";
         cout << " >";
+        // Get the user's option
         cin >> opt;
 
+        // Validate the user's option
         if (opt == 'a' || (opt == 'b' && b) || opt == 'f')
             valid = true;
-
         else {
+            // Print an error message if the user's option is invalid
             cout << "\n Invalid!! \n";
             Sleep(700);
         }
     } while (!valid);
+    // Return the user's option
     return opt;
 }
-
 void Employee::printDetail()
 {
     cout << "\n ID: " << id << "\tName: " << name << "\tDepartment: " << dept->getName() << ((Available) ? "\t Available " : "\t Not Available") << "\n";

@@ -6,10 +6,10 @@
 <lines_of_code_per_member_function value="******" level="0" />
 <McCabes_cyclomatic_complexity value="21" level="0" />
 <McCabes_cyclomatic_complexity_per_member_function value="******" level="2" />
-<lines_of_code value="0" level="0" />
-<lines_of_code_per_member_function value="********" level="0" />
-<lines_of_code_per_line_of_comment value="******" level="2" />
-<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+<lines_of_code value="14" level="0" />
+<lines_of_code_per_member_function value="********" level="2" />
+<lines_of_code_per_line_of_comment value="3.857" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="1.500" level="0" />
 <weighted_methods_per_class_unity value="9" level="0" />
 <weighted_methods_per_class_visibility value="8" level="0" />
 <depth_of_inheritance_tree value="0" level="0" />
@@ -43,11 +43,11 @@
 <name>Date()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Date.h" line="16" />
+<source_reference file="Date.h" line="17" />
 </extent>
 <lines_of_code value="1" level="0" />
 <McCabes_cyclomatic_complexity value="0" level="0" />
-<lines_of_comment value="0" level="0" />
+<lines_of_comment value="1" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
 <McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
 </member_function>
@@ -55,11 +55,11 @@
 <name>Date(int,int,int)</name>
 <extent>
 <description>definition</description>
-<source_reference file="Date.h" line="18" />
+<source_reference file="Date.h" line="20" />
 </extent>
 <lines_of_code value="1" level="0" />
 <McCabes_cyclomatic_complexity value="0" level="0" />
-<lines_of_comment value="0" level="0" />
+<lines_of_comment value="1" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
 <McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
 </member_function>
@@ -67,11 +67,11 @@
 <name>displayDate()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Date.h" line="32" />
+<source_reference file="Date.h" line="38" />
 </extent>
 <lines_of_code value="3" level="0" />
 <McCabes_cyclomatic_complexity value="0" level="0" />
-<lines_of_comment value="0" level="0" />
+<lines_of_comment value="1" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
 <McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
 </member_function>
@@ -79,11 +79,11 @@
 <name>getDay()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Date.h" line="20" />
+<source_reference file="Date.h" line="23" />
 </extent>
 <lines_of_code value="3" level="0" />
 <McCabes_cyclomatic_complexity value="1" level="0" />
-<lines_of_comment value="0" level="0" />
+<lines_of_comment value="1" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
 <McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
 </member_function>
@@ -91,11 +91,11 @@
 <name>getMonth()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Date.h" line="24" />
+<source_reference file="Date.h" line="28" />
 </extent>
 <lines_of_code value="3" level="0" />
 <McCabes_cyclomatic_complexity value="1" level="0" />
-<lines_of_comment value="0" level="0" />
+<lines_of_comment value="1" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
 <McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
 </member_function>
@@ -103,11 +103,11 @@
 <name>getYear()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Date.h" line="28" />
+<source_reference file="Date.h" line="33" />
 </extent>
 <lines_of_code value="3" level="0" />
 <McCabes_cyclomatic_complexity value="1" level="0" />
-<lines_of_comment value="0" level="0" />
+<lines_of_comment value="1" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
 <McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
 </member_function>
@@ -115,35 +115,35 @@
 <name>operator &lt;=(const Date &amp;)</name>
 <extent>
 <description>definition</description>
-<source_reference file="Date.h" line="36" />
+<source_reference file="Date.h" line="43" />
 </extent>
 <lines_of_code value="11" level="0" />
 <McCabes_cyclomatic_complexity value="9" level="0" />
-<lines_of_comment value="0" level="0" />
+<lines_of_comment value="1" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
-<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="9.000" level="1" />
 </member_function>
 <member_function>
 <name>operator &gt;=(const Date &amp;)</name>
 <extent>
 <description>definition</description>
-<source_reference file="Date.h" line="48" />
+<source_reference file="Date.h" line="56" />
 </extent>
 <lines_of_code value="11" level="0" />
 <McCabes_cyclomatic_complexity value="9" level="0" />
-<lines_of_comment value="0" level="0" />
+<lines_of_comment value="1" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
-<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="9.000" level="1" />
 </member_function>
 <member_function>
 <name>storeCurrentDate()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Date.h" line="61" />
+<source_reference file="Date.h" line="70" />
 </extent>
 <lines_of_code value="8" level="0" />
 <McCabes_cyclomatic_complexity value="0" level="0" />
-<lines_of_comment value="0" level="0" />
+<lines_of_comment value="6" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
 <McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
 </member_function>
@@ -164,11 +164,11 @@
 <concrete>true</concrete>
 <extent>
 <description>pass by value</description>
-<source_reference file="Department.cpp" line="148" />
+<source_reference file="Department.cpp" line="152" />
 </extent>
 <extent>
 <description>pass by value</description>
-<source_reference file="Department.cpp" line="148" />
+<source_reference file="Department.cpp" line="152" />
 </extent>
 <extent>
 <description>pass by value</description>

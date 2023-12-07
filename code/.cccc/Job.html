@@ -8,29 +8,29 @@ Detailed report on module Job
 <TR>
 <TH BGCOLOR="AQUA" WIDTH=70%>Metric</TH><TH BGCOLOR="AQUA" WIDTH=10%>Tag</TH><TH BGCOLOR="AQUA" WIDTH=10%>Overall</TH><TH BGCOLOR="AQUA" WIDTH=10%>Per Function</TH></TR>
 <TR>
-<TD>Lines of Code</TD><TD>LOC</TD><TD ALIGN=RIGHT>   129</TD><TD ALIGN=RIGHT>******</TD></TR>
+<TD>Lines of Code</TD><TD>LOC</TD><TD ALIGN=RIGHT>   160</TD><TD ALIGN=RIGHT>******</TD></TR>
 <TR>
-<TD>McCabe's Cyclomatic Number</TD><TD>MVG</TD><TD ALIGN=RIGHT>    18</TD><TD ALIGN=RIGHT BGCOLOR="RED"><STRONG>******</STRONG></TD></TR>
+<TD>McCabe's Cyclomatic Number</TD><TD>MVG</TD><TD ALIGN=RIGHT>    26</TD><TD ALIGN=RIGHT BGCOLOR="RED"><STRONG>******</STRONG></TD></TR>
 <TR>
-<TD>Lines of Comment</TD><TD>COM</TD><TD ALIGN=RIGHT>     9</TD><TD ALIGN=RIGHT BGCOLOR="RED"><STRONG>********</STRONG></TD></TR>
+<TD>Lines of Comment</TD><TD>COM</TD><TD ALIGN=RIGHT>    20</TD><TD ALIGN=RIGHT BGCOLOR="RED"><STRONG>********</STRONG></TD></TR>
 <TR>
-<TD>LOC/COM</TD><TD>L_C</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>14.333</EM></TD><TD>&nbsp;</TD></TR>
+<TD>LOC/COM</TD><TD>L_C</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM> 8.000</EM></TD><TD>&nbsp;</TD></TR>
 <TR>
-<TD>MVG/COM</TD><TD>M_C</TD><TD ALIGN=RIGHT> 2.000</TD><TD>&nbsp;</TD></TR>
+<TD>MVG/COM</TD><TD>M_C</TD><TD ALIGN=RIGHT> 1.300</TD><TD>&nbsp;</TD></TR>
 <TR>
-<TD>Weighted Methods per Class ( &nbsp;weighting = unity&nbsp;)</TD><TD>WMC1</TD><TD ALIGN=RIGHT>    12</TD><TD>&nbsp;</TD></TR>
+<TD>Weighted Methods per Class ( &nbsp;weighting = unity&nbsp;)</TD><TD>WMC1</TD><TD ALIGN=RIGHT>    13</TD><TD>&nbsp;</TD></TR>
 <TR>
-<TD>Weighted Methods per Class ( &nbsp;weighting = visible&nbsp;)</TD><TD>WMCv</TD><TD ALIGN=RIGHT>    12</TD><TD>&nbsp;</TD></TR>
+<TD>Weighted Methods per Class ( &nbsp;weighting = visible&nbsp;)</TD><TD>WMCv</TD><TD ALIGN=RIGHT>    10</TD><TD>&nbsp;</TD></TR>
 <TR>
 <TD>Depth of Inheritance Tree</TD><TD>DIT</TD><TD ALIGN=RIGHT>     0</TD><TD>&nbsp;</TD></TR>
 <TR>
 <TD>Number of Children</TD><TD>NOC</TD><TD ALIGN=RIGHT>     0</TD><TD>&nbsp;</TD></TR>
 <TR>
-<TD>Coupling between objects</TD><TD>CBO</TD><TD ALIGN=RIGHT>     6</TD><TD>&nbsp;</TD></TR>
+<TD>Coupling between objects</TD><TD>CBO</TD><TD ALIGN=RIGHT>     7</TD><TD>&nbsp;</TD></TR>
 <TR>
-<TD>Information Flow measure ( &nbsp;inclusive&nbsp;)</TD><TD>IF4</TD><TD ALIGN=RIGHT>    64</TD><TD ALIGN=RIGHT BGCOLOR="RED"><STRONG>********</STRONG></TD></TR>
+<TD>Information Flow measure ( &nbsp;inclusive&nbsp;)</TD><TD>IF4</TD><TD ALIGN=RIGHT>   100</TD><TD ALIGN=RIGHT BGCOLOR="RED"><STRONG>********</STRONG></TD></TR>
 <TR>
-<TD>Information Flow measure ( &nbsp;visible&nbsp;)</TD><TD>IF4v</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>    36</EM></TD><TD ALIGN=RIGHT BGCOLOR="RED"><STRONG>********</STRONG></TD></TR>
+<TD>Information Flow measure ( &nbsp;visible&nbsp;)</TD><TD>IF4v</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>    64</EM></TD><TD ALIGN=RIGHT BGCOLOR="RED"><STRONG>********</STRONG></TD></TR>
 <TR>
 <TD>Information Flow measure ( &nbsp;concrete&nbsp;)</TD><TD>IF4c</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>********</TD></TR>
 </TABLE>
@@ -45,7 +45,7 @@ Detailed report on module Job
 <TD>definition &nbsp;
 <CODE><A HREF="cccc_src.html#Job.h:        13">Job.h:13</A></CODE><BR>
 </TD>
-<TD ALIGN=RIGHT>    10</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TD ALIGN=RIGHT>    11</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
 <TR>
 <TD>declaration &nbsp;
 <CODE><A HREF="cccc_src.html#Manager.h:        14">Manager.h:14</A></CODE><BR>
@@ -58,97 +58,105 @@ Detailed report on module Job
 <TD WIDTH=50%>Function prototype</TD><TH BGCOLOR="AQUA" WIDTH=10%>LOC</TH><TH BGCOLOR="AQUA" WIDTH=10%>MVG</TH><TH BGCOLOR="AQUA" WIDTH=10%>COM</TH><TH BGCOLOR="AQUA" WIDTH=10%>L_C</TH><TH BGCOLOR="AQUA" WIDTH=10%>M_C</TH><TR>
 <TD>Complete( &nbsp;bool&nbsp;)<BR>
 definition &nbsp;
-<CODE><A HREF="cccc_src.html#Job.cpp:        58">Job.cpp:58</A></CODE><BR>
+<CODE><A HREF="cccc_src.html#Job.cpp:        61">Job.cpp:61</A></CODE><BR>
 declaration &nbsp;
-<CODE><A HREF="cccc_src.html#Job.h:        39">Job.h:39</A></CODE><BR>
+<CODE><A HREF="cccc_src.html#Job.h:        36">Job.h:36</A></CODE><BR>
 <BR>
 </TD><TD ALIGN=RIGHT>     7</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
 <TR>
 <TD>Job( &nbsp;int, &nbsp;Manager *, &nbsp;vector&nbsp;)<BR>
 definition &nbsp;
-<CODE><A HREF="cccc_src.html#Job.cpp:         8">Job.cpp:8</A></CODE><BR>
+<CODE><A HREF="cccc_src.html#Job.cpp:         9">Job.cpp:9</A></CODE><BR>
 declaration &nbsp;
 <CODE><A HREF="cccc_src.html#Job.h:        23">Job.h:23</A></CODE><BR>
 <BR>
-</TD><TD ALIGN=RIGHT>    12</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+</TD><TD ALIGN=RIGHT>    12</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     6</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
 <TR>
 <TD>Job( &nbsp;int, &nbsp;int, &nbsp;Manager *, &nbsp;vector, &nbsp;int, &nbsp;int, &nbsp;int, &nbsp;int, &nbsp;int&nbsp;)<BR>
 definition &nbsp;
-<CODE><A HREF="cccc_src.html#Job.cpp:        20">Job.cpp:20</A></CODE><BR>
+<CODE><A HREF="cccc_src.html#Job.cpp:        22">Job.cpp:22</A></CODE><BR>
 declaration &nbsp;
-<CODE><A HREF="cccc_src.html#Job.h:        25">Job.h:25</A></CODE><BR>
+<CODE><A HREF="cccc_src.html#Job.h:        24">Job.h:24</A></CODE><BR>
 <BR>
-</TD><TD ALIGN=RIGHT>    12</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+</TD><TD ALIGN=RIGHT>    13</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
 <TR>
 <TD>getComID( &nbsp;&nbsp;)<BR>
 definition &nbsp;
-<CODE><A HREF="cccc_src.html#Job.cpp:        36">Job.cpp:36</A></CODE><BR>
+<CODE><A HREF="cccc_src.html#Job.cpp:        39">Job.cpp:39</A></CODE><BR>
 declaration &nbsp;
-<CODE><A HREF="cccc_src.html#Job.h:        31">Job.h:31</A></CODE><BR>
+<CODE><A HREF="cccc_src.html#Job.h:        30">Job.h:30</A></CODE><BR>
 <BR>
 </TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
 <TR>
 <TD>getID( &nbsp;&nbsp;)<BR>
 definition &nbsp;
-<CODE><A HREF="cccc_src.html#Job.cpp:        34">Job.cpp:34</A></CODE><BR>
+<CODE><A HREF="cccc_src.html#Job.cpp:        37">Job.cpp:37</A></CODE><BR>
 declaration &nbsp;
-<CODE><A HREF="cccc_src.html#Job.h:        29">Job.h:29</A></CODE><BR>
+<CODE><A HREF="cccc_src.html#Job.h:        28">Job.h:28</A></CODE><BR>
 <BR>
 </TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
 <TR>
 <TD>getUniqueID( &nbsp;&nbsp;)<BR>
 definition &nbsp;
-<CODE><A HREF="cccc_src.html#Job.cpp:        38">Job.cpp:38</A></CODE><BR>
+<CODE><A HREF="cccc_src.html#Job.cpp:        41">Job.cpp:41</A></CODE><BR>
 declaration &nbsp;
-<CODE><A HREF="cccc_src.html#Job.h:        33">Job.h:33</A></CODE><BR>
+<CODE><A HREF="cccc_src.html#Job.h:        43">Job.h:43</A></CODE><BR>
 <BR>
 </TD><TD ALIGN=RIGHT>    16</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
 <TR>
 <TD>isCompleted( &nbsp;&nbsp;)<BR>
 definition &nbsp;
-<CODE><A HREF="cccc_src.html#Job.cpp:        54">Job.cpp:54</A></CODE><BR>
+<CODE><A HREF="cccc_src.html#Job.cpp:        57">Job.cpp:57</A></CODE><BR>
 declaration &nbsp;
-<CODE><A HREF="cccc_src.html#Job.h:        35">Job.h:35</A></CODE><BR>
+<CODE><A HREF="cccc_src.html#Job.h:        32">Job.h:32</A></CODE><BR>
 <BR>
 </TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
 <TR>
 <TD>isHighlight( &nbsp;&nbsp;)<BR>
 definition &nbsp;
-<CODE><A HREF="cccc_src.html#Job.cpp:        56">Job.cpp:56</A></CODE><BR>
+<CODE><A HREF="cccc_src.html#Job.cpp:        59">Job.cpp:59</A></CODE><BR>
 declaration &nbsp;
-<CODE><A HREF="cccc_src.html#Job.h:        37">Job.h:37</A></CODE><BR>
+<CODE><A HREF="cccc_src.html#Job.h:        34">Job.h:34</A></CODE><BR>
 <BR>
 </TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
 <TR>
 <TD>printDetail( &nbsp;&nbsp;)<BR>
 definition &nbsp;
-<CODE><A HREF="cccc_src.html#Job.cpp:        65">Job.cpp:65</A></CODE><BR>
+<CODE><A HREF="cccc_src.html#Job.cpp:        68">Job.cpp:68</A></CODE><BR>
 declaration &nbsp;
-<CODE><A HREF="cccc_src.html#Job.h:        41">Job.h:41</A></CODE><BR>
+<CODE><A HREF="cccc_src.html#Job.h:        38">Job.h:38</A></CODE><BR>
 <BR>
 </TD><TD ALIGN=RIGHT>     9</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
 <TR>
 <TD>read( &nbsp;&nbsp;)<BR>
 definition &nbsp;
-<CODE><A HREF="cccc_src.html#Job.cpp:        32">Job.cpp:32</A></CODE><BR>
+<CODE><A HREF="cccc_src.html#Job.cpp:        35">Job.cpp:35</A></CODE><BR>
 declaration &nbsp;
-<CODE><A HREF="cccc_src.html#Job.h:        27">Job.h:27</A></CODE><BR>
+<CODE><A HREF="cccc_src.html#Job.h:        26">Job.h:26</A></CODE><BR>
 <BR>
 </TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
 <TR>
-<TD>updateFile( &nbsp;&nbsp;)<BR>
+<TD>removeEmp( &nbsp;Employee *&nbsp;)<BR>
 definition &nbsp;
-<CODE><A HREF="cccc_src.html#Job.cpp:        89">Job.cpp:89</A></CODE><BR>
+<CODE><A HREF="cccc_src.html#Job.cpp:        77">Job.cpp:77</A></CODE><BR>
 declaration &nbsp;
-<CODE><A HREF="cccc_src.html#Job.h:        45">Job.h:45</A></CODE><BR>
+<CODE><A HREF="cccc_src.html#Job.h:        40">Job.h:40</A></CODE><BR>
 <BR>
-</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>    36</EM></TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     6</TD><TD ALIGN=RIGHT> 6.000</TD><TD ALIGN=RIGHT>------</TD></TR>
+</TD><TD ALIGN=RIGHT>     5</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD>updateFile( &nbsp;int&nbsp;)<BR>
+definition &nbsp;
+<CODE><A HREF="cccc_src.html#Job.cpp:        97">Job.cpp:97</A></CODE><BR>
+declaration &nbsp;
+<CODE><A HREF="cccc_src.html#Job.h:        44">Job.h:44</A></CODE><BR>
+<BR>
+</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>    60</EM></TD><TD ALIGN=RIGHT>    10</TD><TD ALIGN=RIGHT>     9</TD><TD ALIGN=RIGHT> 6.667</TD><TD ALIGN=RIGHT> 1.111</TD></TR>
 <TR>
 <TD>writeToFile( &nbsp;&nbsp;)<BR>
 definition &nbsp;
-<CODE><A HREF="cccc_src.html#Job.cpp:        74">Job.cpp:74</A></CODE><BR>
+<CODE><A HREF="cccc_src.html#Job.cpp:        82">Job.cpp:82</A></CODE><BR>
 declaration &nbsp;
-<CODE><A HREF="cccc_src.html#Job.h:        43">Job.h:43</A></CODE><BR>
+<CODE><A HREF="cccc_src.html#Job.h:        42">Job.h:42</A></CODE><BR>
 <BR>
 </TD><TD ALIGN=RIGHT>    15</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
 <TR><TD HEIGHT=12 COLSPAN=6></TD></TR>
@@ -160,7 +168,7 @@ declaration &nbsp;
 <TD WIDTH=50%>
 Employee [V] <BR>
 pass by reference &nbsp;
-<CODE><A HREF="cccc_src.html#Employee.cpp:        28">Employee.cpp:28</A></CODE><BR>
+<CODE><A HREF="cccc_src.html#Employee.cpp:        34">Employee.cpp:34</A></CODE><BR>
 pass by reference &nbsp;
 <CODE><A HREF="cccc_src.html#Employee.h:        33">Employee.h:33</A></CODE><BR>
 <BR>
@@ -169,7 +177,7 @@ Manager [V] <BR>
 pass by reference &nbsp;
 <CODE><A HREF="cccc_src.html#Manager.cpp:        30">Manager.cpp:30</A></CODE><BR>
 pass by reference &nbsp;
-<CODE><A HREF="cccc_src.html#Manager.h:        29">Manager.h:29</A></CODE><BR>
+<CODE><A HREF="cccc_src.html#Manager.h:        27">Manager.h:27</A></CODE><BR>
 <BR>
 <BR>
 &nbsp;
@@ -180,41 +188,48 @@ has by reference &nbsp;
 <CODE><A HREF="cccc_src.html#Job.h:        16">Job.h:16</A></CODE><BR>
 <BR>
 <BR>
+Employee [V] <BR>
+pass by reference &nbsp;
+<CODE><A HREF="cccc_src.html#Job.cpp:        77">Job.cpp:77</A></CODE><BR>
+pass by reference &nbsp;
+<CODE><A HREF="cccc_src.html#Job.h:        40">Job.h:40</A></CODE><BR>
+<BR>
+<BR>
 Manager [V] <BR>
 pass by reference &nbsp;
-<CODE><A HREF="cccc_src.html#Job.cpp:         8">Job.cpp:8</A></CODE><BR>
+<CODE><A HREF="cccc_src.html#Job.cpp:         9">Job.cpp:9</A></CODE><BR>
 pass by reference &nbsp;
-<CODE><A HREF="cccc_src.html#Job.cpp:        20">Job.cpp:20</A></CODE><BR>
+<CODE><A HREF="cccc_src.html#Job.cpp:        22">Job.cpp:22</A></CODE><BR>
 has by reference &nbsp;
 <CODE><A HREF="cccc_src.html#Job.h:        17">Job.h:17</A></CODE><BR>
 pass by reference &nbsp;
 <CODE><A HREF="cccc_src.html#Job.h:        23">Job.h:23</A></CODE><BR>
 pass by reference &nbsp;
-<CODE><A HREF="cccc_src.html#Job.h:        25">Job.h:25</A></CODE><BR>
+<CODE><A HREF="cccc_src.html#Job.h:        24">Job.h:24</A></CODE><BR>
 <BR>
 <BR>
 bool [CV] <BR>
 pass by value &nbsp;
-<CODE><A HREF="cccc_src.html#Job.cpp:        58">Job.cpp:58</A></CODE><BR>
+<CODE><A HREF="cccc_src.html#Job.cpp:        61">Job.cpp:61</A></CODE><BR>
 has by value &nbsp;
 <CODE><A HREF="cccc_src.html#Job.h:        19">Job.h:19</A></CODE><BR>
 has by value &nbsp;
 <CODE><A HREF="cccc_src.html#Job.h:        20">Job.h:20</A></CODE><BR>
 pass by value &nbsp;
-<CODE><A HREF="cccc_src.html#Job.h:        39">Job.h:39</A></CODE><BR>
+<CODE><A HREF="cccc_src.html#Job.h:        36">Job.h:36</A></CODE><BR>
 <BR>
 <BR>
 vector [CV] <BR>
 pass by value &nbsp;
-<CODE><A HREF="cccc_src.html#Job.cpp:         8">Job.cpp:8</A></CODE><BR>
+<CODE><A HREF="cccc_src.html#Job.cpp:         9">Job.cpp:9</A></CODE><BR>
 pass by value &nbsp;
-<CODE><A HREF="cccc_src.html#Job.cpp:        20">Job.cpp:20</A></CODE><BR>
+<CODE><A HREF="cccc_src.html#Job.cpp:        22">Job.cpp:22</A></CODE><BR>
 has by value &nbsp;
 <CODE><A HREF="cccc_src.html#Job.h:        18">Job.h:18</A></CODE><BR>
 pass by value &nbsp;
 <CODE><A HREF="cccc_src.html#Job.h:        23">Job.h:23</A></CODE><BR>
 pass by value &nbsp;
-<CODE><A HREF="cccc_src.html#Job.h:        25">Job.h:25</A></CODE><BR>
+<CODE><A HREF="cccc_src.html#Job.h:        24">Job.h:24</A></CODE><BR>
 <BR>
 <BR>
 &nbsp;

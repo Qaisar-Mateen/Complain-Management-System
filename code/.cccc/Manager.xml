@@ -2,16 +2,16 @@
 <!--Detailed report on module Manager-->
 <CCCC_Project>
 <module_summary>
-<lines_of_code value="296" level="0" />
+<lines_of_code value="294" level="0" />
 <lines_of_code_per_member_function value="******" level="0" />
 <McCabes_cyclomatic_complexity value="68" level="0" />
 <McCabes_cyclomatic_complexity_per_member_function value="******" level="2" />
-<lines_of_code value="8" level="0" />
+<lines_of_code value="7" level="0" />
 <lines_of_code_per_member_function value="********" level="2" />
-<lines_of_code_per_line_of_comment value="37.000" level="2" />
-<McCabes_cyclomatic_complexity_per_line_of_comment value="8.500" level="1" />
-<weighted_methods_per_class_unity value="19" level="0" />
-<weighted_methods_per_class_visibility value="19" level="0" />
+<lines_of_code_per_line_of_comment value="42.000" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="9.714" level="1" />
+<weighted_methods_per_class_unity value="16" level="0" />
+<weighted_methods_per_class_visibility value="12" level="0" />
 <depth_of_inheritance_tree value="1" level="0" />
 <number_of_children value="0" level="0" />
 <coupling_between_objects value="9" level="0" />
@@ -53,7 +53,7 @@
 <McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
 <description>definition</description>
 <source_reference file="Manager.h" line="16" />
-<lines_of_code value="8" level="0" />
+<lines_of_code value="9" level="0" />
 <McCabes_cyclomatic_complexity value="0" level="0" />
 <lines_of_comment value="0" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
@@ -68,7 +68,7 @@
 </extent>
 <extent>
 <description>declaration</description>
-<source_reference file="Manager.h" line="23" />
+<source_reference file="Manager.h" line="50" />
 </extent>
 <lines_of_code value="7" level="0" />
 <McCabes_cyclomatic_complexity value="0" level="0" />
@@ -84,7 +84,7 @@
 </extent>
 <extent>
 <description>declaration</description>
-<source_reference file="Manager.h" line="25" />
+<source_reference file="Manager.h" line="23" />
 </extent>
 <lines_of_code value="7" level="0" />
 <McCabes_cyclomatic_complexity value="0" level="0" />
@@ -100,7 +100,7 @@
 </extent>
 <extent>
 <description>declaration</description>
-<source_reference file="Manager.h" line="27" />
+<source_reference file="Manager.h" line="25" />
 </extent>
 <lines_of_code value="8" level="0" />
 <McCabes_cyclomatic_complexity value="1" level="0" />
@@ -116,21 +116,9 @@
 </extent>
 <extent>
 <description>declaration</description>
-<source_reference file="Manager.h" line="29" />
+<source_reference file="Manager.h" line="27" />
 </extent>
 <lines_of_code value="2" level="0" />
-<McCabes_cyclomatic_complexity value="0" level="0" />
-<lines_of_comment value="0" level="0" />
-<lines_of_code_per_line_of_comment value="------" level="0" />
-<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
-</member_function>
-<member_function>
-<name>assignJob()</name>
-<extent>
-<description>declaration</description>
-<source_reference file="Manager.h" line="45" />
-</extent>
-<lines_of_code value="1" level="0" />
 <McCabes_cyclomatic_complexity value="0" level="0" />
 <lines_of_comment value="0" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
@@ -144,7 +132,7 @@
 </extent>
 <extent>
 <description>declaration</description>
-<source_reference file="Manager.h" line="31" />
+<source_reference file="Manager.h" line="29" />
 </extent>
 <lines_of_code value="36" level="1" />
 <McCabes_cyclomatic_complexity value="7" level="0" />
@@ -160,7 +148,7 @@
 </extent>
 <extent>
 <description>declaration</description>
-<source_reference file="Manager.h" line="55" />
+<source_reference file="Manager.h" line="39" />
 </extent>
 <lines_of_code value="4" level="0" />
 <McCabes_cyclomatic_complexity value="1" level="0" />
@@ -176,7 +164,7 @@
 </extent>
 <extent>
 <description>declaration</description>
-<source_reference file="Manager.h" line="53" />
+<source_reference file="Manager.h" line="37" />
 </extent>
 <lines_of_code value="4" level="0" />
 <McCabes_cyclomatic_complexity value="1" level="0" />
@@ -192,7 +180,7 @@
 </extent>
 <extent>
 <description>declaration</description>
-<source_reference file="Manager.h" line="57" />
+<source_reference file="Manager.h" line="41" />
 </extent>
 <lines_of_code value="4" level="0" />
 <McCabes_cyclomatic_complexity value="1" level="0" />
@@ -208,7 +196,7 @@
 </extent>
 <extent>
 <description>declaration</description>
-<source_reference file="Manager.h" line="51" />
+<source_reference file="Manager.h" line="35" />
 </extent>
 <lines_of_code value="14" level="0" />
 <McCabes_cyclomatic_complexity value="3" level="0" />
@@ -224,7 +212,7 @@
 </extent>
 <extent>
 <description>declaration</description>
-<source_reference file="Manager.h" line="61" />
+<source_reference file="Manager.h" line="43" />
 </extent>
 <lines_of_code value="21" level="0" />
 <McCabes_cyclomatic_complexity value="2" level="0" />
@@ -240,11 +228,11 @@
 </extent>
 <extent>
 <description>declaration</description>
-<source_reference file="Manager.h" line="41" />
+<source_reference file="Manager.h" line="31" />
 </extent>
 <lines_of_code value="5" level="0" />
 <McCabes_cyclomatic_complexity value="0" level="0" />
-<lines_of_comment value="1" level="0" />
+<lines_of_comment value="0" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
 <McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
 </member_function>
@@ -256,7 +244,7 @@
 </extent>
 <extent>
 <description>declaration</description>
-<source_reference file="Manager.h" line="33" />
+<source_reference file="Manager.h" line="47" />
 </extent>
 <lines_of_code value="31" level="1" />
 <McCabes_cyclomatic_complexity value="13" level="1" />
@@ -272,37 +260,13 @@
 </extent>
 <extent>
 <description>declaration</description>
-<source_reference file="Manager.h" line="43" />
+<source_reference file="Manager.h" line="49" />
 </extent>
 <lines_of_code value="53" level="1" />
 <McCabes_cyclomatic_complexity value="19" level="1" />
 <lines_of_comment value="1" level="0" />
 <lines_of_code_per_line_of_comment value="53.000" level="2" />
 <McCabes_cyclomatic_complexity_per_line_of_comment value="19.000" level="2" />
-</member_function>
-<member_function>
-<name>reviewJob()</name>
-<extent>
-<description>declaration</description>
-<source_reference file="Manager.h" line="47" />
-</extent>
-<lines_of_code value="1" level="0" />
-<McCabes_cyclomatic_complexity value="0" level="0" />
-<lines_of_comment value="0" level="0" />
-<lines_of_code_per_line_of_comment value="------" level="0" />
-<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
-</member_function>
-<member_function>
-<name>viewNotif()</name>
-<extent>
-<description>declaration</description>
-<source_reference file="Manager.h" line="35" />
-</extent>
-<lines_of_code value="1" level="0" />
-<McCabes_cyclomatic_complexity value="0" level="0" />
-<lines_of_comment value="0" level="0" />
-<lines_of_code_per_line_of_comment value="------" level="0" />
-<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
 </member_function>
 <member_function>
 <name>viewNotif_E()</name>
@@ -312,7 +276,7 @@
 </extent>
 <extent>
 <description>declaration</description>
-<source_reference file="Manager.h" line="37" />
+<source_reference file="Manager.h" line="48" />
 </extent>
 <lines_of_code value="65" level="1" />
 <McCabes_cyclomatic_complexity value="16" level="1" />
@@ -328,7 +292,7 @@
 </extent>
 <extent>
 <description>declaration</description>
-<source_reference file="Manager.h" line="49" />
+<source_reference file="Manager.h" line="33" />
 </extent>
 <lines_of_code value="8" level="0" />
 <McCabes_cyclomatic_complexity value="1" level="0" />
@@ -344,7 +308,7 @@
 </extent>
 <extent>
 <description>declaration</description>
-<source_reference file="Manager.h" line="59" />
+<source_reference file="Manager.h" line="45" />
 </extent>
 <lines_of_code value="12" level="0" />
 <McCabes_cyclomatic_complexity value="3" level="0" />
@@ -362,11 +326,11 @@
 <concrete>false</concrete>
 <extent>
 <description>pass by reference</description>
-<source_reference file="Department.cpp" line="9" />
+<source_reference file="Department.cpp" line="10" />
 </extent>
 <extent>
 <description>pass by reference</description>
-<source_reference file="Department.cpp" line="53" />
+<source_reference file="Department.cpp" line="54" />
 </extent>
 <extent>
 <description>pass by reference</description>
@@ -393,11 +357,11 @@
 <concrete>false</concrete>
 <extent>
 <description>pass by reference</description>
-<source_reference file="Job.cpp" line="8" />
+<source_reference file="Job.cpp" line="9" />
 </extent>
 <extent>
 <description>pass by reference</description>
-<source_reference file="Job.cpp" line="20" />
+<source_reference file="Job.cpp" line="22" />
 </extent>
 <extent>
 <description>has by reference</description>
@@ -409,7 +373,7 @@
 </extent>
 <extent>
 <description>pass by reference</description>
-<source_reference file="Job.h" line="25" />
+<source_reference file="Job.h" line="24" />
 </extent>
 <name>Manages</name>
 <visible>true</visible>
@@ -429,7 +393,7 @@
 </extent>
 <extent>
 <description>pass by reference</description>
-<source_reference file="Manager.h" line="27" />
+<source_reference file="Manager.h" line="25" />
 </extent>
 <name>Job</name>
 <visible>true</visible>
@@ -440,7 +404,7 @@
 </extent>
 <extent>
 <description>pass by reference</description>
-<source_reference file="Manager.h" line="29" />
+<source_reference file="Manager.h" line="27" />
 </extent>
 <name>Manages</name>
 <visible>false</visible>
@@ -469,7 +433,7 @@
 </extent>
 <extent>
 <description>pass by value</description>
-<source_reference file="Manager.h" line="25" />
+<source_reference file="Manager.h" line="23" />
 </extent>
 <name>vector</name>
 <visible>false</visible>

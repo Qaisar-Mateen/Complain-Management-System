@@ -6,10 +6,10 @@
 <lines_of_code_per_member_function value="******" level="0" />
 <McCabes_cyclomatic_complexity value="34" level="0" />
 <McCabes_cyclomatic_complexity_per_member_function value="******" level="2" />
-<lines_of_code value="0" level="0" />
-<lines_of_code_per_member_function value="********" level="0" />
-<lines_of_code_per_line_of_comment value="******" level="2" />
-<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+<lines_of_code value="28" level="0" />
+<lines_of_code_per_member_function value="********" level="2" />
+<lines_of_code_per_line_of_comment value="5.214" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="1.214" level="0" />
 <weighted_methods_per_class_unity value="7" level="0" />
 <weighted_methods_per_class_visibility value="3" level="0" />
 <depth_of_inheritance_tree value="1" level="0" />
@@ -43,7 +43,7 @@
 <name>Director(vector &amp;)</name>
 <extent>
 <description>definition</description>
-<source_reference file="Director.cpp" line="7" />
+<source_reference file="Director.cpp" line="8" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -51,7 +51,7 @@
 </extent>
 <lines_of_code value="8" level="0" />
 <McCabes_cyclomatic_complexity value="1" level="0" />
-<lines_of_comment value="0" level="0" />
+<lines_of_comment value="1" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
 <McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
 </member_function>
@@ -59,7 +59,7 @@
 <name>complains_in_Dept()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Director.cpp" line="49" />
+<source_reference file="Director.cpp" line="54" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -67,15 +67,15 @@
 </extent>
 <lines_of_code value="34" level="1" />
 <McCabes_cyclomatic_complexity value="4" level="0" />
-<lines_of_comment value="0" level="0" />
-<lines_of_code_per_line_of_comment value="******" level="2" />
+<lines_of_comment value="5" level="0" />
+<lines_of_code_per_line_of_comment value="6.800" level="0" />
 <McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
 </member_function>
 <member_function>
 <name>control()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Director.cpp" line="25" />
+<source_reference file="Director.cpp" line="29" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -83,15 +83,15 @@
 </extent>
 <lines_of_code value="20" level="0" />
 <McCabes_cyclomatic_complexity value="5" level="0" />
-<lines_of_comment value="0" level="0" />
-<lines_of_code_per_line_of_comment value="******" level="0" />
-<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="20.000" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="5.000" level="0" />
 </member_function>
 <member_function>
 <name>getID()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Director.cpp" line="15" />
+<source_reference file="Director.cpp" line="17" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -99,7 +99,7 @@
 </extent>
 <lines_of_code value="5" level="0" />
 <McCabes_cyclomatic_complexity value="1" level="0" />
-<lines_of_comment value="0" level="0" />
+<lines_of_comment value="1" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
 <McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
 </member_function>
@@ -107,7 +107,7 @@
 <name>getName()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Director.cpp" line="20" />
+<source_reference file="Director.cpp" line="23" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -115,7 +115,7 @@
 </extent>
 <lines_of_code value="5" level="0" />
 <McCabes_cyclomatic_complexity value="1" level="0" />
-<lines_of_comment value="0" level="0" />
+<lines_of_comment value="1" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
 <McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
 </member_function>
@@ -123,7 +123,7 @@
 <name>printInterface()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Director.cpp" line="131" />
+<source_reference file="Director.cpp" line="146" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -131,15 +131,15 @@
 </extent>
 <lines_of_code value="23" level="0" />
 <McCabes_cyclomatic_complexity value="5" level="0" />
-<lines_of_comment value="0" level="0" />
-<lines_of_code_per_line_of_comment value="******" level="2" />
-<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="0" />
+<lines_of_comment value="9" level="0" />
+<lines_of_code_per_line_of_comment value="2.556" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="0.556" level="0" />
 </member_function>
 <member_function>
 <name>viewComplaintSummary()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Director.cpp" line="87" />
+<source_reference file="Director.cpp" line="92" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -147,9 +147,9 @@
 </extent>
 <lines_of_code value="43" level="1" />
 <McCabes_cyclomatic_complexity value="17" level="1" />
-<lines_of_comment value="0" level="0" />
-<lines_of_code_per_line_of_comment value="******" level="2" />
-<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+<lines_of_comment value="10" level="0" />
+<lines_of_code_per_line_of_comment value="4.300" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="1.700" level="0" />
 </member_function>
 </procedural_detail>
 <structural_detail>
@@ -177,7 +177,7 @@
 <concrete>true</concrete>
 <extent>
 <description>pass by reference</description>
-<source_reference file="Director.cpp" line="7" />
+<source_reference file="Director.cpp" line="8" />
 </extent>
 <extent>
 <description>has by value</description>

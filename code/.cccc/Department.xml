@@ -2,14 +2,14 @@
 <!--Detailed report on module Department-->
 <CCCC_Project>
 <module_summary>
-<lines_of_code value="178" level="0" />
+<lines_of_code value="166" level="0" />
 <lines_of_code_per_member_function value="******" level="0" />
 <McCabes_cyclomatic_complexity value="44" level="0" />
 <McCabes_cyclomatic_complexity_per_member_function value="******" level="2" />
-<lines_of_code value="0" level="0" />
-<lines_of_code_per_member_function value="********" level="0" />
-<lines_of_code_per_line_of_comment value="******" level="2" />
-<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+<lines_of_code value="27" level="0" />
+<lines_of_code_per_member_function value="********" level="2" />
+<lines_of_code_per_line_of_comment value="6.148" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="1.630" level="0" />
 <weighted_methods_per_class_unity value="17" level="0" />
 <weighted_methods_per_class_visibility value="16" level="0" />
 <depth_of_inheritance_tree value="1" level="0" />
@@ -64,15 +64,15 @@
 <name>Department(int,string,Manager *,vector)</name>
 <extent>
 <description>definition</description>
-<source_reference file="Department.cpp" line="9" />
+<source_reference file="Department.cpp" line="10" />
 </extent>
 <extent>
 <description>declaration</description>
 <source_reference file="Department.h" line="52" />
 </extent>
-<lines_of_code value="13" level="0" />
+<lines_of_code value="12" level="0" />
 <McCabes_cyclomatic_complexity value="1" level="0" />
-<lines_of_comment value="0" level="0" />
+<lines_of_comment value="5" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
 <McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
 </member_function>
@@ -88,9 +88,9 @@
 </extent>
 <lines_of_code value="15" level="0" />
 <McCabes_cyclomatic_complexity value="5" level="0" />
-<lines_of_comment value="0" level="0" />
+<lines_of_comment value="1" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
-<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="5.000" level="0" />
 </member_function>
 <member_function>
 <name>addComplaint(Complaint *)</name>
@@ -102,9 +102,9 @@
 <description>declaration</description>
 <source_reference file="Department.h" line="70" />
 </extent>
-<lines_of_code value="5" level="0" />
+<lines_of_code value="4" level="0" />
 <McCabes_cyclomatic_complexity value="0" level="0" />
-<lines_of_comment value="0" level="0" />
+<lines_of_comment value="1" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
 <McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
 </member_function>
@@ -112,15 +112,15 @@
 <name>addEmployee(Employee *)</name>
 <extent>
 <description>definition</description>
-<source_reference file="Department.cpp" line="47" />
+<source_reference file="Department.cpp" line="48" />
 </extent>
 <extent>
 <description>declaration</description>
 <source_reference file="Department.h" line="62" />
 </extent>
-<lines_of_code value="6" level="0" />
+<lines_of_code value="5" level="0" />
 <McCabes_cyclomatic_complexity value="0" level="0" />
-<lines_of_comment value="0" level="0" />
+<lines_of_comment value="3" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
 <McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
 </member_function>
@@ -128,15 +128,15 @@
 <name>changeManager(Manager *)</name>
 <extent>
 <description>definition</description>
-<source_reference file="Department.cpp" line="53" />
+<source_reference file="Department.cpp" line="54" />
 </extent>
 <extent>
 <description>declaration</description>
 <source_reference file="Department.h" line="64" />
 </extent>
-<lines_of_code value="9" level="0" />
+<lines_of_code value="8" level="0" />
 <McCabes_cyclomatic_complexity value="1" level="0" />
-<lines_of_comment value="0" level="0" />
+<lines_of_comment value="5" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
 <McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
 </member_function>
@@ -144,15 +144,15 @@
 <name>getID()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Department.cpp" line="22" />
+<source_reference file="Department.cpp" line="23" />
 </extent>
 <extent>
 <description>declaration</description>
 <source_reference file="Department.h" line="54" />
 </extent>
-<lines_of_code value="5" level="0" />
+<lines_of_code value="4" level="0" />
 <McCabes_cyclomatic_complexity value="1" level="0" />
-<lines_of_comment value="0" level="0" />
+<lines_of_comment value="1" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
 <McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
 </member_function>
@@ -160,15 +160,15 @@
 <name>getName()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Department.cpp" line="27" />
+<source_reference file="Department.cpp" line="28" />
 </extent>
 <extent>
 <description>declaration</description>
 <source_reference file="Department.h" line="56" />
 </extent>
-<lines_of_code value="5" level="0" />
+<lines_of_code value="4" level="0" />
 <McCabes_cyclomatic_complexity value="1" level="0" />
-<lines_of_comment value="0" level="0" />
+<lines_of_comment value="1" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
 <McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
 </member_function>
@@ -176,7 +176,7 @@
 <name>inDeptAndAval()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Department.cpp" line="127" />
+<source_reference file="Department.cpp" line="130" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -184,7 +184,7 @@
 </extent>
 <lines_of_code value="8" level="0" />
 <McCabes_cyclomatic_complexity value="3" level="0" />
-<lines_of_comment value="0" level="0" />
+<lines_of_comment value="1" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
 <McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
 </member_function>
@@ -192,7 +192,7 @@
 <name>pendingComplaint()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Department.cpp" line="107" />
+<source_reference file="Department.cpp" line="108" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -200,23 +200,23 @@
 </extent>
 <lines_of_code value="10" level="0" />
 <McCabes_cyclomatic_complexity value="5" level="0" />
-<lines_of_comment value="0" level="0" />
+<lines_of_comment value="1" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
-<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="5.000" level="0" />
 </member_function>
 <member_function>
 <name>printDetail()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Department.cpp" line="39" />
+<source_reference file="Department.cpp" line="40" />
 </extent>
 <extent>
 <description>declaration</description>
 <source_reference file="Department.h" line="60" />
 </extent>
-<lines_of_code value="8" level="0" />
+<lines_of_code value="7" level="0" />
 <McCabes_cyclomatic_complexity value="1" level="0" />
-<lines_of_comment value="0" level="0" />
+<lines_of_comment value="1" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
 <McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
 </member_function>
@@ -224,15 +224,15 @@
 <name>printEmployees()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Department.cpp" line="32" />
+<source_reference file="Department.cpp" line="33" />
 </extent>
 <extent>
 <description>declaration</description>
 <source_reference file="Department.h" line="58" />
 </extent>
-<lines_of_code value="7" level="0" />
+<lines_of_code value="6" level="0" />
 <McCabes_cyclomatic_complexity value="1" level="0" />
-<lines_of_comment value="0" level="0" />
+<lines_of_comment value="1" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
 <McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
 </member_function>
@@ -240,15 +240,15 @@
 <name>removeEmployee(Employee *)</name>
 <extent>
 <description>definition</description>
-<source_reference file="Department.cpp" line="63" />
+<source_reference file="Department.cpp" line="65" />
 </extent>
 <extent>
 <description>declaration</description>
 <source_reference file="Department.h" line="66" />
 </extent>
-<lines_of_code value="15" level="0" />
+<lines_of_code value="12" level="0" />
 <McCabes_cyclomatic_complexity value="4" level="0" />
-<lines_of_comment value="0" level="0" />
+<lines_of_comment value="1" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
 <McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
 </member_function>
@@ -262,9 +262,9 @@
 <description>declaration</description>
 <source_reference file="Department.h" line="68" />
 </extent>
-<lines_of_code value="9" level="0" />
+<lines_of_code value="8" level="0" />
 <McCabes_cyclomatic_complexity value="3" level="0" />
-<lines_of_comment value="0" level="0" />
+<lines_of_comment value="1" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
 <McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
 </member_function>
@@ -272,7 +272,7 @@
 <name>setCompState(int,int)</name>
 <extent>
 <description>definition</description>
-<source_reference file="Department.cpp" line="136" />
+<source_reference file="Department.cpp" line="139" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -280,15 +280,15 @@
 </extent>
 <lines_of_code value="12" level="0" />
 <McCabes_cyclomatic_complexity value="6" level="0" />
-<lines_of_comment value="0" level="0" />
+<lines_of_comment value="1" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
-<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="6.000" level="1" />
 </member_function>
 <member_function>
 <name>summary(Date,Date)</name>
 <extent>
 <description>definition</description>
-<source_reference file="Department.cpp" line="148" />
+<source_reference file="Department.cpp" line="152" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -296,15 +296,15 @@
 </extent>
 <lines_of_code value="14" level="0" />
 <McCabes_cyclomatic_complexity value="7" level="0" />
-<lines_of_comment value="0" level="0" />
+<lines_of_comment value="1" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
-<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="7.000" level="1" />
 </member_function>
 <member_function>
 <name>updateDept_file(int,int,int,int)</name>
 <extent>
 <description>definition</description>
-<source_reference file="Department.cpp" line="162" />
+<source_reference file="Department.cpp" line="167" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -312,7 +312,7 @@
 </extent>
 <lines_of_code value="13" level="0" />
 <McCabes_cyclomatic_complexity value="2" level="0" />
-<lines_of_comment value="0" level="0" />
+<lines_of_comment value="1" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
 <McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
 </member_function>
@@ -320,7 +320,7 @@
 <name>viewComplaint()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Department.cpp" line="117" />
+<source_reference file="Department.cpp" line="119" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -328,7 +328,7 @@
 </extent>
 <lines_of_code value="10" level="0" />
 <McCabes_cyclomatic_complexity value="3" level="0" />
-<lines_of_comment value="0" level="0" />
+<lines_of_comment value="1" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
 <McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
 </member_function>
@@ -349,7 +349,7 @@
 <concrete>false</concrete>
 <extent>
 <description>pass by reference</description>
-<source_reference file="Employee.cpp" line="20" />
+<source_reference file="Employee.cpp" line="23" />
 </extent>
 <extent>
 <description>pass by reference</description>
@@ -364,7 +364,7 @@
 </extent>
 <extent>
 <description>pass by reference</description>
-<source_reference file="Manager.h" line="27" />
+<source_reference file="Manager.h" line="25" />
 </extent>
 </client_module>
 <supplier_module>
@@ -384,11 +384,11 @@
 <concrete>true</concrete>
 <extent>
 <description>pass by value</description>
-<source_reference file="Department.cpp" line="148" />
+<source_reference file="Department.cpp" line="152" />
 </extent>
 <extent>
 <description>pass by value</description>
-<source_reference file="Department.cpp" line="148" />
+<source_reference file="Department.cpp" line="152" />
 </extent>
 <extent>
 <description>pass by value</description>
@@ -403,11 +403,11 @@
 <concrete>false</concrete>
 <extent>
 <description>pass by reference</description>
-<source_reference file="Department.cpp" line="47" />
+<source_reference file="Department.cpp" line="48" />
 </extent>
 <extent>
 <description>pass by reference</description>
-<source_reference file="Department.cpp" line="63" />
+<source_reference file="Department.cpp" line="65" />
 </extent>
 <extent>
 <description>pass by reference</description>
@@ -422,11 +422,11 @@
 <concrete>false</concrete>
 <extent>
 <description>pass by reference</description>
-<source_reference file="Department.cpp" line="9" />
+<source_reference file="Department.cpp" line="10" />
 </extent>
 <extent>
 <description>pass by reference</description>
-<source_reference file="Department.cpp" line="53" />
+<source_reference file="Department.cpp" line="54" />
 </extent>
 <extent>
 <description>pass by reference</description>
@@ -474,7 +474,7 @@
 <concrete>true</concrete>
 <extent>
 <description>pass by value</description>
-<source_reference file="Department.cpp" line="9" />
+<source_reference file="Department.cpp" line="10" />
 </extent>
 <extent>
 <description>has by value</description>
@@ -489,7 +489,7 @@
 <concrete>true</concrete>
 <extent>
 <description>pass by value</description>
-<source_reference file="Department.cpp" line="9" />
+<source_reference file="Department.cpp" line="10" />
 </extent>
 <extent>
 <description>has by value</description>
