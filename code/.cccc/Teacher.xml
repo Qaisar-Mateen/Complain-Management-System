@@ -6,10 +6,10 @@
 <lines_of_code_per_member_function value="******" level="0" />
 <McCabes_cyclomatic_complexity value="48" level="0" />
 <McCabes_cyclomatic_complexity_per_member_function value="******" level="2" />
-<lines_of_code value="6" level="0" />
+<lines_of_code value="66" level="0" />
 <lines_of_code_per_member_function value="********" level="2" />
-<lines_of_code_per_line_of_comment value="39.333" level="2" />
-<McCabes_cyclomatic_complexity_per_line_of_comment value="8.000" level="1" />
+<lines_of_code_per_line_of_comment value="3.576" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="0.727" level="0" />
 <weighted_methods_per_class_unity value="14" level="0" />
 <weighted_methods_per_class_visibility value="9" level="0" />
 <depth_of_inheritance_tree value="1" level="0" />
@@ -57,7 +57,7 @@
 <name>Teacher()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Teacher.cpp" line="6" />
+<source_reference file="Teacher.cpp" line="7" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -65,7 +65,7 @@
 </extent>
 <lines_of_code value="6" level="0" />
 <McCabes_cyclomatic_complexity value="0" level="0" />
-<lines_of_comment value="0" level="0" />
+<lines_of_comment value="3" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
 <McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
 </member_function>
@@ -73,7 +73,7 @@
 <name>Teacher(int,string)</name>
 <extent>
 <description>definition</description>
-<source_reference file="Teacher.cpp" line="12" />
+<source_reference file="Teacher.cpp" line="14" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -81,7 +81,7 @@
 </extent>
 <lines_of_code value="6" level="0" />
 <McCabes_cyclomatic_complexity value="0" level="0" />
-<lines_of_comment value="0" level="0" />
+<lines_of_comment value="3" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
 <McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
 </member_function>
@@ -89,7 +89,7 @@
 <name>addComplaint(Complaint *)</name>
 <extent>
 <description>definition</description>
-<source_reference file="Teacher.cpp" line="231" />
+<source_reference file="Teacher.cpp" line="240" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -105,7 +105,7 @@
 <name>complaintDetail()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Teacher.cpp" line="74" />
+<source_reference file="Teacher.cpp" line="82" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -113,15 +113,15 @@
 </extent>
 <lines_of_code value="33" level="1" />
 <McCabes_cyclomatic_complexity value="6" level="0" />
-<lines_of_comment value="0" level="0" />
-<lines_of_code_per_line_of_comment value="******" level="2" />
-<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+<lines_of_comment value="20" level="0" />
+<lines_of_code_per_line_of_comment value="1.650" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="0.300" level="0" />
 </member_function>
 <member_function>
 <name>control()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Teacher.cpp" line="18" />
+<source_reference file="Teacher.cpp" line="21" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -129,15 +129,15 @@
 </extent>
 <lines_of_code value="21" level="0" />
 <McCabes_cyclomatic_complexity value="6" level="0" />
-<lines_of_comment value="0" level="0" />
-<lines_of_code_per_line_of_comment value="******" level="2" />
-<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+<lines_of_comment value="14" level="0" />
+<lines_of_code_per_line_of_comment value="1.500" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="0.429" level="0" />
 </member_function>
 <member_function>
 <name>getID()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Teacher.cpp" line="227" />
+<source_reference file="Teacher.cpp" line="236" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -153,7 +153,7 @@
 <name>getName()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Teacher.cpp" line="229" />
+<source_reference file="Teacher.cpp" line="238" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -169,7 +169,7 @@
 <name>getUniqueID()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Teacher.cpp" line="210" />
+<source_reference file="Teacher.cpp" line="219" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -185,7 +185,7 @@
 <name>makeComplaint()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Teacher.cpp" line="116" />
+<source_reference file="Teacher.cpp" line="125" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -201,7 +201,7 @@
 <name>markAsUnallocated(int)</name>
 <extent>
 <description>definition</description>
-<source_reference file="Teacher.cpp" line="233" />
+<source_reference file="Teacher.cpp" line="242" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -217,7 +217,7 @@
 <name>printDetail()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Teacher.cpp" line="111" />
+<source_reference file="Teacher.cpp" line="120" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -225,7 +225,7 @@
 </extent>
 <lines_of_code value="5" level="0" />
 <McCabes_cyclomatic_complexity value="0" level="0" />
-<lines_of_comment value="0" level="0" />
+<lines_of_comment value="2" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
 <McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
 </member_function>
@@ -233,7 +233,7 @@
 <name>printInterface()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Teacher.cpp" line="44" />
+<source_reference file="Teacher.cpp" line="49" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -241,15 +241,15 @@
 </extent>
 <lines_of_code value="28" level="0" />
 <McCabes_cyclomatic_complexity value="10" level="0" />
-<lines_of_comment value="0" level="0" />
-<lines_of_code_per_line_of_comment value="******" level="2" />
-<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+<lines_of_comment value="18" level="0" />
+<lines_of_code_per_line_of_comment value="1.556" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="0.556" level="0" />
 </member_function>
 <member_function>
 <name>reocordFeedback()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Teacher.cpp" line="132" />
+<source_reference file="Teacher.cpp" line="141" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -265,7 +265,7 @@
 <name>writeToFile(const Teacher &amp;)</name>
 <extent>
 <description>definition</description>
-<source_reference file="Teacher.cpp" line="202" />
+<source_reference file="Teacher.cpp" line="211" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -296,7 +296,7 @@
 <concrete>false</concrete>
 <extent>
 <description>pass by reference</description>
-<source_reference file="Teacher.cpp" line="231" />
+<source_reference file="Teacher.cpp" line="240" />
 </extent>
 <extent>
 <description>pass by reference</description>
@@ -314,7 +314,7 @@
 <concrete>true</concrete>
 <extent>
 <description>pass by value</description>
-<source_reference file="Teacher.cpp" line="12" />
+<source_reference file="Teacher.cpp" line="14" />
 </extent>
 <extent>
 <description>has by value</description>

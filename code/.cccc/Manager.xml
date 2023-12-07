@@ -6,10 +6,10 @@
 <lines_of_code_per_member_function value="******" level="0" />
 <McCabes_cyclomatic_complexity value="68" level="0" />
 <McCabes_cyclomatic_complexity_per_member_function value="******" level="2" />
-<lines_of_code value="7" level="0" />
+<lines_of_code value="78" level="0" />
 <lines_of_code_per_member_function value="********" level="2" />
-<lines_of_code_per_line_of_comment value="42.000" level="2" />
-<McCabes_cyclomatic_complexity_per_line_of_comment value="9.714" level="1" />
+<lines_of_code_per_line_of_comment value="3.769" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="0.872" level="0" />
 <weighted_methods_per_class_unity value="16" level="0" />
 <weighted_methods_per_class_visibility value="12" level="0" />
 <depth_of_inheritance_tree value="1" level="0" />
@@ -64,7 +64,7 @@
 <name>Manager()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Manager.cpp" line="8" />
+<source_reference file="Manager.cpp" line="9" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -72,7 +72,7 @@
 </extent>
 <lines_of_code value="7" level="0" />
 <McCabes_cyclomatic_complexity value="0" level="0" />
-<lines_of_comment value="0" level="0" />
+<lines_of_comment value="4" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
 <McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
 </member_function>
@@ -80,7 +80,7 @@
 <name>Manager(int,string)</name>
 <extent>
 <description>definition</description>
-<source_reference file="Manager.cpp" line="15" />
+<source_reference file="Manager.cpp" line="17" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -88,7 +88,7 @@
 </extent>
 <lines_of_code value="7" level="0" />
 <McCabes_cyclomatic_complexity value="0" level="0" />
-<lines_of_comment value="0" level="0" />
+<lines_of_comment value="4" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
 <McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
 </member_function>
@@ -96,7 +96,7 @@
 <name>addDept(Department *)</name>
 <extent>
 <description>definition</description>
-<source_reference file="Manager.cpp" line="22" />
+<source_reference file="Manager.cpp" line="25" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -104,7 +104,7 @@
 </extent>
 <lines_of_code value="8" level="0" />
 <McCabes_cyclomatic_complexity value="1" level="0" />
-<lines_of_comment value="0" level="0" />
+<lines_of_comment value="4" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
 <McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
 </member_function>
@@ -112,7 +112,7 @@
 <name>addJob(Job *)</name>
 <extent>
 <description>definition</description>
-<source_reference file="Manager.cpp" line="30" />
+<source_reference file="Manager.cpp" line="34" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -120,7 +120,7 @@
 </extent>
 <lines_of_code value="2" level="0" />
 <McCabes_cyclomatic_complexity value="0" level="0" />
-<lines_of_comment value="0" level="0" />
+<lines_of_comment value="2" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
 <McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
 </member_function>
@@ -128,7 +128,7 @@
 <name>control()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Manager.cpp" line="32" />
+<source_reference file="Manager.cpp" line="37" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -136,15 +136,15 @@
 </extent>
 <lines_of_code value="36" level="1" />
 <McCabes_cyclomatic_complexity value="7" level="0" />
-<lines_of_comment value="0" level="0" />
-<lines_of_code_per_line_of_comment value="******" level="2" />
-<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+<lines_of_comment value="17" level="0" />
+<lines_of_code_per_line_of_comment value="2.118" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="0.412" level="0" />
 </member_function>
 <member_function>
 <name>getDeptId()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Manager.cpp" line="275" />
+<source_reference file="Manager.cpp" line="290" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -152,7 +152,7 @@
 </extent>
 <lines_of_code value="4" level="0" />
 <McCabes_cyclomatic_complexity value="1" level="0" />
-<lines_of_comment value="0" level="0" />
+<lines_of_comment value="2" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
 <McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
 </member_function>
@@ -160,7 +160,7 @@
 <name>getID()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Manager.cpp" line="271" />
+<source_reference file="Manager.cpp" line="285" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -168,7 +168,7 @@
 </extent>
 <lines_of_code value="4" level="0" />
 <McCabes_cyclomatic_complexity value="1" level="0" />
-<lines_of_comment value="0" level="0" />
+<lines_of_comment value="2" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
 <McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
 </member_function>
@@ -176,7 +176,7 @@
 <name>getName()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Manager.cpp" line="279" />
+<source_reference file="Manager.cpp" line="295" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -184,7 +184,7 @@
 </extent>
 <lines_of_code value="4" level="0" />
 <McCabes_cyclomatic_complexity value="1" level="0" />
-<lines_of_comment value="0" level="0" />
+<lines_of_comment value="2" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
 <McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
 </member_function>
@@ -192,7 +192,7 @@
 <name>getUniqueID()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Manager.cpp" line="255" />
+<source_reference file="Manager.cpp" line="266" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -200,7 +200,7 @@
 </extent>
 <lines_of_code value="14" level="0" />
 <McCabes_cyclomatic_complexity value="3" level="0" />
-<lines_of_comment value="2" level="0" />
+<lines_of_comment value="11" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
 <McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
 </member_function>
@@ -208,7 +208,7 @@
 <name>markAsUnallocated(int)</name>
 <extent>
 <description>definition</description>
-<source_reference file="Manager.cpp" line="296" />
+<source_reference file="Manager.cpp" line="312" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -224,7 +224,7 @@
 <name>printDetail()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Manager.cpp" line="181" />
+<source_reference file="Manager.cpp" line="190" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -240,7 +240,7 @@
 <name>printInterface()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Manager.cpp" line="74" />
+<source_reference file="Manager.cpp" line="82" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -248,15 +248,15 @@
 </extent>
 <lines_of_code value="31" level="1" />
 <McCabes_cyclomatic_complexity value="13" level="1" />
-<lines_of_comment value="0" level="0" />
-<lines_of_code_per_line_of_comment value="******" level="2" />
-<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+<lines_of_comment value="20" level="0" />
+<lines_of_code_per_line_of_comment value="1.550" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="0.650" level="0" />
 </member_function>
 <member_function>
 <name>reviewComplaint()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Manager.cpp" line="186" />
+<source_reference file="Manager.cpp" line="195" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -272,7 +272,7 @@
 <name>viewNotif_E()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Manager.cpp" line="107" />
+<source_reference file="Manager.cpp" line="116" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -288,7 +288,7 @@
 <name>writeToFile(const Manager &amp;)</name>
 <extent>
 <description>definition</description>
-<source_reference file="Manager.cpp" line="247" />
+<source_reference file="Manager.cpp" line="257" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -296,7 +296,7 @@
 </extent>
 <lines_of_code value="8" level="0" />
 <McCabes_cyclomatic_complexity value="1" level="0" />
-<lines_of_comment value="0" level="0" />
+<lines_of_comment value="5" level="0" />
 <lines_of_code_per_line_of_comment value="------" level="0" />
 <McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
 </member_function>
@@ -304,7 +304,7 @@
 <name>~Manager()</name>
 <extent>
 <description>definition</description>
-<source_reference file="Manager.cpp" line="283" />
+<source_reference file="Manager.cpp" line="299" />
 </extent>
 <extent>
 <description>declaration</description>
@@ -389,7 +389,7 @@
 <concrete>false</concrete>
 <extent>
 <description>pass by reference</description>
-<source_reference file="Manager.cpp" line="22" />
+<source_reference file="Manager.cpp" line="25" />
 </extent>
 <extent>
 <description>pass by reference</description>
@@ -400,7 +400,7 @@
 <concrete>false</concrete>
 <extent>
 <description>pass by reference</description>
-<source_reference file="Manager.cpp" line="30" />
+<source_reference file="Manager.cpp" line="34" />
 </extent>
 <extent>
 <description>pass by reference</description>
@@ -425,7 +425,7 @@
 <concrete>true</concrete>
 <extent>
 <description>pass by value</description>
-<source_reference file="Manager.cpp" line="15" />
+<source_reference file="Manager.cpp" line="17" />
 </extent>
 <extent>
 <description>has by value</description>

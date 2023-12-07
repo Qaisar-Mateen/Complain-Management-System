@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--Report on software metrics-->
 <CCCC_Project>
-<timestamp>Thu Dec 07 23:08:33 2023
+<timestamp>Thu Dec 07 23:27:55 2023
 </timestamp>
 <project_summary>
 <number_of_modules value="18" level="0" />
@@ -9,10 +9,10 @@
 <lines_of_code_per_module value="115.944" level="0" />
 <McCabes_cyclomatic_complexity value="433" level="0" />
 <McCabes_cyclomatic_complexity_per_module value="24.056" level="0" />
-<lines_of_comment value="301" level="0" />
-<lines_of_comment_per_module value="16.722" level="0" />
-<lines_of_code_per_line_of_comment value="6.934" level="0" />
-<McCabes_cyclomatic_complexity_per_line_of_comment value="1.439" level="0" />
+<lines_of_comment value="489" level="0" />
+<lines_of_comment_per_module value="27.167" level="0" />
+<lines_of_code_per_line_of_comment value="4.268" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="0.885" level="0" />
 <IF4 value="1763" level="0" />
 <IF4_per_module value="97.944" level="0" />
 <IF4_visible value="1015" level="0" />
@@ -66,25 +66,25 @@
 <name>Employee</name>
 <lines_of_code value="232" level="0" />
 <McCabes_cyclomatic_complexity value="37" level="0" />
-<lines_of_comment value="54" level="0" />
-<lines_of_code_per_line_of_comment value="4.296" level="0" />
-<McCabes_cyclomatic_complexity_per_line_of_comment value="0.685" level="0" />
+<lines_of_comment value="53" level="0" />
+<lines_of_code_per_line_of_comment value="4.377" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="0.698" level="0" />
 </module>
 <module>
 <name>Job</name>
 <lines_of_code value="160" level="0" />
 <McCabes_cyclomatic_complexity value="26" level="0" />
-<lines_of_comment value="20" level="0" />
-<lines_of_code_per_line_of_comment value="8.000" level="1" />
-<McCabes_cyclomatic_complexity_per_line_of_comment value="1.300" level="0" />
+<lines_of_comment value="78" level="0" />
+<lines_of_code_per_line_of_comment value="2.051" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="0.333" level="0" />
 </module>
 <module>
 <name>Manager</name>
 <lines_of_code value="294" level="0" />
 <McCabes_cyclomatic_complexity value="68" level="0" />
-<lines_of_comment value="7" level="0" />
-<lines_of_code_per_line_of_comment value="42.000" level="2" />
-<McCabes_cyclomatic_complexity_per_line_of_comment value="9.714" level="1" />
+<lines_of_comment value="78" level="0" />
+<lines_of_code_per_line_of_comment value="3.769" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="0.872" level="0" />
 </module>
 <module>
 <name>Manages</name>
@@ -122,9 +122,9 @@
 <name>Teacher</name>
 <lines_of_code value="236" level="0" />
 <McCabes_cyclomatic_complexity value="48" level="0" />
-<lines_of_comment value="6" level="0" />
-<lines_of_code_per_line_of_comment value="39.333" level="2" />
-<McCabes_cyclomatic_complexity_per_line_of_comment value="8.000" level="1" />
+<lines_of_comment value="66" level="0" />
+<lines_of_code_per_line_of_comment value="3.576" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="0.727" level="0" />
 </module>
 <module>
 <name>WorksIn</name>

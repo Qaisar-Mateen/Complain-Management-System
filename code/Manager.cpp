@@ -5,44 +5,50 @@
 #include "Complaint.h"
 #include "Job.h"
 
+// Default constructor for the Manager class
 Manager::Manager()
 {
-	id = -1;
-    name = "Invalid";
-    dept = nullptr;
+    id = -1; // Initialize the ID to -1
+    name = "Invalid"; // Initialize the name to "Invalid"
+    dept = nullptr; // Initialize the department pointer to nullptr
 }
 
+// Parameterized constructor for the Manager class
 Manager::Manager(int ID, string Name)
 {
-	id = ID;
-	name = Name;
-    dept = nullptr;
+    id = ID; // Set the ID to the passed value
+    name = Name; // Set the name to the passed value
+    dept = nullptr; // Initialize the department pointer to nullptr
 }
 
+// Function to add a department to the manager
 void Manager::addDept(Department* d)
 {
-    if (dept)
-        cout << "\n Already Manager of Dept: " << dept->getName();
+    if (dept) // If the manager already has a department
+        cout << "\n Already Manager of Dept: " << dept->getName(); // Print a message
     else
-        dept = d;
+        dept = d; // Otherwise, set the department to the passed value
 }
 
-void Manager::addJob(Job* j) { job.push_back(j); }
+// Function to add a job to the manager
+void Manager::addJob(Job* j) { job.push_back(j); } // Add the job to the list of jobs
 
+// Function to control the manager's actions
 void Manager::control()
 {
-    char opt = 'd';
+    char opt = 'd'; // Initialize the option to 'd'
 
+    // Loop until the option is 'f'
     while (opt != 'f')
     {
-        opt = printInterface();
+        opt = printInterface(); // Print the interface and get the user's option
 
-        if (opt == 'a') reviewComplaint();
+        if (opt == 'a') reviewComplaint(); // If the option is 'a', review the complaint
 
-        else if (opt == 'b') viewNotif_E();
+        else if (opt == 'b') viewNotif_E(); // If the option is 'b', view the notifications
 
-        else if (opt == 'c') {
-            system("cls");
+        else if (opt == 'c') { // If the option is 'c', view the department's complaints
+            system("cls"); // Clear the console
             cout << "\t\t\t ----<><><><><><><><><><><><( Manager )><><><><><><><><><><><>----\n\n";
             cout << " ID: " << id << endl;
             cout << " Name: " << name << endl;
@@ -50,8 +56,8 @@ void Manager::control()
             dept->viewComplaint();
         }
 
-        else if (opt == 'd') {
-            system("cls");
+        else if (opt == 'd') { // If the option is 'd', view the department's pending complaints
+            system("cls"); // Clear the console
             cout << "\t\t\t ----<><><><><><><><><><><><( Manager )><><><><><><><><><><><>----\n\n";
             cout << " ID: " << id << endl;
             cout << " Name: " << name << endl;
@@ -59,49 +65,52 @@ void Manager::control()
             dept->pendingComplaint();
         }
 
-        if (opt != 'f' && opt != 'l')
+        if (opt != 'f' && opt != 'l') // If the option is not 'f' or 'l'
         {
-            cin.ignore();
-            cout << "\n Press any key to continue...";
-            cin.get();
+            cin.ignore(); // Ignore the newline character in the input buffer
+            cout << "\n Press any key to continue..."; // Print a message
+            cin.get(); // Wait for the user to press a key
         }
     }
-    cout << "\n Logging out...";
-    Sleep(700);
-    system("cls");
+    cout << "\n Logging out..."; // Print a message
+    Sleep(700); // Pause for 700 milliseconds
+    system("cls"); // Clear the console
 }
 
+
+// Function to print the manager's interface and get the user's option
 char Manager::printInterface() {
-    bool valid = false;
-    char opt;
+    bool valid = false; // Initialize the valid flag to false
+    char opt; // Declare a variable to hold the user's option
     do {
-        int b = 0;
-        for (auto it : job)
-            if (it->isHighlight()) b = 1;
-        vector<int> v = dept->NewComplaint();
-        system("cls");
+        int b = 0; // Initialize a flag to 0
+        for (auto it : job) // For each job
+            if (it->isHighlight()) b = 1; // If the job is highlighted, set the flag to 1
+        vector<int> v = dept->NewComplaint(); // Get the new complaints
+        system("cls"); // Clear the console
         cout << "\t\t\t ----<><><><><><><><><><><><( Manager )><><><><><><><><><><><>----\n\n";
         cout << " ID: " << id << endl;
         cout << " Name: " << name << endl;
         cout << " Department: " << dept->getName() << "\n";
         cout << "\n --<{ Manager Controls }>--\n";
-        if (!v.empty()) cout << " a: View New Complaints\n";
-        if(b) cout << " b: View Notifications\n";
-        cout << " c: View All Complaints\n";
-        cout << " d: View Pending Complaints\n";
-        cout << " f: Log Out\n";
+        if (!v.empty()) cout << " a: View New Complaints\n"; // If there are new complaints, print the option to view them
+        if (b) cout << " b: View Notifications\n"; // If there are highlighted jobs, print the option to view notifications
+        cout << " c: View All Complaints\n"; // Print the option to view all complaints
+        cout << " d: View Pending Complaints\n"; // Print the option to view pending complaints
+        cout << " f: Log Out\n"; // Print the option to log out
         cout << " >";
-        cin >> opt;
+        cin >> opt; // Get the user's option
 
+        // If the option is valid, set the valid flag to true
         if ((opt == 'a' && !v.empty()) || (opt == 'b' && b) || opt == 'c' || opt == 'f' || opt == 'd')
             valid = true;
 
-        else {
-            cout << "\n Invalid!! \n";
-            Sleep(700);
+        else { // If the option is not valid
+            cout << "\n Invalid!! \n"; // Print a message
+            Sleep(700); // Pause for 700 milliseconds
         }
-    } while (!valid);
-    return opt;
+    } while (!valid); // Repeat until the option is valid
+    return opt; // Return the user's option
 }
 
 void Manager::viewNotif_E() {
@@ -244,40 +253,47 @@ void Manager::reviewComplaint() {
     } while (!valid);
 }
 
+// Function to write the manager's details to a file
 void Manager::writeToFile(const Manager& manage) {
-    ofstream file("Manager.txt", ios::app);
-    if (file.is_open()) {
-        file << manage.getID() << " " << manage.getName() << endl;
-        file.close();
+    ofstream file("Manager.txt", ios::app); // Open the file in append mode
+    if (file.is_open()) { // If the file is open
+        file << manage.getID() << " " << manage.getName() << endl; // Write the manager's ID and name
+        file.close(); // Close the file
     }
 }
 
+// Function to get a unique ID for a new manager
 int Manager::getUniqueID() {
-    ifstream file("Manager.txt");
-    int maxID = 1;
-    int currentID;
+    ifstream file("Manager.txt"); // Open the file
+    int maxID = 1; // Initialize the maximum ID to 1
+    int currentID; // Declare a variable to hold the current ID
 
+    // While there are more IDs in the file
     while (file >> currentID) {
-        file.ignore(); // Ignore the space between ID and name
+        file.ignore(); // Ignore the space between the ID and name
         file.ignore(numeric_limits<streamsize>::max(), '\n'); // Ignore the rest of the line
 
-        if (currentID == maxID)
-            maxID++;
+        if (currentID == maxID) // If the current ID is equal to the maximum ID
+            maxID++; // Increment the maximum ID
     }
-    file.close();
+    file.close(); // Close the file
 
-    return maxID;
+    return maxID; // Return the maximum ID
 }
+
+// Function to get the manager's ID
 int Manager::getID() const {
-    return id;
+    return id; // Return the ID
 }
 
+// Function to get the manager's department's ID
 int Manager::getDeptId() {
-    return dept->getID();
+    return dept->getID(); // Return the department's ID
 }
 
+// Function to get the manager's name
 string Manager::getName() const {
-    return name;
+    return name; // Return the name
 }
 
 Manager::~Manager()

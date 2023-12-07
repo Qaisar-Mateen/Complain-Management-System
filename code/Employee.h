@@ -16,7 +16,6 @@ class Employee: virtual public Person {
     string name;
     WorksIn* dept;
     vector<Job*> job;
-    //Job* job;
     bool Available;
 
 public:

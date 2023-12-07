@@ -95,14 +95,14 @@
 </extent>
 <extent>
 <description>pass by value</description>
-<source_reference file="Employee.h" line="23" />
+<source_reference file="Employee.h" line="22" />
 </extent>
 <name>Manager</name>
 <visible>true</visible>
 <concrete>true</concrete>
 <extent>
 <description>pass by value</description>
-<source_reference file="Manager.cpp" line="15" />
+<source_reference file="Manager.cpp" line="17" />
 </extent>
 <extent>
 <description>has by value</description>
@@ -117,7 +117,7 @@
 <concrete>true</concrete>
 <extent>
 <description>pass by value</description>
-<source_reference file="Teacher.cpp" line="12" />
+<source_reference file="Teacher.cpp" line="14" />
 </extent>
 <extent>
 <description>has by value</description>
